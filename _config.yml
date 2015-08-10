@@ -1,0 +1,6 @@
+name: Writings of Urda
+description: "One Man's Thoughts on Life, Technology, and Everything Else in Between"
+permalink: /blog/:year/:month/:day/:title
+
+gems:
+  - jekyll-redirect-from
