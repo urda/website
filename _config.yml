@@ -19,15 +19,15 @@ avatar: /images/avatar-square.jpg
 footer-links:
   dribbble:
   email:
-  facebook:
-  flickr:
+  facebook: peter.urda
+  flickr: urda
   github: urda
   instagram:
-  linkedin:
+  linkedin: urdap
   pinterest:
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
+  rss: asdf # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: urda
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  stackoverflow: users/169153/urda # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
