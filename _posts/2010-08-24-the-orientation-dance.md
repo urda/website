@@ -13,8 +13,6 @@ tags:
   - Delegates
 ---
 
-
-
 ![](/content/{{ page.urda_uuid }}/mercer.jpg) On Monday I started my first day
 of my second co-op with a new employer. I will be working with Mercer, a
 subsidiary of Marsh & McLennan Companies, developing and supporting C# and .NET
@@ -40,6 +38,5 @@ need for a program to know what in the world the method actually does. Our
 program is not bound to knowing which method exactly will be called when the
 delegate is used. This offers flexibility to defining the back-end method used
 by the delegate, without trigger compilation issues while working on a project.
-
 
 [1]: http://en.wikipedia.org/w/index.php?title=Delegate_%28.NET%29&oldid=380252993
