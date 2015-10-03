@@ -3,6 +3,9 @@ title: Delegate Chain of Command
 author: Peter Urda
 layout: post
 redirect_from: /2010/08/delegate-chain-of-command/
+
+urda_uuid: 20100826
+
 categories:
   - How To
   - Mercer Daily Reports
@@ -11,9 +14,15 @@ tags:
   - Co-Op
   - Delegates
 ---
-Another cool thing about delegates is the ability to chain them together. Say for example you have an object modification process, and you need a given object to be manipulated in a very specific order. Well you could use a delegate chain to accomplish that. For a simple example I have written up a C# delegate chain program that evaluates a mathematical expression following the order of operations by using a delegate chain.
+Another cool thing about delegates is the ability to chain them together. Say
+for example you have an object modification process, and you need a given object
+to be manipulated in a very specific order. Well you could use a delegate chain
+to accomplish that. For a simple example I have written up a C# delegate chain
+program that evaluates a mathematical expression following the order of
+operations by using a delegate chain.
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 
 namespace DelegateChain
 {
@@ -45,8 +54,8 @@ namespace DelegateChain
             UrdaDelegate delegate01 = new UrdaDelegate(DelegateMath.AddOne);
             UrdaDelegate delegate02 = new UrdaDelegate(DelegateMath.TimesTwo);
             UrdaDelegate delegate03 = new UrdaDelegate(DelegateMath.PlusThree);
-            
-            // Chain the delegates together. The variable manipulation will 
+
+            // Chain the delegates together. The variable manipulation will
             // start with delegate01, then delegate02, and end with delegate03.
             UrdaDelegate DelegateChain = delegate01 + delegate02 + delegate03;
 
@@ -69,10 +78,14 @@ namespace DelegateChain
         }
     }
 }
-</pre>
+```
 
-&#8230;and when we run the program we get this output:
+...and when we run the program we get this output:
 
-<img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/08/delegatesoftwarerunning.png" alt="Delegate Chain Software Example (C#)" title="Delegate Chain Software Example (C#)" width="677" height="342" class="aligncenter size-full wp-image-374" />
+[![Program Output](/content/{{ page.urda_uuid }}/delegatesoftwarerunning.png)](/content/{{ page.urda_uuid }}/delegatesoftwarerunning.png)
 
-Sure you could have just performed the mathematical expression by itself without writing all of that code. But the point is you are able to link delegates together, and perform manipulation on a given variable at each function in a specific order. This can be dragged out to more complex methods, where ordered execution is mission critical.
+Sure you could have just performed the mathematical expression by itself without
+writing all of that code. But the point is you are able to link delegates
+together, and perform manipulation on a given variable at each function in a
+specific order. This can be dragged out to more complex methods, where ordered
+execution is mission critical.
