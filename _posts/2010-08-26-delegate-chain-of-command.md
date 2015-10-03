@@ -14,6 +14,7 @@ tags:
   - Co-Op
   - Delegates
 ---
+
 Another cool thing about delegates is the ability to chain them together. Say
 for example you have an object modification process, and you need a given object
 to be manipulated in a very specific order. Well you could use a delegate chain
