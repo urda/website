@@ -4,7 +4,7 @@ author: Peter Urda
 layout: post
 redirect_from: /2010/08/the-orientation-dance/
 
-urda_uuid: 12c57ad5-50ed-4404-98a3-4df1a40f70d0
+urda_uuid: 20100824
 
 categories:
   - Mercer Daily Reports
@@ -13,12 +13,14 @@ tags:
   - Delegates
 ---
 
-![](/content/{{ page.urda_uuid }}/mercer.jpg) On Monday I started my first day
+On Monday I started my first day
 of my second co-op with a new employer. I will be working with Mercer, a
 subsidiary of Marsh & McLennan Companies, developing and supporting C# and .NET
 Mercer applications. The past two days have been filled with standard new hire
 training and orientation sessions and plenty of reading. However it is the brief
 product overview and C# introduction sessions I learned the most from.
+
+![Mercer Logo, Circa 2010](/content/{{ page.urda_uuid }}/mercer.jpg)
 
 I have learned a handful of C# specifics and design ideas from my supervisor
 Zane Thorn. Out of all the topics touched, C# 'delegates' was the most new and
