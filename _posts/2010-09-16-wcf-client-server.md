@@ -104,7 +104,7 @@ namespace Microsoft.ServiceModel.Samples
 
                 SelfHost.Open();
                 Console.WriteLine("The service is ready.");
-                Console.WriteLine("Press &lt;ENTER&gt; to terminate service.");
+                Console.WriteLine("Press <ENTER> to terminate service.");
                 Console.WriteLine();
                 Console.ReadLine();
 
@@ -192,7 +192,7 @@ namespace Client
             client.Close();
 
             Console.WriteLine();
-            Console.WriteLine("Press &lt;ENTER&gt; to terminate client.");
+            Console.WriteLine("Press <ENTER> to terminate client.");
             Console.ReadLine();
         }
     }

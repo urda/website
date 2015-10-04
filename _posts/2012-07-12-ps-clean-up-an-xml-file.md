@@ -17,7 +17,7 @@ Here is the function you can load into your session, or add to your profile for 
 ```powershell
 function Format-Xml
 {
-    &lt;#
+    <#
     .SYNOPSIS
         Loads, formats (prettifies), and resaves an Xml file for easier reading and editing.
     .DESCRIPTION
@@ -28,7 +28,7 @@ function Format-Xml
         Author : Peter Urda (@Urda)
     .LINK
         This script posted to: http://www.peter-urda.com/2012/07/ps-clean-up-an-xml-file
-    #&gt;
+    #>
     param ([string]$FilePath = $null)
     if ($FilePath) {
         if (Test-Path $FilePath) {

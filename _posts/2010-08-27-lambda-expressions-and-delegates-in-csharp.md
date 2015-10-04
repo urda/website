@@ -39,7 +39,7 @@ something like this:
 
 ```csharp
 delegate int del(int i);
-del ADelegate = x =&gt; x * x;
+del ADelegate = x => x * x;
 int j = ADelegate(5); // j = 25
 ```
 
@@ -66,9 +66,9 @@ namespace DelegateChainWithLambda
         public static void Main(string[] args)
         {
             // Create delegate objects from lambda expressions.
-            UrdaDelegate delegate01 = (ref int a) =&gt; { a = a + 1; };
-            UrdaDelegate delegate02 = (ref int b) =&gt; { b = b * 2; };
-            UrdaDelegate delegate03 = (ref int c) =&gt; { c = c + 3; };
+            UrdaDelegate delegate01 = (ref int a) => { a = a + 1; };
+            UrdaDelegate delegate02 = (ref int b) => { b = b * 2; };
+            UrdaDelegate delegate03 = (ref int c) => { c = c + 3; };
 
             // Chain the delegates together. The variable manipulation will
             // start with delegate01, then delegate02, and end with delegate03.

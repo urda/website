@@ -66,7 +66,7 @@ Basically, this method has the following workflow:
 All you have to do now is loop through the enum to prove the code:
 
 ```csharp
-for (MyColors i = MyColors.White; i &lt;= MyColors.Black; i++)
+for (MyColors i = MyColors.White; i <= MyColors.Black; i++)
     Console.WriteLine(i.GetDescription());
 
 /*

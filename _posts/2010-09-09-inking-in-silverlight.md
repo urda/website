@@ -16,50 +16,50 @@ Users with touch screens, stylus-enabled screens, or USB stylus pads appreciate 
 The first thing we need to do is define our XAML that will build the visual layout of our web application. In this case we will just call this our MainPage.xaml:
 
 ```xml
-&lt;UserControl x:Class="SilverlightInk.MainPage"
+<UserControl x:Class="SilverlightInk.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-&gt;
-    &lt;Grid x:Name="MainLayout" Background="Gray"&gt;
-        &lt;Grid.RowDefinitions&gt;
-            &lt;RowDefinition Height="*" /&gt;
-            &lt;RowDefinition Height="*" /&gt;
-        &lt;/Grid.RowDefinitions&gt;
-        &lt;Grid.ColumnDefinitions&gt;
-            &lt;ColumnDefinition Width="100" /&gt;
-            &lt;ColumnDefinition Width="*" /&gt;
-        &lt;/Grid.ColumnDefinitions&gt;
+>
+    <Grid x:Name="MainLayout" Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-        &lt;Grid x:Name="OptionPanel" Background="Transparent" Grid.Column="0" Grid.Row="0"&gt;
-            &lt;Grid.RowDefinitions&gt;
-                &lt;RowDefinition Height="*" /&gt;
-                &lt;RowDefinition Height="*" /&gt;
-            &lt;/Grid.RowDefinitions&gt;
-            &lt;Grid.ColumnDefinitions&gt;
-                &lt;ColumnDefinition Width="*" /&gt;
-                &lt;ColumnDefinition Width="*" /&gt;
-            &lt;/Grid.ColumnDefinitions&gt;
+        <Grid x:Name="OptionPanel" Background="Transparent" Grid.Column="0" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-            &lt;Button x:Name="InkButton" Content="Ink" Grid.Column="0" Grid.Row="0"
+            <Button x:Name="InkButton" Content="Ink" Grid.Column="0" Grid.Row="0"
                 Click="InkButtonClick"
-            /&gt;
-            &lt;Button x:Name="EraseButton" Content="Eraser" Grid.Column="1"
+            />
+            <Button x:Name="EraseButton" Content="Eraser" Grid.Column="1"
                 Grid.Row="0" Click="EraseButtonClick"
-            /&gt;
-        &lt;/Grid&gt;
+            />
+        </Grid>
 
-        &lt;Border Background="White" CornerRadius="20" x:Name="BorderInk"
+        <Border Background="White" CornerRadius="20" x:Name="BorderInk"
                 Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
-        &gt;
-            &lt;InkPresenter x:Name="InkPad" Background="Transparent"
+        >
+            <InkPresenter x:Name="InkPad" Background="Transparent"
                             Cursor="Stylus"
                             MouseLeftButtonDown="InkPadMouseLeftButtonDown"
                             MouseLeftButtonUp="InkPadMouseLeftButtonUp"
                             MouseMove="InkPadMouseMove"
-            /&gt;
-        &lt;/Border&gt;
-    &lt;/Grid&gt;
-&lt;/UserControl&gt;
+            />
+        </Border>
+    </Grid>
+</UserControl>
 ```
 
 The flow of our XAML document, in a nutshell, is as follows:
@@ -146,7 +146,7 @@ namespace SilverlightInk
             {
                 _EraserPoints.Add(e.StylusDevice.GetStylusPoints(InkPad));
                 StrokeCollection hits = InkPad.Strokes.HitTest(_EraserPoints);
-		        for (int i = 0; i &lt; hits.Count; i++)
+		        for (int i = 0; i < hits.Count; i++)
 		        {
                     InkPad.Strokes.Remove(hits[i]);
 		        }
@@ -242,7 +242,7 @@ private void InkPadMouseMove(object sender, MouseEventArgs e)
 	{
 		_EraserPoints.Add(e.StylusDevice.GetStylusPoints(InkPad));
 		StrokeCollection hits = InkPad.Strokes.HitTest(_EraserPoints);
-		for (int i = 0; i &lt; hits.Count; i++)
+		for (int i = 0; i < hits.Count; i++)
 		{
 			InkPad.Strokes.Remove(hits[i]);
 		}
