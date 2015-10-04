@@ -10,7 +10,7 @@ tags:
   - Co-Op
   - Oracle
 ---
-I was working on one of Mercer&#8217;s internal applications today. I ran across an off the wall query from our QA team. They wanted to know what was the best way to confirm the information going into an Oracle database was actually written to the database. I told them it was simple **SELECT FROM &#8230;** query, but when I went to run the statement myself, I did not get the results I expected. Two major things were wrong in the codebase: one commits were not actually being made to the Oracle database. Two, a boolean method was configured to always **&#8216;return true&#8217;** making it look like the commits actually occurred.
+I was working on one of Mercer&#8217;s internal applications today. I ran across an off the wall query from our QA team. They wanted to know what was the best way to confirm the information going into an Oracle database was actually written to the database. I told them it was simple **SELECT FROM ...** query, but when I went to run the statement myself, I did not get the results I expected. Two major things were wrong in the codebase: one commits were not actually being made to the Oracle database. Two, a boolean method was configured to always **&#8216;return true&#8217;** making it look like the commits actually occurred.
 
 To visually understand what was going on, I&#8217;ll create a simple mockup method for you in C#:
 
@@ -104,7 +104,7 @@ We only made a few changes to our code to make it much more robust:
 
   * Had a generic catch statement that returns false on an error.
   * Actually write the code to make commits to the database.
-  * Surround the database action section with a using block to control the transaction. 
+  * Surround the database action section with a using block to control the transaction.
       * If the commit fails (0 rows added) then we fail the entire operation and return false.
       * If it works we complete the transaction and return true.
 

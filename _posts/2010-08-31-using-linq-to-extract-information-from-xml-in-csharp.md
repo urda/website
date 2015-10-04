@@ -17,14 +17,14 @@ tags:
 In case you are not familiar with LINQ, here is a quick overview on it:
 
 > Language Integrated Query (LINQ, pronounced &#8220;link&#8221;) is a Microsoft .NET Framework component that adds native data querying capabilities to .NET languages.
-> 
+>
 > LINQ defines a set of method names (called standard query operators, or standard sequence operators), along with translation rules from so-called query expressions to expressions using these method names, lambda expressions and anonymous types. These can, for example, be used to project and filter data in arrays, enumerable classes, XML (XLINQ), relational database, and third party data sources. Other uses, which utilize query expressions as a general framework for readably composing arbitrary computations, include the construction of event handlers or monadic parsers.
-> 
+>
 > Source: <a href="http://en.wikipedia.org/w/index.php?title=Language_Integrated_Query&#038;oldid=382114822" class="external external_icon" target="_blank">http://en.wikipedia.org/wiki/Language_Integrated_Query</a>
 
 So if we modify the previous program to use a LINQ statement instead, we can use logic and syntax that look a lot like a SQL statement. But instead of accessing a SQL database, we are instead polling an array or chunk of data. In our case we are using LINQ to run a query against a chunk of XML data.
 
-So let&#8217;s cut to the chase, here is the modified source code from the last post&#8230;
+So let&#8217;s cut to the chase, here is the modified source code from the last post...
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 using System.Collections.Generic;
@@ -70,7 +70,7 @@ namespace UsingXML
             Console.WriteLine(Environment.CurrentDirectory);
             Console.Write("Path to file? &gt; ");
             string UserPath = Console.ReadLine();
- 
+
             // Try to open the XML file
             try
             {
@@ -176,13 +176,13 @@ Now for comparison, let&#8217;s look at the difference between the two sources:
 -using System.Xml;
 +using System.Linq;
 +using System.Xml.Linq;
- 
+
  namespace UsingXML
  {
 @@ -12,6 +13,13 @@
          public int age { get; set; }
          public char gender { get; set; }
- 
+
 +        public PersonObject()
 +        {
 +            this.fname = null;
@@ -194,7 +194,7 @@ Now for comparison, let&#8217;s look at the difference between the two sources:
          {
              this.fname = f;
 @@ -23,6 +31,9 @@
- 
+
      class ReadAndLoad
      {
 +        // Declare a public XDocument for use
@@ -210,8 +210,8 @@ Now for comparison, let&#8217;s look at the difference between the two sources:
 -
 -            // Declare a new XML Document
 -            XmlDocument XmlDoc = new XmlDocument();
--            
-+ 
+-
++
              // Try to open the XML file
              try
              {
@@ -224,13 +224,13 @@ Now for comparison, let&#8217;s look at the difference between the two sources:
 @@ -61,26 +69,23 @@
                  Environment.Exit(1);
              }
- 
+
 -            // Declare the xpath for finding objects inside the XML file
 -            XmlNodeList XmlDocNodes = XmlDoc.SelectNodes("/People/Person");
 -
              // Define a new List, to store the objects we pull out of the XML
              List&lt;PersonObject&gt; PersonList = new List&lt;PersonObject&gt;();
- 
+
 -            // Loop through the nodes, extracting Person information.
 -            // We can then define a person object and add it to the list.
 -            foreach (XmlNode node in XmlDocNodes)
@@ -244,7 +244,7 @@ Now for comparison, let&#8217;s look at the difference between the two sources:
 -                                                    TempGender);
 -                PersonList.Add(obj);
 -            }
--            
+-
 +            // Build a LINQ query, and run through the XML building
 +            // the PersonObjects
 +            var query = from xml in XDoc.Descendants("Person")

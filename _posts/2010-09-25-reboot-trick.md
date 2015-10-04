@@ -17,4 +17,4 @@ To simply fix the issue where Windows is constantly stuck in a &#8220;Reboot Req
 <pre class="brush: powershell; title: ; notranslate" title="">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\PendingFileRenameOperations
 </pre>
 
-&#8230;and that should correct the issue and allow you to install more software!
+...and that should correct the issue and allow you to install more software!

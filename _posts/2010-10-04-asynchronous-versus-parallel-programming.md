@@ -24,7 +24,7 @@ So you might ask yourself &#8220;Well these sound like the same deal!&#8221; In 
 
 Imagine this use case: I have an array of 1,000,000 int values. I have requested that you, the programmer, make an addition to each of these people objects to contain an internal id equal to the object&#8217;s array index. I also tell you about how the latest buzzword on the street is &#8220;multi-core processing&#8221; so I want to see patterns on that used for this assignment. Assuming you have already defined the original &#8220;person&#8221; class and wrote a &#8220;NewPerson&#8221; class with the added dimension, which pattern (asynchronous or parallel) would be preferred to break the work up and why?
 
-&#8230;
+...
 
 The correct answer of course would be the parallel pattern. Since each object is **not** dependent on another object from somewhere else (from something like a remote API) we can split the million objects into smaller chunks and perform the object copy and addition of the new parameter. We can then break send those chunks to different processors to conduct the execution of our code. Our code can even be designed to account for n processors in any computer, and evenly spread the work across CPU cores.
 

@@ -80,7 +80,7 @@ public class SomeClass
 }
 </pre>
 
-&#8230;and of course #error will cause an error to be displayed in the compiler output:
+...and of course #error will cause an error to be displayed in the compiler output:
 
 <pre class="brush: csharp; title: ; notranslate" title="">#define DEBUG_MODE
 using System;
@@ -144,4 +144,4 @@ I can expand and collapse the section inside Visual Studio as pictured:
 
 <img class="aligncenter size-full wp-image-984" title="#region in Visual Studio" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Collapse.png" alt="#region, #endregion in Visual Studio" width="602" height="215" />
 
-&#8230;and that is all the possible C# preprocessor directives you can use! I love the #region one, since it allows you to lump your code together for easier reading.
+...and that is all the possible C# preprocessor directives you can use! I love the #region one, since it allows you to lump your code together for easier reading.

@@ -17,11 +17,11 @@ Before we can work with IronPython in C#, we need to setup our environment. Here
   1. Install the latest stable release of IronPython
   2. Create a new C# Console Application in Visual Studio 2010
   3. Add required references for IronPython
-  4. &#8230;then write the code!
+  4. ...then write the code!
 
 The first step in working with IronPython in Visual Studio 2010 is to actually install IronPython. You&#8217;ll need to visit <a href="http://ironpython.net/download/" class="external external_icon" target="_blank">IronPython.net</a> to grab the latest version of IronPython. Just install the latest **stable** release. For reference, I installed IronPython version 2.6.1 when I wrote this article. Just install all the recommended components. After that is done you can go ahead and startup Visual Studio.
 
-After Visual Studio has started up, you&#8217;ll need to start a new C# Console Application project. After you have created that we are going to need to add references (Right-Click on References in the Solution Explorer > &#8220;Add Reference&#8230;&#8221;) to this project. Assuming you installed IronPython in the default directory you will find all the needed references in **&#8220;C:\Program Files\IronPython 2.6 for .NET 4.0&#8243;** on **32-bit systems** and **&#8220;C:\Program Files (x86)\IronPython 2.6 for .NET 4.0&#8243;** on **64-bit systems**. We will be adding the following references:
+After Visual Studio has started up, you&#8217;ll need to start a new C# Console Application project. After you have created that we are going to need to add references (Right-Click on References in the Solution Explorer > &#8220;Add Reference...&#8221;) to this project. Assuming you installed IronPython in the default directory you will find all the needed references in **&#8220;C:\Program Files\IronPython 2.6 for .NET 4.0&#8243;** on **32-bit systems** and **&#8220;C:\Program Files (x86)\IronPython 2.6 for .NET 4.0&#8243;** on **64-bit systems**. We will be adding the following references:
 
   * IronPython
   * IronPython.Modules
@@ -53,7 +53,7 @@ Now that we have our python prepared, we will rename the generic **Program.cs** 
   * Run the Python Commands
   * Exit the Program
 
-So here is the C# that will run our IronPython program&#8230;
+So here is the C# that will run our IronPython program...
 
 <pre class="brush: csharp; title: ; notranslate" title="">using IronPython.Hosting;
 using IronPython.Runtime;
@@ -110,7 +110,7 @@ namespace IntroIronPython
 }
 </pre>
 
-When the program is run, we are greeted with this output:  
+When the program is run, we are greeted with this output:
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/09/IntroIronPythonRunning.png" alt="Intro to IronPython Screenshot" title="Intro to IronPython Screenshot" width="677" height="342" class="aligncenter size-full wp-image-858" />
 
 Again take note, that it is the **print** function from the Python file that is driving the console output in this application. All C# is doing is opening up the runtime, loading the Python file, and just calling the Python methods we defined.
