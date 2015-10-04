@@ -16,7 +16,8 @@ It is a pretty simple C# method. It basically checks to see if the file path to 
 
 See if you can follow along with comments in the code:
 
-<pre class="brush: csharp; title: ; notranslate" title="">public bool DoesTableExist(string TableName)
+```csharp
+public bool DoesTableExist(string TableName)
 {
     // Variables availbe to the method, but not defined here are:
     // SomeFilePath (string)
@@ -69,6 +70,6 @@ See if you can follow along with comments in the code:
     // Return the results!
     return TableExists;
 }
-</pre>
+```
 
 Feel free to integrate this into your project, this may come in handy with one of your future projects!

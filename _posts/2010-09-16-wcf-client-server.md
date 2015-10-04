@@ -28,7 +28,8 @@ First we need to setup our project...
 
 ...and NOW we are ready to build our interface for the service. In this case we are going to build a calculator.
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
@@ -118,7 +119,7 @@ namespace Microsoft.ServiceModel.Samples
         }
     }
 }
-</pre>
+```
 
 The first block of code defines our calculator interface, or **ICalculator**. We have directives before each method, named **OperationContractAttribute**, that define what portions of this interface are being exposed for the WCF contract. Pretty straight forward.
 
@@ -139,14 +140,16 @@ Now here is where we can use Visual Studio to build some code for us. Go ahead a
 
 Now when you are inside the directory you want the generated code to be placed, run this command:
 
-<pre class="brush: powershell; title: ; notranslate" title="">svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service
-</pre>
+```powershell
+svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service
+```
 
 Now all you have to do is add the **generatedProxy** file to your project. That should be as simple as clicking*Show All Files* and then *Include in Project*.
 
 Now let's define the client:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 using System.ServiceModel;
 using System.Text;
 
@@ -194,15 +197,16 @@ namespace Client
         }
     }
 }
-</pre>
+```
 
 The first step is to create a **CalculatorClient** object. Then it is as simple as calling any of the following:
 
-<pre class="brush: csharp; title: ; notranslate" title="">client.Add(...);
+```csharp
+client.Add(...);
 client.Subtract(...);
 client.Multiply(...);
 client.Divide(...);
-</pre>
+```
 
 All the above commands will cause our Client app to hit the Server app with requests. The Server app will then run the methods and send back results to the Client. Here is a screenshot of the applications running side-by-side:
 

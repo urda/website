@@ -17,8 +17,9 @@ If you use **CTRL + TAB** in Visual Studio 2010 today, you'll get a dialog that 
 
 So in order to restore the thumbnail previews we will run this simple command from ***an elevated command prompt*** in Windows:
 
-<pre class="brush: plain; title: ; notranslate" title="">reg ADD HKCU\Software\Microsoft\VisualStudio\10.0\General /v ShowThumbnailsOnNavigation /t REG_DWORD /d 1
-</pre>
+```
+reg ADD HKCU\Software\Microsoft\VisualStudio\10.0\General /v ShowThumbnailsOnNavigation /t REG_DWORD /d 1
+```
 
 Now all you have to do is start up or restart Visual Studio 2010, get your documents open again, and then try to cycle through them. You should get a much more useful display like so:
 

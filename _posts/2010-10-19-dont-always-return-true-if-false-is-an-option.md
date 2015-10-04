@@ -15,7 +15,8 @@ I was working on one of Mercer's internal applications today. I ran across an of
 
 To visually understand what was going on, I'll create a simple mockup method for you in C#:
 
-<pre class="brush: csharp; title: ; notranslate" title="">class OracleDbHandler
+```csharp
+class OracleDbHandler
 {
     // Gadgets and Gizmo's Aplenty Here
 
@@ -45,7 +46,7 @@ To visually understand what was going on, I'll create a simple mockup method for
 
     // Whozits and Whatzits Galore Down Here
 }
-</pre>
+```
 
 You see the horrible issue with this? The main program for starters has a logic flow that handles a true return for a good commit, and a false return for a failed commit. Since this method will always 'return true' the program will always imagine that the commit occurred. In reality it did not! Sure we setup the Oracle command, but we never executed it! Our problems in a nutshell are:
 
@@ -54,7 +55,8 @@ You see the horrible issue with this? The main program for starters has a logic 
 
 So let's make corrections to this so the code is actually commited properly to the database:
 
-<pre class="brush: csharp; title: ; notranslate" title="">class OracleDbHandler
+```csharp
+class OracleDbHandler
 {
     // Gadgets and Gizmo's Aplenty Here
 
@@ -99,7 +101,7 @@ So let's make corrections to this so the code is actually commited properly to t
 
     // Whozits and Whatzits Galore Down Here
 }
-</pre>
+```
 
 We only made a few changes to our code to make it much more robust:
 

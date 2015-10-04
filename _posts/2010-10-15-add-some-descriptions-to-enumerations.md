@@ -14,17 +14,19 @@ Enumerations in C# allow you to group common constants together inside a piece o
 
 In order to add descriptions to the desired enum, you'll need to declare **using System.ComponentModel;** at the top of your source file. This will help with simplifying the definitions later on. So first let's lay out an enum:
 
-<pre class="brush: csharp; title: ; notranslate" title="">enum MyColors
+```csharp
+enum MyColors
 {
     White,
     Gray,
     Black
 }
-</pre>
+```
 
 Now we just add the description parameter before each portion of the enum:
 
-<pre class="brush: csharp; title: ; notranslate" title="">enum MyColors
+```csharp
+enum MyColors
 {
     [Description("Eggshell White")]
     White,
@@ -35,11 +37,12 @@ Now we just add the description parameter before each portion of the enum:
     [Description("Midnight Black")]
     Black
 }
-</pre>
+```
 
 Now we will need to construct an extension method for accessing these new descriptions.
 
-<pre class="brush: csharp; title: ; notranslate" title="">public static class EnumExtensions
+```csharp
+public static class EnumExtensions
 {
     public static string GetDescription(this Enum value)
     {
@@ -49,7 +52,7 @@ Now we will need to construct an extension method for accessing these new descri
         return attributes.Length == 0 ? value.ToString() : ((DescriptionAttribute)attributes[0]).Description;
     }
 }
-</pre>
+```
 
 Basically, this method has the following workflow:
 
@@ -62,7 +65,8 @@ Basically, this method has the following workflow:
 
 All you have to do now is loop through the enum to prove the code:
 
-<pre class="brush: csharp; title: ; notranslate" title="">for (MyColors i = MyColors.White; i &lt;= MyColors.Black; i++)
+```csharp
+for (MyColors i = MyColors.White; i &lt;= MyColors.Black; i++)
     Console.WriteLine(i.GetDescription());
 
 /*
@@ -70,6 +74,6 @@ Eggshell White
 Granite Gray
 Midnight Black
 */
-</pre>
+```
 
 This could be very useful if you want to pull something for a XAML binding, and not try to format an enum at runtime! You also will only have to keep the description in one place, and that is with the actual enum value itself.

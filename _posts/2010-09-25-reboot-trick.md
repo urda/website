@@ -14,7 +14,8 @@ As always be careful when editing the system registry, and be sure to make a bac
 
 To simply fix the issue where Windows is constantly stuck in a "Reboot Required" state, just remove any values that are contained in the **PendingFileRenameOperations** key. The full path for this key is listed below:
 
-<pre class="brush: powershell; title: ; notranslate" title="">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\PendingFileRenameOperations
-</pre>
+```powershell
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\PendingFileRenameOperations
+```
 
 ...and that should correct the issue and allow you to install more software!

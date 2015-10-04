@@ -26,7 +26,8 @@ So if we modify the previous program to use a LINQ statement instead, we can use
 
 So let's cut to the chase, here is the modified source code from the last post...
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
@@ -145,11 +146,12 @@ namespace UsingXML
         }
     }
 }
-</pre>
+```
 
 But here is where the real magic is:
 
-<pre class="brush: csharp; title: ; notranslate" title="">// Build a LINQ query, and run through the XML building
+```csharp
+// Build a LINQ query, and run through the XML building
 // the PersonObjects
     var query = from xml in XDoc.Descendants("Person")
         select new PersonObject
@@ -162,13 +164,14 @@ But here is where the real magic is:
                 'F')
             };
     PersonList = query.ToList();
-</pre>
+```
 
 Looks a lot like SQL huh? Well what this statement is doing is grabbing all the objects in the XML that are a "Person". It then uses an empty PersonObject and defines each of the variables in the object. There is a logic statement inside the query to set the char for the gender in each object (since you cannot cast a string to a char in this instance) based on the string retrieved from the XML.
 
 Now for comparison, let's look at the difference between the two sources:
 
-<pre class="brush: diff; title: ; notranslate" title="">--- ReadAndLoad.cs	2010-08-31 22:34:53.082425983 -0400
+```diff
+--- ReadAndLoad.cs	2010-08-31 22:34:53.082425983 -0400
 +++ ReadAndLoad02.cs	2010-08-31 22:34:50.682829175 -0400
 @@ -1,6 +1,7 @@
  ﻿using System;
@@ -261,11 +264,12 @@ Now for comparison, let's look at the difference between the two sources:
 +
              // How many PersonObjects did we find in the XML?
              int ListSize = PersonList.Count;
-</pre>
+```
 
 And just in case you were unsure about the gender logic part of the query, I ran this dataset:
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+```xml
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;People&gt;
   &lt;Person&gt;
     &lt;FirstName&gt;Peter&lt;/FirstName&gt;
@@ -286,7 +290,7 @@ And just in case you were unsure about the gender logic part of the query, I ran
     &lt;Gender&gt;F&lt;/Gender&gt;
   &lt;/Person&gt;
 &lt;/People&gt;
-</pre>
+```
 
 And got this result:
 

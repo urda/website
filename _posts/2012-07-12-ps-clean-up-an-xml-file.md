@@ -14,7 +14,8 @@ There is error handling at each step, to verify that there was input, the file e
 
 Here is the function you can load into your session, or add to your profile for future use:
 
-<pre class="brush: powershell; title: ; notranslate" title="">function Format-Xml
+```powershell
+function Format-Xml
 {
     &lt;#
     .SYNOPSIS
@@ -45,4 +46,4 @@ Here is the function you can load into your session, or add to your profile for 
         } else { Write-Host "/!\ File not found /!\" -Foreground Black -Background Red }
     } else { Write-Host "Usage: Format-Xml \Path\To\Xml\File" }
 }
-</pre>
+```

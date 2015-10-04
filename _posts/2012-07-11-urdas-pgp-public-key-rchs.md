@@ -18,28 +18,32 @@ This key can be used for signature verification and encryption purposes.
 
 My public key has the following properties, and can be found on key servers:
 
-<pre class="brush: plain; title: ; notranslate" title="">Key ID:
+```
+Key ID:
 533D66D6
 
 Key Fingerprint:
 DE85 6BAF D17C 69E1 A8A9  E10E 0077 41E2 533D 66D6
-</pre>
+```
 
 You should be able to obtain it from a key server, such as <a href="http://pgp.mit.edu/" class="external external_icon" target="_blank">MIT's</a>. Use the following command in your *nix shell:
 
-<pre class="brush: bash; title: ; notranslate" title="">gpg --keyserver pgp.mit.edu --recv-key 533D66D6
-</pre>
+```bash
+gpg --keyserver pgp.mit.edu --recv-key 533D66D6
+```
 
 My public key can be downloaded from my web server here: [PeterUrda.RCHS_.2012.07.08][1]
 
 You can download it in your *nix shell using wget from my web server like so:
 
-<pre class="brush: bash; title: ; notranslate" title="">wget http://www.peter-urda.com/wp/wp-content/uploads/2012/07/PeterUrda.RCHS_.2012.07.08.gpg
-</pre>
+```bash
+wget http://www.peter-urda.com/wp/wp-content/uploads/2012/07/PeterUrda.RCHS_.2012.07.08.gpg
+```
 
 You can also copy the public key from the block below:
 
-<pre class="brush: plain; title: ; notranslate" title="">-----BEGIN PGP PUBLIC KEY BLOCK-----
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: SKS 1.1.0
 
 mQENBE/5mXcBCADb7/C50RG32W0/41SuEjoSWKswH7fL3zTlSV5lbrZxWu77bcjwXVtoWOXv
@@ -101,7 +105,7 @@ XWqR9qZTNqQinZ0PS+hPacAEWYdq0Pqoif2Z59JrbhKYyPNfTPjZwjPxCD3IeqC6D9/Wgqmc
 I98wGQ==
 =KFcZ
 -----END PGP PUBLIC KEY BLOCK-----
-</pre>
+```
 
 You can learn more about PGP by reading this Wikipedia article: <a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy" class="external external_icon" target="_blank">http://en.wikipedia.org/wiki/Pretty_Good_Privacy</a>. You can also learn more about helpful applications over here: <a href="http://www.gnupg.org/" class="external external_icon" target="_blank">http://www.gnupg.org/</a>.
 

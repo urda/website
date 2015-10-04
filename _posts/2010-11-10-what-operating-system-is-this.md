@@ -15,7 +15,8 @@ We first need to understand the Major and Minor versions of Windows. Major versi
 
 All you have to do is call this method below, and you'll get a string representation of the operating system your application is running in:
 
-<pre class="brush: csharp; title: ; notranslate" title="">private string GetOSString()
+```csharp
+private string GetOSString()
 {
     System.Version v = Environment.OSVersion.Version;
 
@@ -44,9 +45,9 @@ All you have to do is call this method below, and you'll get a string representa
         if (v.Minor == 1)
             return "Windows 7";
     }
-    
+
     return "Unknown";
 }
-</pre>
+```
 
 In the worst case it'll kick back *Unknown* if it can't figure it out. So now instead of spitting out a long NT version, you can have the pretty brand name in your application instead!

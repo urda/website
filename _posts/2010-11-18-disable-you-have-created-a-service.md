@@ -18,7 +18,8 @@ When you first setup a service, you'll see this screen when you visit the servic
 
 To disable the HTML "You Have Created a Service" page for your WCF services, simply add this XML inside your *Web.config* file as a child of **configuration**
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;system.serviceModel&gt;
+```xml
+&lt;system.serviceModel&gt;
     &lt;behaviors&gt;
         &lt;serviceBehaviors&gt;
             &lt;behavior&gt;
@@ -28,6 +29,6 @@ To disable the HTML "You Have Created a Service" page for your WCF services, sim
         &lt;/serviceBehaviors&gt;
     &lt;/behaviors&gt;
 &lt;/system.serviceModel&gt;
-</pre>
+```
 
 This block of XML will then cause the raw XML information to be displayed instead of the generic "You Have Created a Service" page. You can fine tune the behavior even more, so you may want to reference the <a href="http://msdn.microsoft.com/en-us/library/ms788993.aspx" class="external external_icon" target="_blank">MSDN documentation</a> for more information.

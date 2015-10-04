@@ -13,7 +13,8 @@ Everyone knows how amazing XAML is to create flexible and beautiful GUI's for va
 
 So here is the XAML I came up with to display a simple grid in my application:
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;DataGrid x:Name="SomeDataGrid" ItemsSource="{Binding}"
+```xml
+&lt;DataGrid x:Name="SomeDataGrid" ItemsSource="{Binding}"
                 DataContext="{Binding}" AutoGenerateColumns="False"
                 CanUserAddRows="False" CanUserDeleteRows="False"
                 HeadersVisibility="Column"
@@ -36,13 +37,14 @@ So here is the XAML I came up with to display a simple grid in my application:
             Binding="{Binding Path=Text, Mode=OneWay}" /&gt;
     &lt;/data:DataGrid.Columns&gt;
 &lt;/data:DataGrid&gt;
-</pre>
+```
 
 The issue that arose was centered around the checkbox column. The new checkbox column required the user to first make a row active (by clicking on it) to then have to click a second time to enable or disable the desired checkbox. Obviously this is not the desired action, since a user expects to be able to just check a box **without** having to select the row first.
 
 So how do we correct the issue. Well instead of just using a plain *DataGridCheckBoxColumn* we will declare a template column instead. We can then define within this template the actions and styling of this column. Below is my updated XAML section for the first column:
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;!-- XAML Omitted --&gt;
+```xml
+&lt;!-- XAML Omitted --&gt;
 
 &lt;data:DataGridTemplateColumn
 	Header="Include?"
@@ -62,7 +64,7 @@ So how do we correct the issue. Well instead of just using a plain *DataGridChec
 &lt;/data:DataGridTemplateColumn&gt;
 
 &lt;!-- XAML Omitted --&gt;
-</pre>
+```
 
 The *ClickMode="Press"* will allow the box to be checked when the mouse is hovered over it and a click event is caught. This allows for our desired action, while still keeping clean and organized XAML!
 

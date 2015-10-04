@@ -16,8 +16,9 @@ First things first, what exactly is a GUID or a UUID? First off they are essenti
 
 Now that is out of the way, let's take a look at the makeup of a regular UUID value. A UUID is a 128-bit, 16 byte value that follows this pattern:
 
-<pre class="brush: plain; title: ; notranslate" title="">01234567-0123-0123-0123456789ab
-</pre>
+```
+01234567-0123-0123-0123456789ab
+```
 
 With this design, you can have 3 x 10<sup>38</sup> unique values. The chance of a collision is so small that you can use UUID's as your ID data in a database. The downside to using a UUID is going to be the larger size and readability compared to an integer. However, the benefits of using a UUID allow you to merge databases quickly and without collisions, be sure that each row is truly a unique row, and other operations that need to be spread across machines or physical locations.
 

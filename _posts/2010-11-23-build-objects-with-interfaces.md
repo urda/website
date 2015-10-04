@@ -14,7 +14,8 @@ The ability to create module software and code blocks is a great trait to have. 
 
 We are going to create an interface **IHuman** to build people objects from. Everyone can agree that all people have a First Name, Last Name, Age, and have some ability to speak. So we will wrap that up into a neat interface.
 
-<pre class="brush: csharp; title: IHuman Interface; notranslate" title="IHuman Interface">public interface IHuman
+```csharp
+public interface IHuman
 {
     string fname { get; set; }
     string lname { get; set; }
@@ -22,11 +23,12 @@ We are going to create an interface **IHuman** to build people objects from. Eve
 
     void Speak(string input);
 }
-</pre>
+```
 
 An interface is a very basic chunk of code in C#. It is like a checklist of objects and actions that all derived classes should have. The way each class handles each dimension of the **IHuman** will be unique to each class. So now we will create just a basic person object from the interface. I will then use Visual Studio to implement the interface, and this will be the result:
 
-<pre class="brush: csharp; title: Person Object; notranslate" title="Person Object">public class Person : IHuman
+```csharp
+public class Person : IHuman
 {
     public string fname
     {
@@ -69,11 +71,12 @@ An interface is a very basic chunk of code in C#. It is like a checklist of obje
         throw new NotImplementedException();
     }
 }
-</pre>
+```
 
 As you can tell, you'll need to go through each method and implement it for use. I simply took a moment to do some clean up, and added logic to my *Speak* method:
 
-<pre class="brush: csharp; title: Built Person Object; notranslate" title="Built Person Object">public class Person : IHuman
+```csharp
+public class Person : IHuman
 {
     public string fname
     {
@@ -98,11 +101,12 @@ As you can tell, you'll need to go through each method and implement it for use.
         Console.WriteLine(input);
     }
 }
-</pre>
+```
 
 Now I can build a simple program and declare a Person 0bject. Then I can set variables within the object and/or use any of the methods associated with it. Yet, I need another object to describe a programmer. Again, I'll use the **IHuman** interface and make the needed changes to my methods. I'm also adding a custom method in this class as another way to speak.
 
-<pre class="brush: csharp; title: Programmer Object; notranslate" title="Programmer Object">public class Programmer : IHuman
+```csharp
+public class Programmer : IHuman
 {
     public string fname
     {
@@ -139,11 +143,12 @@ Now I can build a simple program and declare a Person 0bject. Then I can set var
         Console.WriteLine("Sorry my bad... " + input);
     }
 }
-</pre>
+```
 
 If you pull the interface and two objects together, you can build a simple console application to prove this proof of concept:
 
-<pre class="brush: csharp; title: Sample Main Code; notranslate" title="Sample Main Code">static void Main(string[] args)
+```csharp
+static void Main(string[] args)
 {
     Person MyPerson = new Person();
     MyPerson.fname = "John";
@@ -169,7 +174,7 @@ If you pull the interface and two objects together, you can build a simple conso
     Me.DudeInPlainEnglish(UrdaText);
     Console.WriteLine();
 }
-</pre>
+```
 
 Running the program will produce this output:
 
