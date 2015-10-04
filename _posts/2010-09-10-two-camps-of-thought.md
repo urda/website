@@ -9,7 +9,7 @@ tags:
   - Business
   - Co-Op
 ---
-When it comes to running a business the driving factor in many decisions is the "bottom line". The easiest way to express that is with the equation **Revenue &#8211; Cost = Profit**. Now in order to increase profit you want to minimize your cost and maximize your revenue. Actually doing that is a different story. Making changes to your product line is one way to bring in more cash, either by improving your current stuff or adding new products. However, there are generally two camps of thought when it comes to approaching this possibility.
+When it comes to running a business the driving factor in many decisions is the "bottom line". The easiest way to express that is with the equation **Revenue - Cost = Profit**. Now in order to increase profit you want to minimize your cost and maximize your revenue. Actually doing that is a different story. Making changes to your product line is one way to bring in more cash, either by improving your current stuff or adding new products. However, there are generally two camps of thought when it comes to approaching this possibility.
 
 One concept is to continue improving the core product. Since it is the cash cow of the company only more profits can come from adding functionality or improving it overall. Your customers will want to keep investing in your product, because you just keep adding on to it overtime. You try to avoid redeveloping new products, since that can be risky and has a larger up front cost to the company. This method can be thought of as "If it isn't broken, don't fix it".
 

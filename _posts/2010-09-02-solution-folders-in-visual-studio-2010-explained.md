@@ -28,7 +28,7 @@ We are going to create the solution folder first, by Right-Clicking on the root 
   <img class="size-full wp-image-570  aligncenter" title="Solution Folders in Visual Studio 2010" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/09/SolutionFolders01.png" alt="Solution Folders in Visual Studio 2010" width="344" height="122" />
 </p>
 
-Now we will go ahead and create our Console Application inside the 'Test' Solution Folder. We will do that by Right-Clicking on 'Test', then clicking 'Add', and then clicking 'New Project'. We select "Console Application" from the Visual C# &#8211; Windows templates, and we fill in 'MyApp' in the Name field.** But do not click OK yet!**
+Now we will go ahead and create our Console Application inside the 'Test' Solution Folder. We will do that by Right-Clicking on 'Test', then clicking 'Add', and then clicking 'New Project'. We select "Console Application" from the Visual C# - Windows templates, and we fill in 'MyApp' in the Name field.** But do not click OK yet!**
 
 *<span style="color: #ff0000;">Pay attention to this critical step:</span> * We need to change the location of this project to correctly reflect our desired one-to-one relationship when it comes to comparing Solution Folders to actual physical folders on the hard drive. So we are going to tack on '\Test\' to the end of the Location Path. This will cause Visual Studio to automatically create a sub-folder inside the VS.Projects folder named 'Test', and then place our new project titled 'MyApp' inside the new folder on the hard drive. Your project screen will look like this before you submit it:
 
