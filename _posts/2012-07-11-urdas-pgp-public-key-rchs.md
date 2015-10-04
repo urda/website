@@ -1,5 +1,5 @@
 ---
-title: 'Urda's PGP Public Key (RCHS)'
+title: Urda's PGP Public Key (RCHS)
 author: Peter Urda
 layout: post
 redirect_from: /2012/07/urdas-pgp-public-key-rchs/
@@ -11,6 +11,7 @@ tags:
   - Cryptography
   - Public Key
 ---
+
 Here is a copy of my PGP public key for verification and encryption purposes. This one is used for <a href="http://www.rivercityhealthservices.com" class="external external_icon" target="_blank">River City Health Services</a> related communication.
 
 This key can be used for signature verification and encryption purposes.
