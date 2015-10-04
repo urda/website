@@ -10,7 +10,7 @@ tags:
   - Co-Op
   - Innovation
 ---
-Ok imagine this: you gather the world&#8217;s best and brightest engineers, physicists, chemists, and other professions of high end science and place them into a large warehouse. Now that you have them all gathered into this warehouse, you give them a TON of research resources and funding. Finally, you tell them to come up with something radical or revolutionary with the resources you have just provided them. Well my friend, you just launched your very own "Skunkworks Project".
+Ok imagine this: you gather the world's best and brightest engineers, physicists, chemists, and other professions of high end science and place them into a large warehouse. Now that you have them all gathered into this warehouse, you give them a TON of research resources and funding. Finally, you tell them to come up with something radical or revolutionary with the resources you have just provided them. Well my friend, you just launched your very own "Skunkworks Project".
 
 A skunkworks project is a type of research and innovation initiative. It is best defined as the following:
 

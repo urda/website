@@ -12,7 +12,7 @@ tags:
 ---
 You may be wondering to yourself "What in the world is the difference between a C# Class and a C# structure?" It is true that both types follow a similar syntax and a similar ideology, but there is a major difference at the machine level. There are a few situations where a C# structure will provided better performance than a C# class and other times a class will be faster than a structure. The reason for this is how C# is handling both of these in memory during program execution.
 
-Let&#8217;s talk about classes first. A class in C# is a **reference type**. This means that C# creates references, or pointers, to values in memory for each part of the object. When you copy a C# class you are making a copy of the references to values in memory. Structures have a different behavior than this.
+Let's talk about classes first. A class in C# is a **reference type**. This means that C# creates references, or pointers, to values in memory for each part of the object. When you copy a C# class you are making a copy of the references to values in memory. Structures have a different behavior than this.
 
 Structures behave like a **value type** much like an **int** or a **bool**. These types are based on values in memory directly, there are no pointers or references in between. These types are said to run *on the metal* since they do not use references.
 

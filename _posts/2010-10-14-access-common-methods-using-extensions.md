@@ -10,7 +10,7 @@ tags:
   - Co-Op
   - Programming
 ---
-There will be times when you are using a third-party library or some other "black box" software in your project. During those times you may need to add functionality to objects or classes, but that addition does not necessarily call for employing inheritance or some other subclass. In fact, you might not have access to the library&#8217;s source code if it is proprietary. There is a wonderful feature of C# though that allows you to add-on commonly used methods to any type of object, and that feature is called **Extension Methods**
+There will be times when you are using a third-party library or some other "black box" software in your project. During those times you may need to add functionality to objects or classes, but that addition does not necessarily call for employing inheritance or some other subclass. In fact, you might not have access to the library's source code if it is proprietary. There is a wonderful feature of C# though that allows you to add-on commonly used methods to any type of object, and that feature is called **Extension Methods**
 
 Extension methods are a simple way of adding common functionality to a given object in C#. It is usually faster than trying to build a new subclass from the original class and it makes your code a lot more readable. MSDN has a wonderful explanation of extension methods:
 

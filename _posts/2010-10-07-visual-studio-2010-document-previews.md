@@ -11,7 +11,7 @@ tags:
 ---
 If you have used Visual Studio 2008 or the Visual Studio 2010 Betas you should remember a distinct feature. When you moved through documents inside the IDE with **CTRL + TAB** you would get a nice little preview of the documents you were flipping through. If you have used the latest version of Visual Studio 2010, you may have noticed that this feature has been pulled. Well you can restore it with a simple registry change!
 
-If you use **CTRL + TAB** in Visual Studio 2010 today, you&#8217;ll get a dialog that looks something like the following:
+If you use **CTRL + TAB** in Visual Studio 2010 today, you'll get a dialog that looks something like the following:
 
 <img class="aligncenter size-full wp-image-1012" title="Visual Studio 2010 - No Document Previews" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/VS2010-NoPreview.png" alt="Visual Studio 2010 - No Document Previews" width="390" height="323" />
 
@@ -24,4 +24,4 @@ Now all you have to do is start up or restart Visual Studio 2010, get your docum
 
 <img class="aligncenter size-full wp-image-1020" title="Visual Studio 2010 - Document Previews" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/VS2010-Preview.png" alt="Visual Studio 2010 - Document Previews" width="600" height="323" />
 
-Isn&#8217;t that fantastic?
+Isn't that fantastic?

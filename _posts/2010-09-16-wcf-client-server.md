@@ -124,7 +124,7 @@ The first block of code defines our calculator interface, or **ICalculator**. We
 
 Then our second block of code actually defines our **CalculatorService**. We have added some *Console.WriteLine* statements that will appear when we start the service up. Again, the operations this calculator is doing are very simple and could easily be added to a standalone program. However, we will be using this to demonstrate how to setup a WCF client-server environment.
 
-Our final block of code defines the *Server* class. This will be in charge of spinning up the application and listening on a specified host and port number. In this case it will listen from localhost on port 8000. We declare a new service host, and attempt to bind the server to it. If it fails we catch the error and dump it to screen. If not, it will fire up the service and be ready for use! So go ahead and run your project (without debugging) and after it starts verify that the server is running by opening your web browser and navigating to <a href="http://localhost:8000/ServiceModelSamples/Service" class="external external_icon" target="_blank">http://localhost:8000/ServiceModelSamples/Service</a>. You&#8217;ll see a screen like this:
+Our final block of code defines the *Server* class. This will be in charge of spinning up the application and listening on a specified host and port number. In this case it will listen from localhost on port 8000. We declare a new service host, and attempt to bind the server to it. If it fails we catch the error and dump it to screen. If not, it will fire up the service and be ready for use! So go ahead and run your project (without debugging) and after it starts verify that the server is running by opening your web browser and navigating to <a href="http://localhost:8000/ServiceModelSamples/Service" class="external external_icon" target="_blank">http://localhost:8000/ServiceModelSamples/Service</a>. You'll see a screen like this:
 
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/09/WCFServerHTTP.png" alt="WCF Server from Browser" title="WCFServerHTTP" width="591" height="203" class="aligncenter size-full wp-image-743" />
 
@@ -144,7 +144,7 @@ Now when you are inside the directory you want the generated code to be placed, 
 
 Now all you have to do is add the **generatedProxy** file to your project. That should be as simple as clicking*Show All Files* and then *Include in Project*.
 
-Now let&#8217;s define the client:
+Now let's define the client:
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 using System.ServiceModel;

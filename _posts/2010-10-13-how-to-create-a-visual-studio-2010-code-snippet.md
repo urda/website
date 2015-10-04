@@ -13,7 +13,7 @@ tags:
 ---
 As you work through various projects in Visual Studio 2010 you will find yourself reusing a lot of code. In fact, you may find yourself reusing a lot of the same static code, or code that follows a basic pattern. Visual Studio 2010 lets you cut out a lot of this wasted time by employing code snippets. Code snippets can generate basic code patterns or layouts on the fly inside your project. Today I will walk you through creating a basic code snippet for generating a C# class with specific section stubs.
 
-You will need to start with a generic XML file. You&#8217;ll want to keep the XML declaration line inside the file once you create it and change the file extension from **.xml** to **.snippet**. For reference I store my stubs inside **"C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom"**
+You will need to start with a generic XML file. You'll want to keep the XML declaration line inside the file once you create it and change the file extension from **.xml** to **.snippet**. For reference I store my stubs inside **"C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom"**
 
 Now we can go ahead our XML stub! We will first fill out the required schema information:
 
@@ -188,10 +188,10 @@ So after all this work we still need to tell Visual Studio 2010 where to find th
   * Select the folder you would like Visual Studio to store said snippet (I used my "Custom" folder)
   * ..and your done!
 
-If you take a peak back at the main Code Snippets Manager window and find your new snippet you&#8217;ll be presented with a screen detailing the information from the header section:
+If you take a peak back at the main Code Snippets Manager window and find your new snippet you'll be presented with a screen detailing the information from the header section:
 <img class="aligncenter size-full wp-image-1098" title="Code Snippets Manager After Adding Snippet" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Code-Snippets-Manager-After-Add.png" alt="Code Snippets Manager After Adding Snippet" width="629" height="469" />
 
-So now just jump back to your C# project and you should be able to just type **&#8216;b&#8217;** or **&#8216;B&#8217;** for IntelliSense to prompt you with the following:
+So now just jump back to your C# project and you should be able to just type **'b'** or **'B'** for IntelliSense to prompt you with the following:
 <img class="aligncenter size-full wp-image-1097" title="Code Snippets Before Double-Tab" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Code-Snippets-Before-Call.png" alt="Code Snippets Before Double-Tab" width="512" height="224" />
 
 Like any other snippet (such as prop) a double tab after that point will fill out the code and jump your cursor to the class name for you to rename:

@@ -12,7 +12,7 @@ tags:
 ---
 When you create a basic WCF service hosted through IIS, you are greeted with a generic page informing you that "You Have Created a Service". This is useful since it provides to the developer two critical pieces of information. First it lets you know that the service is up and running, second it provides basic code stubs to query the service with. While this may be fine for development, you might not want to display this page in production. Disabling it is not intuitive, but with some searching through the MSDN documentation I have found the preferred way of changing this page.
 
-When you first setup a service, you&#8217;ll see this screen when you visit the service URL:
+When you first setup a service, you'll see this screen when you visit the service URL:
 
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/11/CalculatorService-Service.png" alt="CalculatorService Service HTML" title="CalculatorService Service HTML" width="396" height="256" class="aligncenter size-full wp-image-1217" />
 

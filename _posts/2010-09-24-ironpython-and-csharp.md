@@ -19,16 +19,16 @@ Before we can work with IronPython in C#, we need to setup our environment. Here
   3. Add required references for IronPython
   4. ...then write the code!
 
-The first step in working with IronPython in Visual Studio 2010 is to actually install IronPython. You&#8217;ll need to visit <a href="http://ironpython.net/download/" class="external external_icon" target="_blank">IronPython.net</a> to grab the latest version of IronPython. Just install the latest **stable** release. For reference, I installed IronPython version 2.6.1 when I wrote this article. Just install all the recommended components. After that is done you can go ahead and startup Visual Studio.
+The first step in working with IronPython in Visual Studio 2010 is to actually install IronPython. You'll need to visit <a href="http://ironpython.net/download/" class="external external_icon" target="_blank">IronPython.net</a> to grab the latest version of IronPython. Just install the latest **stable** release. For reference, I installed IronPython version 2.6.1 when I wrote this article. Just install all the recommended components. After that is done you can go ahead and startup Visual Studio.
 
-After Visual Studio has started up, you&#8217;ll need to start a new C# Console Application project. After you have created that we are going to need to add references (Right-Click on References in the Solution Explorer > "Add Reference...") to this project. Assuming you installed IronPython in the default directory you will find all the needed references in **"C:\Program Files\IronPython 2.6 for .NET 4.0&#8243;** on **32-bit systems** and **"C:\Program Files (x86)\IronPython 2.6 for .NET 4.0&#8243;** on **64-bit systems**. We will be adding the following references:
+After Visual Studio has started up, you'll need to start a new C# Console Application project. After you have created that we are going to need to add references (Right-Click on References in the Solution Explorer > "Add Reference...") to this project. Assuming you installed IronPython in the default directory you will find all the needed references in **"C:\Program Files\IronPython 2.6 for .NET 4.0&#8243;** on **32-bit systems** and **"C:\Program Files (x86)\IronPython 2.6 for .NET 4.0&#8243;** on **64-bit systems**. We will be adding the following references:
 
   * IronPython
   * IronPython.Modules
   * Microsoft.Dynamic
   * Microsoft.Scripting
 
-Now we can actually get to the code creation! First we are going to make a new text file in the root of our project, and we will call it **PythonFunctions.py**. When that has been created you&#8217;ll need to update the properties on that file, specifically set **Copy to Output Directory** to **Copy always**. Now we will fill out our Python file with some Python functions:
+Now we can actually get to the code creation! First we are going to make a new text file in the root of our project, and we will call it **PythonFunctions.py**. When that has been created you'll need to update the properties on that file, specifically set **Copy to Output Directory** to **Copy always**. Now we will fill out our Python file with some Python functions:
 
 <pre class="brush: python; title: ; notranslate" title="">def hello(name):
 	print "Hello " + name + "! Welcome to IronPython!"

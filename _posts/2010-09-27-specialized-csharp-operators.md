@@ -10,7 +10,7 @@ tags:
 ---
 In a <a href="http://www.peter-urda.com/2010/09/random-csharp-tricks" target="_blank">previous post</a> I went over some random C# operators. This article is a follow-up to that one, covering some more advanced C# operators and techniques. Specifically, the **?:** operator, the **~** operator, **|=** operator, and the **^=** operator.
 
-We will start off with the conditional operator **?:**. This operator is used to simplify an expression to test for a boolean value, and execute specific code that matches the value. Let&#8217;s start off with a code snippet that does not use the **?:** operator.
+We will start off with the conditional operator **?:**. This operator is used to simplify an expression to test for a boolean value, and execute specific code that matches the value. Let's start off with a code snippet that does not use the **?:** operator.
 
 <pre class="brush: csharp; title: ; notranslate" title="">int TestValue = 6;
 int result = -1;
@@ -41,7 +41,7 @@ In plain English the **?:** operator reads as so:
 > 
 > Source: <a href="http://msdn.microsoft.com/en-us/library/d2bd4x66%28v=VS.71%29.aspx" class="external external_icon" target="_blank">http://msdn.microsoft.com/en-us/library/d2bd4x66%28v=VS.71%29.aspx</a>
 
-A NOT bitwise operation is also known as a one&#8217;s compliment operation. It takes the binary of a variable or object, and flips each bit to a 0 if it was a 1, and to a 1 if it was a 0. The code below demonstrates the operator:
+A NOT bitwise operation is also known as a one's compliment operation. It takes the binary of a variable or object, and flips each bit to a 0 if it was a 1, and to a 1 if it was a 0. The code below demonstrates the operator:
 
 <pre class="brush: csharp; title: ; notranslate" title="">byte OriginalValue = 208;
 byte complement = (byte) ~OriginalValue;

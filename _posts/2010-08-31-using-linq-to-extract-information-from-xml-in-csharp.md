@@ -24,7 +24,7 @@ In case you are not familiar with LINQ, here is a quick overview on it:
 
 So if we modify the previous program to use a LINQ statement instead, we can use logic and syntax that look a lot like a SQL statement. But instead of accessing a SQL database, we are instead polling an array or chunk of data. In our case we are using LINQ to run a query against a chunk of XML data.
 
-So let&#8217;s cut to the chase, here is the modified source code from the last post...
+So let's cut to the chase, here is the modified source code from the last post...
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 using System.Collections.Generic;
@@ -166,7 +166,7 @@ But here is where the real magic is:
 
 Looks a lot like SQL huh? Well what this statement is doing is grabbing all the objects in the XML that are a "Person". It then uses an empty PersonObject and defines each of the variables in the object. There is a logic statement inside the query to set the char for the gender in each object (since you cannot cast a string to a char in this instance) based on the string retrieved from the XML.
 
-Now for comparison, let&#8217;s look at the difference between the two sources:
+Now for comparison, let's look at the difference between the two sources:
 
 <pre class="brush: diff; title: ; notranslate" title="">--- ReadAndLoad.cs	2010-08-31 22:34:53.082425983 -0400
 +++ ReadAndLoad02.cs	2010-08-31 22:34:50.682829175 -0400

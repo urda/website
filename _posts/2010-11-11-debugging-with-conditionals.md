@@ -20,7 +20,7 @@ debug.PrintStackTrace();
 
 You would have these block in your program everywhere you made a call to the debug class. This adds extra lines to our source code, and can cause issues when you have to make changes to debug handling. 
 
-But there is a more elegant way of enabling or disabling debugging. We can add conditionals to our methods based on the build environment. So let&#8217;s say we have a \`debug\` class with the method named \`PrintStackTrace\`. This simply prints out some stack trace where ever it has been requested. Instead of surrounding each method call with #if and #endif we will add a line before our method in the debug class (look at the highlighted line):
+But there is a more elegant way of enabling or disabling debugging. We can add conditionals to our methods based on the build environment. So let's say we have a \`debug\` class with the method named \`PrintStackTrace\`. This simply prints out some stack trace where ever it has been requested. Instead of surrounding each method call with #if and #endif we will add a line before our method in the debug class (look at the highlighted line):
 
 <pre class="brush: csharp; highlight: [3]; title: ; notranslate" title="">// debug class...
 

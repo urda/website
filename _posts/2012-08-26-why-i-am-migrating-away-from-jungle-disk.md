@@ -14,13 +14,13 @@ tags:
 
 I have used Jungle Disk for years, and have been very satisfied with the pricing and the software up until recently. I became a Lifetime member of the Desktop Edition when it was offered for sale as soon as possible, and used it up until this week. However I have opted to leave the service for many KEY reasons:
 
-  * The software has NOT been updated in months, I can&#8217;t even remember when a news item was last posted for a release
+  * The software has NOT been updated in months, I can't even remember when a news item was last posted for a release
   * The blog HAS BEEN pulled offline, probably because:
   * At one point the blog was infected by spammers, this now marks the blog as phishing in OpenDNS and other popular prevention groups. OpenDNS prompts with the following screen if you try to visit their blog: 
     <img src="http://www.peter-urda.com/wp/wp-content/uploads/2012/08/JD.Blog_.Phish_.png" alt="" title="JD.Blog.Phish" width="615" height="359" class="aligncenter size-full wp-image-1507" /></li> 
     
       * The blog has not been updated in months
-      * The blog has been taken offline at this time (That&#8217;s if you are not stopped by any anti-phishing system beforehand).</ul> 
+      * The blog has been taken offline at this time (That's if you are not stopped by any anti-phishing system beforehand).</ul> 
     
       * The development team has been NEAR silent. Back in 2011 I had opened a ticket noting that I was concerned by the lack of updates from the team. Support said they would request an update, but nothing came from that.
       * <a href="http://www.daemonology.net/blog/2011-06-03-insecurity-in-the-jungle.html" class="external external_icon" target="_blank">There are some known security concerns with Jungle Disk at this time.</a></ul> 

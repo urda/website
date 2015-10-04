@@ -1,5 +1,5 @@
 ---
-title: 'Don&#8217;t Always &#8216;return true&#8217; if False is an Option!'
+title: 'Don't Always 'return true' if False is an Option!'
 author: Peter Urda
 layout: post
 redirect_from: /2010/10/dont-always-return-true-if-false-is-an-option/
@@ -10,9 +10,9 @@ tags:
   - Co-Op
   - Oracle
 ---
-I was working on one of Mercer&#8217;s internal applications today. I ran across an off the wall query from our QA team. They wanted to know what was the best way to confirm the information going into an Oracle database was actually written to the database. I told them it was simple **SELECT FROM ...** query, but when I went to run the statement myself, I did not get the results I expected. Two major things were wrong in the codebase: one commits were not actually being made to the Oracle database. Two, a boolean method was configured to always **&#8216;return true&#8217;** making it look like the commits actually occurred.
+I was working on one of Mercer's internal applications today. I ran across an off the wall query from our QA team. They wanted to know what was the best way to confirm the information going into an Oracle database was actually written to the database. I told them it was simple **SELECT FROM ...** query, but when I went to run the statement myself, I did not get the results I expected. Two major things were wrong in the codebase: one commits were not actually being made to the Oracle database. Two, a boolean method was configured to always **'return true'** making it look like the commits actually occurred.
 
-To visually understand what was going on, I&#8217;ll create a simple mockup method for you in C#:
+To visually understand what was going on, I'll create a simple mockup method for you in C#:
 
 <pre class="brush: csharp; title: ; notranslate" title="">class OracleDbHandler
 {
@@ -46,12 +46,12 @@ To visually understand what was going on, I&#8217;ll create a simple mockup meth
 }
 </pre>
 
-You see the horrible issue with this? The main program for starters has a logic flow that handles a true return for a good commit, and a false return for a failed commit. Since this method will always &#8216;return true&#8217; the program will always imagine that the commit occurred. In reality it did not! Sure we setup the Oracle command, but we never executed it! Our problems in a nutshell are:
+You see the horrible issue with this? The main program for starters has a logic flow that handles a true return for a good commit, and a false return for a failed commit. Since this method will always 'return true' the program will always imagine that the commit occurred. In reality it did not! Sure we setup the Oracle command, but we never executed it! Our problems in a nutshell are:
 
   * A boolean method is always returning one, and only one, state
   * We build a connection, open it, never make any oracle commands, and just close it
 
-So let&#8217;s make corrections to this so the code is actually commited properly to the database:
+So let's make corrections to this so the code is actually commited properly to the database:
 
 <pre class="brush: csharp; title: ; notranslate" title="">class OracleDbHandler
 {

@@ -1,5 +1,5 @@
 ---
-title: 'IIS Services, 504&#8217;s, and Fiddler'
+title: 'IIS Services, 504's, and Fiddler'
 author: Peter Urda
 layout: post
 redirect_from: /2010/09/iis-services-504s-and-fiddler/
