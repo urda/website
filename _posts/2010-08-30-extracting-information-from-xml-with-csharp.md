@@ -3,6 +3,9 @@ title: 'Extracting Information From XML With C#'
 author: Peter Urda
 layout: post
 redirect_from: /2010/08/extracting-information-from-xml-with-csharp/
+
+urda_uuid: 20100830
+
 categories:
   - How To
   - Mercer Daily Reports
@@ -11,9 +14,18 @@ tags:
   - Co-Op
   - XML
 ---
-XML is a wonderful way to store information that needs to be read in by a machine or piece of software. It is simple to follow, and you can use it to store and transmit your custom data structures and information across an internet connection or in between bits of software on a local machine. C# has methods built in that can read and write XML files. So today I have put together a little program that will extract a few objects from an XML file in C# for you to see.
 
-Say we want to store simple C# objects that describe a person. A person in our case has a first name, last name, age, and gender. So we can structure our XML file as shown below.
+XML is a wonderful way to store information that needs to be read in by a
+machine or piece of software. It is simple to follow, and you can use it to
+store and transmit your custom data structures and information across an
+internet connection or in between bits of software on a local machine. C# has
+methods built in that can read and write XML files. So today I have put together
+a little program that will extract a few objects from an XML file in C# for you
+to see.
+
+Say we want to store simple C# objects that describe a person. A person in our
+case has a first name, last name, age, and gender. So we can structure our XML
+file as shown below.
 
 **2People.xml:**
 
@@ -35,7 +47,11 @@ Say we want to store simple C# objects that describe a person. A person in our c
 </People>
 ```
 
-This XML is easy to follow, and it would be very simple for a person to just extract the information by hand in this case. But what if we had 100 Person Objects? 1,000? 1,000,000,000? It would be much easier if we could write some software to do the extraction of this information for us. If you were to write such software, it could very well look a lot like the following:
+This XML is easy to follow, and it would be very simple for a person to just
+extract the information by hand in this case. But what if we had 100 Person
+Objects? 1,000? 1,000,000,000? It would be much easier if we could write some
+software to do the extraction of this information for us. If you were to write
+such software, it could very well look a lot like the following:
 
 ```csharp
 using System;
@@ -160,11 +176,16 @@ In a nutshell this program follows a specific routine:
   * Prompt user for a path, attempt to open the file or handle any exceptions.
   * Declare a C# list for storing the *PersonObjects*
   * Read in each node that matches from the XML document
-  * Extract the key-value pairs and load them into the appropriate variables for each *PersonObject*
+  * Extract the key-value pairs and load them into the appropriate variables for
+    each *PersonObject*
   * Display the results to the user, and exit
 
 When we run the program, using the XML from above, we will see this output:
 
-<img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/08/runningApplication.png" alt="PersonObjects Program Output" title="PersonObjects Program Output" width="677" height="342" class="aligncenter size-full wp-image-437" />
+[![Program Output](/content/{{ page.urda_uuid }}/runningApplication.png)](/content/{{ page.urda_uuid }}/runningApplication.png)
 
-C# has plenty more methods for reading and handling XML files and XML based information. This is just a very basic example, but it does help a lot if you are just starting to learn C# programming and XML and handling. If you are looking for some further reading, you may want to <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmldocument.aspx" class="external external_icon" target="_blank">read up on the XmlDocument Class over at MSDN</a>.
+C# has plenty more methods for reading and handling XML files and XML based
+information. This is just a very basic example, but it does help a lot if you
+are just starting to learn C# programming and XML and handling. If you are
+looking for some further reading, you may want to
+[read up on the XmlDocument Class over at MSDN](http://msdn.microsoft.com/en-us/library/system.xml.xmldocument.aspx).
