@@ -17,7 +17,8 @@ Let's start with a basic script for this. We will have two variables: **FilePath
 
 So enough talk, here is the script:
 
-<pre class="brush: powershell; title: ; notranslate" title=""># Path to purge old files from
+```powershell
+# Path to purge old files from
 $FilePath = "C:\temp\"
 
 # Define the minimum number of days since last write time
@@ -32,6 +33,6 @@ foreach($File in Get-ChildItem $FilePath | Where {!($_.PsIsContainer)})
         del $File.FullName
     }
 }
-</pre>
+```
 
 Like I said, really simple. You could schedule this to run as a task, or you could even re-write this script to act as a function within another PowerShell script. This script is well suited for purging files from a log folder, say **C:\dev\logs\** if the log files are created containing the current date in the file name (something-Year-Month-Day.log). This way, you will only have a month of log files at any given time. Once this script is set up, it is pretty much a "set it and forget it".

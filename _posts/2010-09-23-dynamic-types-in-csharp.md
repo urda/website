@@ -16,7 +16,8 @@ All of these basic concepts come together to form the concept of a C# dynamic ty
 
 Let's say I build a simple class that describes a person object. I will also go ahead and create a main class, build a person object with the dynamic type, and print one line to screen.
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 
 namespace IntroDynamicTypes
 {
@@ -41,14 +42,15 @@ namespace IntroDynamicTypes
         }
     }
 }
-</pre>
+```
 
 Now you may notice as you key this into Visual Studio 2010 you will not have your normal IntelliSense to guide you. You will be prompted with this notice:
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/09/No-IntelliSense1.png" alt="No IntelliSense" title="No IntelliSense" width="351" height="134" class="aligncenter size-full wp-image-835" />
 
 Since we have defined this person object as dynamic, we can use any method we want with it! The compiler will not check for anything or stop you from building an application with objects using undefined methods. This is because a dynamic class can call these methods at run time, with the expectation that the method definitions and code will exist when the program is ran. In fact we can even add some more code into our main like so...
 
-<pre class="brush: csharp; title: ; notranslate" title="">static void Main(String[] args)
+```csharp
+static void Main(String[] args)
 {
     dynamic DynamicPerson = new Person("Urda");
     Console.WriteLine("Person Created, Name: " +
@@ -59,7 +61,7 @@ Since we have defined this person object as dynamic, we can use any method we wa
     // *not* at compile time!
     DynamicPerson.SomeMagicFunction();
 }
-</pre>
+```
 
 At this point you'll notice we have added a method called **SomeMagicFunction** that does not exist in the class, but Visual Studio 2010 still lets us compile the application. It is only at run time that this application will throw an error when it attempts to make a call to **SomeMagicFunction**. But if the function was made available through some form of interop, you would be able to execute that function against the object.
 

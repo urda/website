@@ -30,7 +30,8 @@ After Visual Studio has started up, you'll need to start a new C# Console Applic
 
 Now we can actually get to the code creation! First we are going to make a new text file in the root of our project, and we will call it **PythonFunctions.py**. When that has been created you'll need to update the properties on that file, specifically set **Copy to Output Directory** to **Copy always**. Now we will fill out our Python file with some Python functions:
 
-<pre class="brush: python; title: ; notranslate" title="">def hello(name):
+```python
+def hello(name):
 	print "Hello " + name + "! Welcome to IronPython!"
 	return
 
@@ -41,7 +42,7 @@ def add(x, y):
 def multiply(x, y):
 	print "%i * %i = %i" % (x, y, (x * y))
 	return
-</pre>
+```
 
 This file is describing three basic functions in Python: A function that says "Hello {Name}! Welcome to IronPython!" and two math functions. All of these functions will print to our console in C# using the Python **print** command.
 
@@ -55,7 +56,8 @@ Now that we have our python prepared, we will rename the generic **Program.cs** 
 
 So here is the C# that will run our IronPython program...
 
-<pre class="brush: csharp; title: ; notranslate" title="">using IronPython.Hosting;
+```csharp
+using IronPython.Hosting;
 using IronPython.Runtime;
 using Microsoft.Scripting.Hosting;
 using System;
@@ -108,7 +110,7 @@ namespace IntroIronPython
         }
     }
 }
-</pre>
+```
 
 When the program is run, we are greeted with this output:
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/09/IntroIronPythonRunning.png" alt="Intro to IronPython Screenshot" title="Intro to IronPython Screenshot" width="677" height="342" class="aligncenter size-full wp-image-858" />

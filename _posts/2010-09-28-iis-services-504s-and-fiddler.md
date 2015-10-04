@@ -19,20 +19,21 @@ I have been tracking a random issue in one of our projects here at Mercer. It is
 With the problem triggering locally, I started up Fiddler on my program. In case you have never heard of Fiddler it is a wonderful tool to track HTTP requests entering and exiting your computer. From the official Fiddler website:
 
 > Fiddler is a Web Debugging Proxy which logs all HTTP(S) traffic between your computer and the Internet. Fiddler allows you to inspect all HTTP(S) traffic, set breakpoints, and "fiddle" with incoming or outgoing data. Fiddler includes a powerful event-based scripting subsystem, and can be extended using any .NET language.
-> 
+>
 > Fiddler is freeware and can debug traffic from virtually any application, including Internet Explorer, Mozilla Firefox, Opera, and thousands more.
-> 
+>
 > Source: <a href="http://www.fiddler2.com/fiddler2/" class="external external_icon" target="_blank">http://www.fiddler2.com/fiddler2/</a>
 
 When I performed the action that caused the application to lock up (in this case hit a service on IIS to pull down a list from a database), Fiddler treated me with this error message:
 
-<pre class="brush: plain; title: ; notranslate" title="">HTTP/1.1 504 Fiddler - Receive Failure
+```
+HTTP/1.1 504 Fiddler - Receive Failure
 Content-Type: text/html
 Connection: close
 Timestamp: XX:XX:XX.XXX
 
 ReadResponse() failed: The server did not return a response for this request.
-</pre>
+```
 
 This had me lost, I was not sure why the server would be kicking back a 504 timeout error. I was able to get access to the service at its endpoint URL and I was able to use **svcutil.exe** to build generated stubs for C# off it. The logs in IIS also did not give me any further information. What I did know is that when a request for information came from the ClickOnce application, it would be unable to pull in any results right after Fiddler logged a 504 from the service.
 
@@ -40,14 +41,15 @@ So I had to do some investigation into the matter server-side. Afterall, it was 
 
 The request was being cutoff by IIS because it was too large for whatever reason. So I simply added this line to my **Web.config** for the IIS project in Visual Studio:
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;system.web&gt;
+```xml
+&lt;system.web&gt;
     &lt;!-- ... --&gt;
 
     &lt;httpRuntime maxRequestLength="16384"/&gt;
 
     &lt;!-- ... --&gt;
 &lt;/system.web&gt;
-</pre>
+```
 
 The **maxRequestLength **attribute of **httpRuntime **controls how much information IIS will accept before throwing an error. In this case it was trying to build up our desired database query, but was exceeding the limit. For testing purposes, I have increased the limit to 16384KB or 16MB. This allowed the ClickOnce application to receiving all the information it wanted, and our QA team in India was able to run the application as expected.
 

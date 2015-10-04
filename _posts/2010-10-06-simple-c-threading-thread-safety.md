@@ -15,7 +15,8 @@ A few days ago I compared and contrasted Asynchronous and Parallel Programming. 
 
 [Since we already know what exactly parallel programming is, and how it is different from asynchronous calls][1] we can go ahead and drill down to some more aspects of parallel programming. So here is an application that will start a new thread from the main, and both threads will call the same method:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 using System.Threading;
 
 class Threading101
@@ -37,7 +38,7 @@ class Threading101
         }
     }
 }
-</pre>
+```
 
 Now at first glance you might say that we will only see "Method Fired" shown on screen, however when we run the program we will see this output:
 
@@ -47,7 +48,8 @@ Well we have obviously called the method on both threads, but we got an undesire
 
 So what can we do about this? Well we need some method of preventing a thread from entering a method when another thread is entering a critical part of the method. So we just have to update our code to account for some type of locking functionality and then re-work our application:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 using System.Threading;
 
 class Threading101
@@ -83,7 +85,7 @@ class Threading101
         }
     }
 }
-</pre>
+```
 
 Running the code above now produces a better threading result:
 

@@ -15,7 +15,8 @@ In this short source code example I will be demoing the **?? operator**, **chain
 
 So here is the source I'll talk about:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 
 namespace C.Sharp.Tricks
 {
@@ -23,7 +24,7 @@ namespace C.Sharp.Tricks
     {
         static void Main(string[] args)
         {
-            /*** ?? Operator ***/            
+            /*** ?? Operator ***/
             // Allow x to be null by using 'int?'
             int? x = null;
 
@@ -60,7 +61,7 @@ namespace C.Sharp.Tricks
         }
     }
 }
-</pre>
+```
 
 The **?? operator** is a simple way to set a variable to something, and if that first condition is null it will fallback to a second value. So since x is null, y will end up being set to 30. The program outputs the expected result to prove that.
 

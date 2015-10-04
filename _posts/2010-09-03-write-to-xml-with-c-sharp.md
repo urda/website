@@ -15,7 +15,8 @@ So we can read XML in a variety of ways ([one example here][1], [and another her
 
 So here is the steps I take in this sample:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 using System.Xml;
 
 namespace WriteXML01
@@ -118,11 +119,11 @@ namespace WriteXML01
         }
     }
 }
-</pre>
+```
 
-First I make a generic person class to store my data in, and get it back out for the XML later. This could resemble an object we could get from a data factory or a SQL database. But it is an object nonetheless. 
+First I make a generic person class to store my data in, and get it back out for the XML later. This could resemble an object we could get from a data factory or a SQL database. But it is an object nonetheless.
 
-We then define the declaration of the document, it just states what version and encoding we are using in this specific XML file. We then use some XmlDocument methods to make sure that a root node (People in this case) is created and that our declaration is stuck right before it. 
+We then define the declaration of the document, it just states what version and encoding we are using in this specific XML file. We then use some XmlDocument methods to make sure that a root node (People in this case) is created and that our declaration is stuck right before it.
 
 Once that is all said and done, we create a parent node, PersonToXML in this case, and add it after our root node with PrependChild.
 

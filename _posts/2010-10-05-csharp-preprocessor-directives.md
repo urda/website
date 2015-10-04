@@ -28,15 +28,17 @@ C# has the following directives, all of which will be covered in this article:
 
 Let's start with **#define** and **#undef**. These directives are used to define and undefine symbols that evaluate to true (if using #define) when used in other logical directives. As you could imagine, #undef will undefine a given symbol (such that it yields false).
 
-<pre class="brush: csharp; title: ; notranslate" title="">// Set Debug Mode
+```csharp
+// Set Debug Mode
 #define DEBUG_MODE
 // Kill SQL Logger
 #undef SQL_LOG
-</pre>
+```
 
 With those two directives down, we can move on to **#if, #else, #elif,** and **#endif** directives. These directives let you step into or over chunks of code depending on the condition that is checked. As you can imagine, they behave like if, else if, and else statements in C#. The #endif directive must be used to finish off any statement or statements starting with the #if directive. You may use the **==, !=, &&, ||** operators to check various conditions. You can also group symbols and operators by using parentheses.
 
-<pre class="brush: csharp; title: ; notranslate" title="">#define DEBUG_MODE
+```csharp
+#define DEBUG_MODE
 #undef SQL_LOG
 using System;
 
@@ -60,13 +62,14 @@ public class SomeClass
 Prints to screen:
 DEBUG_MODE is defined!
 */
-</pre>
+```
 
 In just these two examples I have already covered 6 of the 11 possible C# preprocessor directives. The next few will help you add messages to your compiler output.
 
 Now let's cover the **#warning** and **#error** directives. Both of these directives will throw Warnings or Errors respectively when you compile your application in Visual Studio. For example, you may want to throw a warning that you left debug mode on so you don't accidentally deploy your application to production while it is running in a debug state:
 
-<pre class="brush: csharp; title: ; notranslate" title="">#define DEBUG_MODE
+```csharp
+#define DEBUG_MODE
 using System;
 
 public class SomeClass
@@ -78,11 +81,12 @@ public class SomeClass
         #endif
     }
 }
-</pre>
+```
 
 ...and of course #error will cause an error to be displayed in the compiler output:
 
-<pre class="brush: csharp; title: ; notranslate" title="">#define DEBUG_MODE
+```csharp
+#define DEBUG_MODE
 using System;
 
 public class SomeClass
@@ -94,16 +98,18 @@ public class SomeClass
         #endif
     }
 }
-</pre>
+```
 
 The **#line** directive is more strange than the other preprocessor directives. Specifically, #line allows you to modify the compiler's line number and optionally change the file name that is used for warning and error outputs.The syntax is as follows:
 
-<pre class="brush: plain; title: ; notranslate" title="">#line [ number ["file_name"] | hidden | default ]
-</pre>
+```
+#line [ number ["file_name"] | hidden | default ]
+```
 
 Hidden will remove successive lines from the debugger *until* another #line directive is hit. Usually the #line directive is used in automated build process or code creators. But for an example if I use this chunk of code:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using system
+```csharp
+using system
 
 class SomeClass
 {
@@ -115,17 +121,19 @@ class SomeClass
         char c;
     }
 }
-</pre>
+```
 
 Will produce this error output inside Visual Studio:
 
-<pre class="brush: plain; title: ; notranslate" title="">C:\Path\To\File.cs(208,13): warning CS0168: The variable 'i' is declared but never used
+```
+C:\Path\To\File.cs(208,13): warning CS0168: The variable 'i' is declared but never used
 C:\Path\To\File.cs(10,13): warning CS0168: The variable 'c' is declared but never used
-</pre>
+```
 
 Finally, we have the **#region** and **#endregion**. Every #region block must end with a #endregion block. When you define a block it allows you to expand and collapse code inside Visual Studio for easier reading and reference. There are some important points to note though: A #region block **cannot** overlap an #if block and vice versa . You can nest an #if block inside a #region block or a #region block inside an #if block though. So for example:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 
 class MainBox
 {
@@ -138,7 +146,7 @@ class MainBox
         #endregion
     }
 }
-</pre>
+```
 
 I can expand and collapse the section inside Visual Studio as pictured:
 

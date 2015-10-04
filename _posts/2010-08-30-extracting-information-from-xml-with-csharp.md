@@ -17,7 +17,8 @@ Say we want to store simple C# objects that describe a person. A person in our c
 
 **2People.xml:**
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+```xml
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;People&gt;
   &lt;Person&gt;
     &lt;FirstName&gt;Peter&lt;/FirstName&gt;
@@ -32,11 +33,12 @@ Say we want to store simple C# objects that describe a person. A person in our c
     &lt;Gender&gt;M&lt;/Gender&gt;
   &lt;/Person&gt;
 &lt;/People&gt;
-</pre>
+```
 
 This XML is easy to follow, and it would be very simple for a person to just extract the information by hand in this case. But what if we had 100 Person Objects? 1,000? 1,000,000,000? It would be much easier if we could write some software to do the extraction of this information for us. If you were to write such software, it could very well look a lot like the following:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Xml;
 
@@ -72,7 +74,7 @@ namespace UsingXML
 
             // Declare a new XML Document
             XmlDocument XmlDoc = new XmlDocument();
-            
+
             // Try to open the XML file
             try
             {
@@ -118,7 +120,7 @@ namespace UsingXML
                                                     TempGender);
                 PersonList.Add(obj);
             }
-            
+
             // How many PersonObjects did we find in the XML?
             int ListSize = PersonList.Count;
 
@@ -150,7 +152,7 @@ namespace UsingXML
         }
     }
 }
-</pre>
+```
 
 In a nutshell this program follows a specific routine:
 

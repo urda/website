@@ -22,7 +22,8 @@ Many of your C# classes, interfaces, and other source files will have common log
 
 So using that as our **#region** framework we can develop a skeleton C# class file that follows that concept:
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 
 namespace SomeConsoleApp
 {
@@ -69,7 +70,7 @@ namespace SomeConsoleApp
         #endregion
     }
 }
-</pre>
+```
 
 So if you were to plug-in the C# example from above, you could collapse your sections down so your editor looks like this:
 

@@ -15,11 +15,12 @@ Users with touch screens, stylus-enabled screens, or USB stylus pads appreciate 
 
 The first thing we need to do is define our XAML that will build the visual layout of our web application. In this case we will just call this our MainPage.xaml:
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;UserControl x:Class="SilverlightInk.MainPage"
+```xml
+&lt;UserControl x:Class="SilverlightInk.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 &gt;
-    &lt;Grid x:Name="MainLayout" Background="Gray"&gt;       
+    &lt;Grid x:Name="MainLayout" Background="Gray"&gt;
         &lt;Grid.RowDefinitions&gt;
             &lt;RowDefinition Height="*" /&gt;
             &lt;RowDefinition Height="*" /&gt;
@@ -28,7 +29,7 @@ The first thing we need to do is define our XAML that will build the visual layo
             &lt;ColumnDefinition Width="100" /&gt;
             &lt;ColumnDefinition Width="*" /&gt;
         &lt;/Grid.ColumnDefinitions&gt;
-        
+
         &lt;Grid x:Name="OptionPanel" Background="Transparent" Grid.Column="0" Grid.Row="0"&gt;
             &lt;Grid.RowDefinitions&gt;
                 &lt;RowDefinition Height="*" /&gt;
@@ -59,7 +60,7 @@ The first thing we need to do is define our XAML that will build the visual layo
         &lt;/Border&gt;
     &lt;/Grid&gt;
 &lt;/UserControl&gt;
-</pre>
+```
 
 The flow of our XAML document, in a nutshell, is as follows:
 
@@ -71,7 +72,8 @@ The flow of our XAML document, in a nutshell, is as follows:
 
 Once our XAML is squared away, we can write the actual code our event handlers will use. So we will go ahead and jump to MainPage.xaml.cs to create the logic behind the application. Let's go ahead and look at the source code for that.
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System.Windows;
+```csharp
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Ink;
 using System.Windows.Input;
@@ -164,7 +166,7 @@ namespace SilverlightInk
         }
     }
 }
-</pre>
+```
 
 We have four variables used throughout the application:
 
@@ -175,7 +177,8 @@ We have four variables used throughout the application:
 
 Let's examine the major handlers closely. First we will take a look at our buttons for the application:
 
-<pre class="brush: csharp; title: ; notranslate" title="">private void EraseButtonClick(object sender, RoutedEventArgs e)
+```csharp
+private void EraseButtonClick(object sender, RoutedEventArgs e)
 {
 	InkPad.Cursor = Cursors.Eraser;
 	_InkMode = InkMode.Erase;
@@ -186,13 +189,14 @@ private void InkButtonClick(object sender, RoutedEventArgs e)
 	InkPad.Cursor = Cursors.Stylus;
 	_InkMode = InkMode.Draw;
 }
-</pre>
+```
 
 When the respective button is pressed it defines the drawing mode as inking or erasing and changes the cursor icon to reflect the status.
 
 Now we need to look at what exactly happens when you press the left mouse button inside the InkPad.
 
-<pre class="brush: csharp; title: ; notranslate" title="">private void InkPadMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+```csharp
+private void InkPadMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 {
 	InkPad.CaptureMouse();
 
@@ -218,7 +222,7 @@ Now we need to look at what exactly happens when you press the left mouse button
 		InkPad.Strokes.Add(_stroke);
 	}
 }
-</pre>
+```
 
 We first make sure to capture the input of the mouse. After we have done this we need to see if a stylus was used. The easiest way to do that is to see if it was inverted. An inverted stylus should act like an eraser (much like flipping to the other side of a pencil). A normal mouse input will never have an inverted value. However, if we detect that a stylus has been flipped, we can assume the user wants to erase a stroke or strokes from the screen. Once that statement has been evaluated to true we just flip the mode to erase, update the cursor, and flip a flag that lets the program know we used a stylus.
 
@@ -226,7 +230,8 @@ If we hadn't used a stylus, we simply check to see what mode we are in for inkin
 
 While the user is moving around on screen, we have another event handler that is running throughout mouse movement.
 
-<pre class="brush: csharp; title: ; notranslate" title="">private void InkPadMouseMove(object sender, MouseEventArgs e)
+```csharp
+private void InkPadMouseMove(object sender, MouseEventArgs e)
 {
 	if (_InkMode == InkMode.Draw && _stroke != null)
 	{
@@ -243,13 +248,14 @@ While the user is moving around on screen, we have another event handler that is
 		}
 	}
 }
-</pre>
+```
 
 The handler checks to see if we are drawing and that a stroke exists first. If that is the case we continue to pile on points that create a single line. If we are in erase mode, the handler detects if a given point intersects an already defined stroke. If that is the case, it will remove the entire stroke from the InkPad.
 
 Now after the user has swiped their mouse or stylus around we need to conduct some final actions. These actions are triggered when the left mouse button is released.
 
-<pre class="brush: csharp; title: ; notranslate" title="">private void InkPadMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+```csharp
+private void InkPadMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
 {
 	_stroke = null;
 	_EraserPoints = null;
@@ -261,7 +267,7 @@ Now after the user has swiped their mouse or stylus around we need to conduct so
 	}
 	InkPad.ReleaseMouseCapture();
 }
-</pre>
+```
 
 We reset a few variables to prepare for the next stroke the user may make. We check to see if a stylus was used, and if that is the case we go ahead and reset the mode back to draw and disable the flag. We do this because we do not want the user to erase a stroke, and then expect the application to ink when the correct end of the stylus is applied again. This works because we check for the eraser end of the stylus when preparing to ink. We finally release capture of the mouse from the application.
 
