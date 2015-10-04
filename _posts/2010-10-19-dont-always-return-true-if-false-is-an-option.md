@@ -1,5 +1,5 @@
 ---
-title: 'Don't Always 'return true' if False is an Option!'
+title: Don't Always 'return true' if False is an Option!
 author: Peter Urda
 layout: post
 redirect_from: /2010/10/dont-always-return-true-if-false-is-an-option/
@@ -10,6 +10,7 @@ tags:
   - Co-Op
   - Oracle
 ---
+
 I was working on one of Mercer's internal applications today. I ran across an off the wall query from our QA team. They wanted to know what was the best way to confirm the information going into an Oracle database was actually written to the database. I told them it was simple **SELECT FROM ...** query, but when I went to run the statement myself, I did not get the results I expected. Two major things were wrong in the codebase: one commits were not actually being made to the Oracle database. Two, a boolean method was configured to always **'return true'** making it look like the commits actually occurred.
 
 To visually understand what was going on, I'll create a simple mockup method for you in C#:

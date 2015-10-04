@@ -1,5 +1,5 @@
 ---
-title: 'Urda's PGP Public Key'
+title: Urda's PGP Public Key
 author: Peter Urda
 layout: post
 redirect_from: /2012/07/urdas-pgp-public-key/
@@ -11,6 +11,7 @@ tags:
   - Cryptography
   - Public Key
 ---
+
 Here is a copy of my PGP public key for verification and encryption purposes.
 
 This key can be used for signature verification and encryption purposes.
