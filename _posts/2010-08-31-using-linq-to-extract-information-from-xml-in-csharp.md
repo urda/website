@@ -3,6 +3,9 @@ title: 'Using LINQ to Extract Information from XML in C#'
 author: Peter Urda
 layout: post
 redirect_from: /2010/08/using-linq-to-extract-information-from-xml-in-csharp/
+
+urda_uuid: 20100831
+
 categories:
   - How To
   - Mercer Daily Reports
@@ -12,19 +15,36 @@ tags:
   - LINQ
   - XML
 ---
-[Yesterday I talked about using C# to extract information from a simple XML file][1]. Well today we can take it one step further. Instead of using the regular XML library and commands, we can use LINQ to build a query to extract the information we desire, and place it into our object list.
+
+[Yesterday I talked about]({% post_url 2010-08-30-extracting-information-from-xml-with-csharp %})
+using C# to extract information from a simple XML file. Well today we can take
+it one step further. Instead of using the regular XML library and commands, we
+can use LINQ to build a query to extract the information we desire, and place it
+into our object list.
 
 In case you are not familiar with LINQ, here is a quick overview on it:
 
-> Language Integrated Query (LINQ, pronounced "link") is a Microsoft .NET Framework component that adds native data querying capabilities to .NET languages.
+> Language Integrated Query (LINQ, pronounced "link") is a Microsoft .NET
+> Framework component that adds native data querying capabilities to .NET
+> languages.
 >
-> LINQ defines a set of method names (called standard query operators, or standard sequence operators), along with translation rules from so-called query expressions to expressions using these method names, lambda expressions and anonymous types. These can, for example, be used to project and filter data in arrays, enumerable classes, XML (XLINQ), relational database, and third party data sources. Other uses, which utilize query expressions as a general framework for readably composing arbitrary computations, include the construction of event handlers or monadic parsers.
+> LINQ defines a set of method names (called standard query operators, or
+> standard sequence operators), along with translation rules from so-called
+> query expressions to expressions using these method names, lambda expressions
+> and anonymous types. These can, for example, be used to project and filter
+> data in arrays, enumerable classes, XML (XLINQ), relational database, and
+> third party data sources. Other uses, which utilize query expressions as a
+> general framework for readably composing arbitrary computations, include the
+> construction of event handlers or monadic parsers.
 >
-> Source: <a href="http://en.wikipedia.org/w/index.php?title=Language_Integrated_Query&#038;oldid=382114822" class="external external_icon" target="_blank">http://en.wikipedia.org/wiki/Language_Integrated_Query</a>
+> Source: [Language Integrated Query - Wikipedia](http://en.wikipedia.org/w/index.php?title=Language_Integrated_Query&oldid=382114822)
 
-So if we modify the previous program to use a LINQ statement instead, we can use logic and syntax that look a lot like a SQL statement. But instead of accessing a SQL database, we are instead polling an array or chunk of data. In our case we are using LINQ to run a query against a chunk of XML data.
+So if we modify the previous program to use a LINQ statement instead, we can use
+logic and syntax that look a lot like a SQL statement. But instead of accessing
+a SQL database, we are instead polling an array or chunk of data. In our case we
+are using LINQ to run a query against a chunk of XML data.
 
-So let's cut to the chase, here is the modified source code from the last post...
+So let's cut to the chase, here is the modified source code from the last post:
 
 ```csharp
 using System;
@@ -153,20 +173,22 @@ But here is where the real magic is:
 ```csharp
 // Build a LINQ query, and run through the XML building
 // the PersonObjects
-    var query = from xml in XDoc.Descendants("Person")
-        select new PersonObject
-        {
-            fname = (string)xml.Element("FirstName"),
-            lname = (string)xml.Element("LastName"),
-            age = (int)xml.Element("Age"),
-            gender = ((string)xml.Element("Gender") == "M" ?
-                'M' :
-                'F')
-            };
-    PersonList = query.ToList();
+var query = from xml in XDoc.Descendants("Person")
+    select new PersonObject
+    {
+        fname = (string)xml.Element("FirstName"),
+        lname = (string)xml.Element("LastName"),
+        age = (int)xml.Element("Age"),
+        gender = ((string)xml.Element("Gender") == "M" ? 'M' : 'F')
+    };
+PersonList = query.ToList();
 ```
 
-Looks a lot like SQL huh? Well what this statement is doing is grabbing all the objects in the XML that are a "Person". It then uses an empty PersonObject and defines each of the variables in the object. There is a logic statement inside the query to set the char for the gender in each object (since you cannot cast a string to a char in this instance) based on the string retrieved from the XML.
+Looks a lot like SQL huh? Well what this statement is doing is grabbing all the
+objects in the XML that are a "Person". It then uses an empty PersonObject and
+defines each of the variables in the object. There is a logic statement inside
+the query to set the char for the gender in each object (since you cannot cast a
+string to a char in this instance) based on the string retrieved from the XML.
 
 Now for comparison, let's look at the difference between the two sources:
 
@@ -266,7 +288,8 @@ Now for comparison, let's look at the difference between the two sources:
              int ListSize = PersonList.Count;
 ```
 
-And just in case you were unsure about the gender logic part of the query, I ran this dataset:
+And just in case you were unsure about the gender logic part of the query, I ran
+this dataset:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -294,8 +317,10 @@ And just in case you were unsure about the gender logic part of the query, I ran
 
 And got this result:
 
-<img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/08/runningProgram.png" alt="runningProgram(UsingXML2)" title="runningProgram(UsingXML2)" width="677" height="414" class="aligncenter size-full wp-image-457" />
+[![Program Output](/content/{{ page.urda_uuid }}/runningProgram.png)](/content/{{ page.urda_uuid }}/runningProgram.png)
 
-Pretty sweet huh? So in review, we built a query to run against XML, and used LINQ statements and methods to retrieve each portion of data that we wanted. All of this was then shoved into a list at the end for storing. So hopefully this gives you a quick intro to start messing around with LINQ if you are inclined to do so.
-
- [1]: http://www.peter-urda.com/2010/08/extracting-information-from-xml-with-csharp
+Pretty sweet huh? So in review, we built a query to run against XML, and used
+LINQ statements and methods to retrieve each portion of data that we wanted. All
+of this was then shoved into a list at the end for storing. So hopefully this
+gives you a quick intro to start messing around with LINQ if you are inclined to
+do so.
