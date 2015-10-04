@@ -29,7 +29,7 @@ namespace IntroDynamicTypes
 
         public string Name { get; set; }
     }
-    
+
     class DynamicTypesProgram
     {
         static void Main(string[] args)
@@ -39,14 +39,14 @@ namespace IntroDynamicTypes
                               DynamicPerson.Name);
             // Prints "Person Created, Name: Urda"
         }
-    }  
+    }
 }
 </pre>
 
-Now you may notice as you key this into Visual Studio 2010 you will not have your normal IntelliSense to guide you. You will be prompted with this notice:  
+Now you may notice as you key this into Visual Studio 2010 you will not have your normal IntelliSense to guide you. You will be prompted with this notice:
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/09/No-IntelliSense1.png" alt="No IntelliSense" title="No IntelliSense" width="351" height="134" class="aligncenter size-full wp-image-835" />
 
-Since we have defined this person object as dynamic, we can use any method we want with it! The compiler will not check for anything or stop you from building an application with objects using undefined methods. This is because a dynamic class can call these methods at run time, with the expectation that the method definitions and code will exist when the program is ran. In fact we can even add some more code into our main like so&#8230;
+Since we have defined this person object as dynamic, we can use any method we want with it! The compiler will not check for anything or stop you from building an application with objects using undefined methods. This is because a dynamic class can call these methods at run time, with the expectation that the method definitions and code will exist when the program is ran. In fact we can even add some more code into our main like so...
 
 <pre class="brush: csharp; title: ; notranslate" title="">static void Main(String[] args)
 {

@@ -175,7 +175,7 @@ Running the program will produce this output:
 
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/11/Humans-People-Programmers.png" alt="Output of Interfaces and Objects" title="Output of Interfaces and Objects" width="677" height="342" class="aligncenter size-full wp-image-1233" />
 
-As you can tell the Programmer spits out binary when asked to speak, and it is only when you call the *DudeInPlainEnglish* method against it is when you get a readable format. The method also appends &#8220;Sorry my bad&#8230;&#8221; to the start of the print out.
+As you can tell the Programmer spits out binary when asked to speak, and it is only when you call the *DudeInPlainEnglish* method against it is when you get a readable format. The method also appends &#8220;Sorry my bad...&#8221; to the start of the print out.
 
 If we only had access to the interface, we would know what properties and methods that each class must have when using said interface. Think of this interface as a type of contract, where each class that uses it must (in some fashion) use the properties and methods laid out. You can also think of an interface as a very basic framework for all involved classes.
 

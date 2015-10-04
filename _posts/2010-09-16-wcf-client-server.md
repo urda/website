@@ -12,7 +12,7 @@ tags:
 ---
 Windows Communication Foundation (or WCF for short) is an interface located inside the .NET Framework for creating connected, service-oriented applications. We can use C# and Visual Studio 2010 to build a simple WCF Client and WCF Server. We will start by developing the server and the service it will provide, and from that we can build a WCF Client based on that very server.
 
-First we need to setup our project&#8230;
+First we need to setup our project...
 
   1. Start Visual Studio 2010 as an Administrator
   2. Create a new **Console Application**, you can name it *WCF.Tutorial.Server*
@@ -26,7 +26,7 @@ First we need to setup our project&#8230;
   6. Update the namespace line inside **Server.cs** to *Microsoft.ServiceModel.Samples*
   7. Add *using System.ServiceModel;* to your **Server.cs** file.
 
-&#8230;and NOW we are ready to build our interface for the service. In this case we are going to build a calculator.
+...and NOW we are ready to build our interface for the service. In this case we are going to build a calculator.
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 using System.ServiceModel;
@@ -128,14 +128,14 @@ Our final block of code defines the *Server* class. This will be in charge of sp
 
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/09/WCFServerHTTP.png" alt="WCF Server from Browser" title="WCFServerHTTP" width="591" height="203" class="aligncenter size-full wp-image-743" />
 
-Now we can just leave that running, and go ahead and build our Client project. Just do the following&#8230;
+Now we can just leave that running, and go ahead and build our Client project. Just do the following...
 
   1. Add a new project to the root of your Solution. Choose **Console Application** and name it *WCF.Tutorial.Client*
   2. Add a reference to **System.ServiceModel.dll** to the new project
   3. Rename **Program.cs** to **Client.cs**
   4. Add *using System.ServiceModel;* to the source code.
 
-Now here is where we can use Visual Studio to build some code for us. Go ahead and open up the **Visual Studio 2010 Command Prompt** from your Program Files. Inside the command prompt navigate to the location of your client code project. 
+Now here is where we can use Visual Studio to build some code for us. Go ahead and open up the **Visual Studio 2010 Command Prompt** from your Program Files. Inside the command prompt navigate to the location of your client code project.
 
 Now when you are inside the directory you want the generated code to be placed, run this command:
 
@@ -210,12 +210,12 @@ All the above commands will cause our Client app to hit the Server app with requ
 
 With WCF you can setup dedicated application servers for your client apps to hit with requests. These requests can then be processed either synchronously or asynchronously. In this example we ran the commands synchronously, so we had to wait for the server to kick back results to us. But you could instead build a giant processing server, and have clients request asynchronous tasks and just catch a callback.
 
-WCF can be applied for use in&#8230;
+WCF can be applied for use in...
 
   * Distributed Processing
   * Threaded Web Applications
   * Dedicated Servers hosting specific services, all based on their capability
   * Routing tasks [ Client <\----> Proxy(WCF Server & Client) <\----> Server ]
-  * &#8230;any other possible Client-Server task you would need! The possibilities are up to you.
+  * ...any other possible Client-Server task you would need! The possibilities are up to you.
 
 All of this is easily setup and built by just using C#, .NET, and Visual Studio 2010. If you can write your methods and algorithms in C#, you can extend them for use in WCF.

@@ -25,7 +25,7 @@ So what does Marketing bring to the table as far as Software Development is conc
   * Beta testers can provide bug reports.
   * Having Beta testers is an economical way to add additional testing to new products with minimal investment of company resources.
   * Can be used as &#8220;word of mouth&#8221; marketing and drive even more interest in the project from possible clients
-  * &#8230;and of course all of these Beta Testing aspects improve the product overtime before its release.
+  * ...and of course all of these Beta Testing aspects improve the product overtime before its release.
 
   * Seriously interested clients can then be offered the opportunity to purchase the software ahead of time as a &#8220;pre-order&#8221;. Incentives along with that can include:
   * Early Access to the new Software

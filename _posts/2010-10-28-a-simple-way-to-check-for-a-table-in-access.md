@@ -10,7 +10,7 @@ tags:
   - Co-Op
   - Programming
 ---
-As I worked on another project today, I came across a simple dilemma. The project reads in a small Microsoft Access database (also known as a .mdb file) into memory. It then queries said database with a simple &#8216;**SELECT foo FROM bar&#8230;&#8217;** statement and pulls the results into the program. However, if you load an Access database that does not follow the expected schema, the program throws a nasty error and causes some logic interruption. I needed a simple way to check for a few table names before proceeding, so I whipped up a simple C# method.
+As I worked on another project today, I came across a simple dilemma. The project reads in a small Microsoft Access database (also known as a .mdb file) into memory. It then queries said database with a simple &#8216;**SELECT foo FROM bar...&#8217;** statement and pulls the results into the program. However, if you load an Access database that does not follow the expected schema, the program throws a nasty error and causes some logic interruption. I needed a simple way to check for a few table names before proceeding, so I whipped up a simple C# method.
 
 It is a pretty simple C# method. It basically checks to see if the file path to the Access database is available. If it is available it checks the schema inside the database for the given table name. If found, the boolean variable will be set to true. If not, the method will return false.
 
