@@ -95,7 +95,7 @@ namespace WriteXML01
             Console.WriteLine(Environment.CurrentDirectory);
             Console.Write("\nSAVE AS? "
                           + "[CAUTION: This does overwrite files!]\n"
-                          + "(defaults to ..\\..\\Output.xml) &gt; ");
+                          + "(defaults to ..\\..\\Output.xml) > ");
             string UserPath = Console.ReadLine();
 
             // Nothing? Default to something.

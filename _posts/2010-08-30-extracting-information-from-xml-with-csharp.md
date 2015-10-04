@@ -18,21 +18,21 @@ Say we want to store simple C# objects that describe a person. A person in our c
 **2People.xml:**
 
 ```xml
-&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;People&gt;
-  &lt;Person&gt;
-    &lt;FirstName&gt;Peter&lt;/FirstName&gt;
-    &lt;LastName&gt;Urda&lt;/LastName&gt;
-    &lt;Age&gt;21&lt;/Age&gt;
-    &lt;Gender&gt;M&lt;/Gender&gt;
-  &lt;/Person&gt;
-  &lt;Person&gt;
-    &lt;FirstName&gt;Joe&lt;/FirstName&gt;
-    &lt;LastName&gt;White&lt;/LastName&gt;
-    &lt;Age&gt;30&lt;/Age&gt;
-    &lt;Gender&gt;M&lt;/Gender&gt;
-  &lt;/Person&gt;
-&lt;/People&gt;
+<?xml version="1.0" encoding="utf-8" ?>
+<People>
+  <Person>
+    <FirstName>Peter</FirstName>
+    <LastName>Urda</LastName>
+    <Age>21</Age>
+    <Gender>M</Gender>
+  </Person>
+  <Person>
+    <FirstName>Joe</FirstName>
+    <LastName>White</LastName>
+    <Age>30</Age>
+    <Gender>M</Gender>
+  </Person>
+</People>
 ```
 
 This XML is easy to follow, and it would be very simple for a person to just extract the information by hand in this case. But what if we had 100 Person Objects? 1,000? 1,000,000,000? It would be much easier if we could write some software to do the extraction of this information for us. If you were to write such software, it could very well look a lot like the following:
@@ -69,7 +69,7 @@ namespace UsingXML
             // directory if the user wants to use a relative path.
             Console.Write("Current Local Path: ");
             Console.WriteLine(Environment.CurrentDirectory);
-            Console.Write("Path to file? &gt; ");
+            Console.Write("Path to file? > ");
             string UserPath = Console.ReadLine();
 
             // Declare a new XML Document
@@ -105,7 +105,7 @@ namespace UsingXML
             XmlNodeList XmlDocNodes = XmlDoc.SelectNodes("/People/Person");
 
             // Define a new List, to store the objects we pull out of the XML
-            List&lt;PersonObject&gt; PersonList = new List&lt;PersonObject&gt;();
+            List<PersonObject> PersonList = new List<PersonObject>();
 
             // Loop through the nodes, extracting Person information.
             // We can then define a person object and add it to the list.
@@ -136,7 +136,7 @@ namespace UsingXML
                 Console.WriteLine("Contains {0} PersonObjects:\n", ListSize);
 
             // Loop through the list, and print all the PersonObjects to screen
-            for (int i = 0; i &lt; ListSize; i++)
+            for (int i = 0; i < ListSize; i++)
             {
                 Console.WriteLine(" PersonObject {0}", i);
                 Console.WriteLine("------------------------------------------");

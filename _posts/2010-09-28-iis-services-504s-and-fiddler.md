@@ -42,13 +42,13 @@ So I had to do some investigation into the matter server-side. Afterall, it was 
 The request was being cutoff by IIS because it was too large for whatever reason. So I simply added this line to my **Web.config** for the IIS project in Visual Studio:
 
 ```xml
-&lt;system.web&gt;
-    &lt;!-- ... --&gt;
+<system.web>
+    <!-- ... -->
 
-    &lt;httpRuntime maxRequestLength="16384"/&gt;
+    <httpRuntime maxRequestLength="16384"/>
 
-    &lt;!-- ... --&gt;
-&lt;/system.web&gt;
+    <!-- ... -->
+</system.web>
 ```
 
 The **maxRequestLength **attribute of **httpRuntime **controls how much information IIS will accept before throwing an error. In this case it was trying to build up our desired database query, but was exceeding the limit. For testing purposes, I have increased the limit to 16384KB or 16MB. This allowed the ClickOnce application to receiving all the information it wanted, and our QA team in India was able to run the application as expected.

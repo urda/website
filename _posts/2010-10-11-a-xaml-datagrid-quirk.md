@@ -14,29 +14,29 @@ Everyone knows how amazing XAML is to create flexible and beautiful GUI's for va
 So here is the XAML I came up with to display a simple grid in my application:
 
 ```xml
-&lt;DataGrid x:Name="SomeDataGrid" ItemsSource="{Binding}"
+<DataGrid x:Name="SomeDataGrid" ItemsSource="{Binding}"
                 DataContext="{Binding}" AutoGenerateColumns="False"
                 CanUserAddRows="False" CanUserDeleteRows="False"
                 HeadersVisibility="Column"
-                AlternatingRowBackground="LightGray" &gt;
-    &lt;data:DataGrid.Columns&gt;
-		&lt;data:DataGridCheckBoxColumn
+                AlternatingRowBackground="LightGray" >
+    <data:DataGrid.Columns>
+		<data:DataGridCheckBoxColumn
             Header="Include?"
             Width="55"
             CanUserResize="False"
-            Binding="{Binding Path=IsIncluded, Mode=TwoWay}" /&gt;
-        &lt;data:DataGridTextColumn
+            Binding="{Binding Path=IsIncluded, Mode=TwoWay}" />
+        <data:DataGridTextColumn
             Header="ID"
             MinWidth="22"
             Width="SizeToCells"
-            Binding="{Binding Path=SystemNumber, Mode=OneWay}" /&gt;
-        &lt;data:DataGridTextColumn
+            Binding="{Binding Path=SystemNumber, Mode=OneWay}" />
+        <data:DataGridTextColumn
             Header="Question Text"
             MinWidth="85"
             Width="SizeToCells"
-            Binding="{Binding Path=Text, Mode=OneWay}" /&gt;
-    &lt;/data:DataGrid.Columns&gt;
-&lt;/data:DataGrid&gt;
+            Binding="{Binding Path=Text, Mode=OneWay}" />
+    </data:DataGrid.Columns>
+</data:DataGrid>
 ```
 
 The issue that arose was centered around the checkbox column. The new checkbox column required the user to first make a row active (by clicking on it) to then have to click a second time to enable or disable the desired checkbox. Obviously this is not the desired action, since a user expects to be able to just check a box **without** having to select the row first.
@@ -44,26 +44,26 @@ The issue that arose was centered around the checkbox column. The new checkbox c
 So how do we correct the issue. Well instead of just using a plain *DataGridCheckBoxColumn* we will declare a template column instead. We can then define within this template the actions and styling of this column. Below is my updated XAML section for the first column:
 
 ```xml
-&lt;!-- XAML Omitted --&gt;
+<!-- XAML Omitted -->
 
-&lt;data:DataGridTemplateColumn
+<data:DataGridTemplateColumn
 	Header="Include?"
 	Width="55"
-	CanUserResize="False"&gt;
-	&lt;data:DataGridTemplateColumn.CellTemplate&gt;
-		&lt;DataTemplate&gt;
-			&lt;Grid&gt;
-				&lt;CheckBox
+	CanUserResize="False">
+	<data:DataGridTemplateColumn.CellTemplate>
+		<DataTemplate>
+			<Grid>
+				<CheckBox
 					IsChecked="{Binding Path=IsIncluded, Mode=TwoWay}"
 					ClickMode="Press"
 					HorizontalAlignment="Center"
-					VerticalAlignment="Center" /&gt;
-			&lt;/Grid&gt;
-		&lt;/DataTemplate&gt;
-	&lt;/data:DataGridTemplateColumn.CellTemplate&gt;
-&lt;/data:DataGridTemplateColumn&gt;
+					VerticalAlignment="Center" />
+			</Grid>
+		</DataTemplate>
+	</data:DataGridTemplateColumn.CellTemplate>
+</data:DataGridTemplateColumn>
 
-&lt;!-- XAML Omitted --&gt;
+<!-- XAML Omitted -->
 ```
 
 The *ClickMode="Press"* will allow the box to be checked when the mouse is hovered over it and a click event is caught. This allows for our desired action, while still keeping clean and organized XAML!

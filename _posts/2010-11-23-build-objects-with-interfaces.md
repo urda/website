@@ -130,7 +130,7 @@ public class Programmer : IHuman
     {
         string result = "";
 
-        foreach (string s in input.Select(c =&gt; Convert.ToString(c, 2)))
+        foreach (string s in input.Select(c => Convert.ToString(c, 2)))
         {
             result += s;
         }

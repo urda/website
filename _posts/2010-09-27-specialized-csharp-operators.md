@@ -16,7 +16,7 @@ We will start off with the conditional operator **?:**. This operator is used to
 int TestValue = 6;
 int result = -1;
 
-if(TestValue &lt;= 5)
+if(TestValue <= 5)
     result = 0;
 else
     result = 1;
@@ -27,7 +27,7 @@ Instead we can use **?:** to simplify that. We can refactor that into a new code
 ```csharp
 int TestValue = 6;
 
-int result = TestValue &lt;= 5 ? 0 : 1;
+int result = TestValue <= 5 ? 0 : 1;
 ```
 
 In plain English the **?:** operator reads as so:
