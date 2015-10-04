@@ -22,13 +22,13 @@ Let&#8217;s go ahead and break down the individual portions of the MVVM architec
 
 **View:** Once again MVVM pulls heavily from the MVC pattern for views. The view is in charge of controlling the presentation of the program to the user. Views will contain all the various buttons, text boxes, pop-ups, graphics, and other UI features to display on-screen to the end-user.
 
-**ViewModel:** A view model can be defined as a &#8220;Model of the View&#8221; and yes I agree that phrase is really confusing and does not say much about the actual functionality of the ViewModel. Basically, the ViewModel binds the data from the Model to the View. It changes and manipulates data from the Model to send to the View for display Data or actions from the view are taken in, logic may or may not be ran against said actions, and any updates or changes to the data is relayed back to the Model. A ViewModel will contain all the commands, properties, and logic a program needs to function.
+**ViewModel:** A view model can be defined as a "Model of the View" and yes I agree that phrase is really confusing and does not say much about the actual functionality of the ViewModel. Basically, the ViewModel binds the data from the Model to the View. It changes and manipulates data from the Model to send to the View for display Data or actions from the view are taken in, logic may or may not be ran against said actions, and any updates or changes to the data is relayed back to the Model. A ViewModel will contain all the commands, properties, and logic a program needs to function.
 
 There are some current issues with MVVM at this time though:
 
   * MVVM is fairly new, so some concepts and practices are still being standardized and worked out
   * Lack of MVVM toolkits, walkthrough, and patterns compared to other architectures
-  * Can be &#8220;overkill&#8221; for small applications
+  * Can be "overkill" for small applications
   * If data binding is not handle well and cleanly, things can get messy really quick!
   * Having to create a property then code needed to bind to said property, can lead to duplicate code and maintenance problems down the road
 

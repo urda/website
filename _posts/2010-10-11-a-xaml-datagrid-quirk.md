@@ -64,6 +64,6 @@ So how do we correct the issue. Well instead of just using a plain *DataGridChec
 &lt;!-- XAML Omitted --&gt;
 </pre>
 
-The *ClickMode=&#8221;Press&#8221;* will allow the box to be checked when the mouse is hovered over it and a click event is caught. This allows for our desired action, while still keeping clean and organized XAML!
+The *ClickMode="Press"* will allow the box to be checked when the mouse is hovered over it and a click event is caught. This allows for our desired action, while still keeping clean and organized XAML!
 
 Hopefully this may come in handy if you are pulling your hair out over DataGrid columns. I know I&#8217;ll end up referring back to this note sometime in the future.

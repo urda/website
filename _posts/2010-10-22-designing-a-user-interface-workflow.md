@@ -19,7 +19,7 @@ Here is the markup I made for my workflow for my latest project:
 
 [<img class="aligncenter size-large wp-image-1144" title="Markup Workflow of a UI" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/IMG_11461-700x522.jpg" alt="Markup Workflow of a UI" width="700" height="522" />][1]
 
-It is a workflow to control how a user can pick a &#8220;project code&#8221; and then account for further actions such as searching, defining a new code, validating the new code, exiting, and so forth. I used various methods within my project to disable and enable each of these sections, literally preventing the user from clicking or typing into disabled fields and controls.
+It is a workflow to control how a user can pick a "project code" and then account for further actions such as searching, defining a new code, validating the new code, exiting, and so forth. I used various methods within my project to disable and enable each of these sections, literally preventing the user from clicking or typing into disabled fields and controls.
 
 Creation can be a little messy, but in the end I have defined a wonderful UI flow that is easy to follow when the program is actually used by an end user. Believe me, your users will thank you if you take the time to make a wonderful UI.
 

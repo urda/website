@@ -11,7 +11,7 @@ tags:
   - Parallel Programming
   - Threading
 ---
-A few days ago I compared and contrasted Asynchronous and Parallel Programming. Today I would like to walk you through a very simple threading example in C#, and why the concept of &#8220;thread safety&#8221; is important to know before you start writing parallel applications.
+A few days ago I compared and contrasted Asynchronous and Parallel Programming. Today I would like to walk you through a very simple threading example in C#, and why the concept of "thread safety" is important to know before you start writing parallel applications.
 
 [Since we already know what exactly parallel programming is, and how it is different from asynchronous calls][1] we can go ahead and drill down to some more aspects of parallel programming. So here is an application that will start a new thread from the main, and both threads will call the same method:
 
@@ -39,7 +39,7 @@ class Threading101
 }
 </pre>
 
-Now at first glance you might say that we will only see &#8220;Method Fired&#8221; shown on screen, however when we run the program we will see this output:
+Now at first glance you might say that we will only see "Method Fired" shown on screen, however when we run the program we will see this output:
 
 <img class="aligncenter size-full wp-image-1002" title="UnsafeThreading" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/UnsafeThreading.png" alt="UnsafeThreading" width="677" height="342" />
 

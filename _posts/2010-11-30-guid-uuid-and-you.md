@@ -12,7 +12,7 @@ tags:
 ---
 So let&#8217;s say you have a bunch of objects. Yeah, a bunch of random objects completely unrelated to each other. You need a simple system that will take the information about these objects and shove them into a database. Do you just create a simple *int* identification value? If you do that then how do you control the indexing across multiple database servers? A surefire way to do this is instead use some method to generate a unique ID no matter the instance. This is where a GUID/UUID will come in handy!
 
-First things first, what exactly is a GUID or a UUID? First off they are essentially the same thing. A GUID is a &#8220;Globally unique identifier&#8221; and a UUID is a &#8220;Universally unique identifier&#8221;. They sound similar because they are pretty much the same, the exception being a GUID is Microsoft&#8217;s implementation of the UUID standard.
+First things first, what exactly is a GUID or a UUID? First off they are essentially the same thing. A GUID is a "Globally unique identifier" and a UUID is a "Universally unique identifier". They sound similar because they are pretty much the same, the exception being a GUID is Microsoft&#8217;s implementation of the UUID standard.
 
 Now that is out of the way, let&#8217;s take a look at the makeup of a regular UUID value. A UUID is a 128-bit, 16 byte value that follows this pattern:
 

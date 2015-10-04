@@ -75,7 +75,7 @@ So if you were to plug-in the C# example from above, you could collapse your sec
 
 <img class="aligncenter size-full wp-image-1039" title="Collapsed Code Sections" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Collapsed-Dragons.png" alt="Collapsed Code Sections" width="229" height="297" />
 
-If you are good about keeping your code clean a system like this can be invaluable to you. A system like my example will let you quickly move from file to file knowing where all the important chunks of code are, and allow you to &#8220;ignore&#8221; other sections since they will be collapsed already.
+If you are good about keeping your code clean a system like this can be invaluable to you. A system like my example will let you quickly move from file to file knowing where all the important chunks of code are, and allow you to "ignore" other sections since they will be collapsed already.
 
 This is just one way to structure your project. You can of course re-order your blocks into however you see fit, and if you do you should leave a comment and tell me how you prefer to organize your source files.
 

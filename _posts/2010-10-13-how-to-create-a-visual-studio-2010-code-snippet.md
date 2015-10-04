@@ -13,7 +13,7 @@ tags:
 ---
 As you work through various projects in Visual Studio 2010 you will find yourself reusing a lot of code. In fact, you may find yourself reusing a lot of the same static code, or code that follows a basic pattern. Visual Studio 2010 lets you cut out a lot of this wasted time by employing code snippets. Code snippets can generate basic code patterns or layouts on the fly inside your project. Today I will walk you through creating a basic code snippet for generating a C# class with specific section stubs.
 
-You will need to start with a generic XML file. You&#8217;ll want to keep the XML declaration line inside the file once you create it and change the file extension from **.xml** to **.snippet**. For reference I store my stubs inside **&#8220;C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom&#8221;**
+You will need to start with a generic XML file. You&#8217;ll want to keep the XML declaration line inside the file once you create it and change the file extension from **.xml** to **.snippet**. For reference I store my stubs inside **"C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom"**
 
 Now we can go ahead our XML stub! We will first fill out the required schema information:
 
@@ -181,11 +181,11 @@ xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet"&gt;
 &lt;!-- ...what we'll see will defy explanation. --&gt;
 </pre>
 
-So after all this work we still need to tell Visual Studio 2010 where to find this snippet file. To do this we will need to open the Code Snippets Manager from **Tools -> Code Snippets Manager...** or with the default keyboard shortcut ** CTRL+K, CTRL+B** inside Visual Studio. Once that is open you may need to reference your custom folder (Mine was at &#8220;C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom&#8221; for reference) using the &#8220;Add..&#8221; button. You can then click do the following:
+So after all this work we still need to tell Visual Studio 2010 where to find this snippet file. To do this we will need to open the Code Snippets Manager from **Tools -> Code Snippets Manager...** or with the default keyboard shortcut ** CTRL+K, CTRL+B** inside Visual Studio. Once that is open you may need to reference your custom folder (Mine was at "C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom" for reference) using the "Add.." button. You can then click do the following:
 
-  * Click &#8220;Import...&#8221;
+  * Click "Import..."
   * Browse to the location of your snippet
-  * Select the folder you would like Visual Studio to store said snippet (I used my &#8220;Custom&#8221; folder)
+  * Select the folder you would like Visual Studio to store said snippet (I used my "Custom" folder)
   * ..and your done!
 
 If you take a peak back at the main Code Snippets Manager window and find your new snippet you&#8217;ll be presented with a screen detailing the information from the header section:
