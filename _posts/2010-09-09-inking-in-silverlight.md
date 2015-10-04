@@ -168,10 +168,10 @@ namespace SilverlightInk
 
 We have four variables used throughout the application:
 
-  * **_stroke** &#8211; Variable to hold a complete ink stroke
-  * **_StylusUsed** &#8211; A flag to determine if a stylus device was used, instead of a mouse.
-  * **_EraserPoints** &#8211; A collection of points to compare against already inked strokes for erasing purposes
-  * **_InkMode** &#8211; Contains constants to flip between ink and erasing modes. The initial setting is drawing when the application starts
+  * **_stroke** - Variable to hold a complete ink stroke
+  * **_StylusUsed** - A flag to determine if a stylus device was used, instead of a mouse.
+  * **_EraserPoints** - A collection of points to compare against already inked strokes for erasing purposes
+  * **_InkMode** - Contains constants to flip between ink and erasing modes. The initial setting is drawing when the application starts
 
 Let's examine the major handlers closely. First we will take a look at our buttons for the application:
 

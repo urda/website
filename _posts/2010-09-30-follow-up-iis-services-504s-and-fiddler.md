@@ -81,7 +81,7 @@ We are almost done defining the XML for our trace operations. Now we just need t
 &lt;/system.diagnostics&gt;
 </pre>
 
-We then go back to the application (after recycling the App Pool in IIS that hosts the application at fault), launch the ClickOnce program, and trigger the error to occur. When the error finally does occur all you have to do is pull down the file the listener wrote to (in our case Server.e2e) and open it up with the **Microsoft Service Trace Viewer** which is located in *All Programs &#8211;> Visual Studio 2010 &#8211;> Microsoft Windows SDK Tools*. You should see any errors that are occurring, and hopefully the one that you need to know to correct the problem!
+We then go back to the application (after recycling the App Pool in IIS that hosts the application at fault), launch the ClickOnce program, and trigger the error to occur. When the error finally does occur all you have to do is pull down the file the listener wrote to (in our case Server.e2e) and open it up with the **Microsoft Service Trace Viewer** which is located in *All Programs -> Visual Studio 2010 -> Microsoft Windows SDK Tools*. You should see any errors that are occurring, and hopefully the one that you need to know to correct the problem!
 
 After I had my output opened in the Service Trace Viewer I found the original problem. In my case the problem was listed as:
 
