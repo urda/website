@@ -18,7 +18,7 @@ I have been tracking a random issue in one of our projects here at Mercer. It is
 
 With the problem triggering locally, I started up Fiddler on my program. In case you have never heard of Fiddler it is a wonderful tool to track HTTP requests entering and exiting your computer. From the official Fiddler website:
 
-> Fiddler is a Web Debugging Proxy which logs all HTTP(S) traffic between your computer and the Internet. Fiddler allows you to inspect all HTTP(S) traffic, set breakpoints, and &#8220;fiddle&#8221; with incoming or outgoing data. Fiddler includes a powerful event-based scripting subsystem, and can be extended using any .NET language.
+> Fiddler is a Web Debugging Proxy which logs all HTTP(S) traffic between your computer and the Internet. Fiddler allows you to inspect all HTTP(S) traffic, set breakpoints, and "fiddle" with incoming or outgoing data. Fiddler includes a powerful event-based scripting subsystem, and can be extended using any .NET language.
 > 
 > Fiddler is freeware and can debug traffic from virtually any application, including Internet Explorer, Mozilla Firefox, Opera, and thousands more.
 > 

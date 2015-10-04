@@ -9,7 +9,7 @@ tags:
   - Co-Op
   - Software
 ---
-You finally made it! You worked long hours and many weeks to bring your small software idea for your company all the way to a &#8220;production ready&#8221; state. There is only one obstacle in your way, give a brilliant demonstration of your software to show how much value it adds for your employer to take advantage of. But what makes a good demo?
+You finally made it! You worked long hours and many weeks to bring your small software idea for your company all the way to a "production ready" state. There is only one obstacle in your way, give a brilliant demonstration of your software to show how much value it adds for your employer to take advantage of. But what makes a good demo?
 
 There is a popular quote that has floated around the internet for some time in reference to product demonstrations:
 
@@ -17,7 +17,7 @@ There is a popular quote that has floated around the internet for some time in r
 > 
 > Source: Unknown
 
-On a given demo you have countless man hours invested and obstacle overcome to bring a product to a &#8220;production ready&#8221; status. Before it can proceed off to production to live a happy life, it often needs one final approval from the business before sale or release. This approval often hinges on the demonstration, which will make or break any software project. Do or die.
+On a given demo you have countless man hours invested and obstacle overcome to bring a product to a "production ready" status. Before it can proceed off to production to live a happy life, it often needs one final approval from the business before sale or release. This approval often hinges on the demonstration, which will make or break any software project. Do or die.
 
 There are a few characteristics that make up a great demonstration. The first major one is preparation. If you have taken the time to review your presentation, the data set you&#8217;ll be using, and practicing the phrases to say you&#8217;ll be better off during the demonstration. In fact, you&#8217;ll come off with a commanding respect with the appearance that you know this software forward, backwards, and upside down.
 

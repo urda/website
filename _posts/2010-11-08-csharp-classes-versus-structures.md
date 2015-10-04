@@ -10,7 +10,7 @@ tags:
   - Co-Op
   - Programming
 ---
-You may be wondering to yourself &#8220;What in the world is the difference between a C# Class and a C# structure?&#8221; It is true that both types follow a similar syntax and a similar ideology, but there is a major difference at the machine level. There are a few situations where a C# structure will provided better performance than a C# class and other times a class will be faster than a structure. The reason for this is how C# is handling both of these in memory during program execution.
+You may be wondering to yourself "What in the world is the difference between a C# Class and a C# structure?" It is true that both types follow a similar syntax and a similar ideology, but there is a major difference at the machine level. There are a few situations where a C# structure will provided better performance than a C# class and other times a class will be faster than a structure. The reason for this is how C# is handling both of these in memory during program execution.
 
 Let&#8217;s talk about classes first. A class in C# is a **reference type**. This means that C# creates references, or pointers, to values in memory for each part of the object. When you copy a C# class you are making a copy of the references to values in memory. Structures have a different behavior than this.
 

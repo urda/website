@@ -21,7 +21,7 @@ Before we can work with IronPython in C#, we need to setup our environment. Here
 
 The first step in working with IronPython in Visual Studio 2010 is to actually install IronPython. You&#8217;ll need to visit <a href="http://ironpython.net/download/" class="external external_icon" target="_blank">IronPython.net</a> to grab the latest version of IronPython. Just install the latest **stable** release. For reference, I installed IronPython version 2.6.1 when I wrote this article. Just install all the recommended components. After that is done you can go ahead and startup Visual Studio.
 
-After Visual Studio has started up, you&#8217;ll need to start a new C# Console Application project. After you have created that we are going to need to add references (Right-Click on References in the Solution Explorer > &#8220;Add Reference...&#8221;) to this project. Assuming you installed IronPython in the default directory you will find all the needed references in **&#8220;C:\Program Files\IronPython 2.6 for .NET 4.0&#8243;** on **32-bit systems** and **&#8220;C:\Program Files (x86)\IronPython 2.6 for .NET 4.0&#8243;** on **64-bit systems**. We will be adding the following references:
+After Visual Studio has started up, you&#8217;ll need to start a new C# Console Application project. After you have created that we are going to need to add references (Right-Click on References in the Solution Explorer > "Add Reference...") to this project. Assuming you installed IronPython in the default directory you will find all the needed references in **"C:\Program Files\IronPython 2.6 for .NET 4.0&#8243;** on **32-bit systems** and **"C:\Program Files (x86)\IronPython 2.6 for .NET 4.0&#8243;** on **64-bit systems**. We will be adding the following references:
 
   * IronPython
   * IronPython.Modules
@@ -43,7 +43,7 @@ def multiply(x, y):
 	return
 </pre>
 
-This file is describing three basic functions in Python: A function that says &#8220;Hello {Name}! Welcome to IronPython!&#8221; and two math functions. All of these functions will print to our console in C# using the Python **print** command.
+This file is describing three basic functions in Python: A function that says "Hello {Name}! Welcome to IronPython!" and two math functions. All of these functions will print to our console in C# using the Python **print** command.
 
 Now that we have our python prepared, we will rename the generic **Program.cs** file to **IronPythonMain.cs**. As always allow Visual Studio to update the references in the file when prompted. Our C# file will follow this workflow:
 

@@ -16,7 +16,7 @@ tags:
 
 In case you are not familiar with LINQ, here is a quick overview on it:
 
-> Language Integrated Query (LINQ, pronounced &#8220;link&#8221;) is a Microsoft .NET Framework component that adds native data querying capabilities to .NET languages.
+> Language Integrated Query (LINQ, pronounced "link") is a Microsoft .NET Framework component that adds native data querying capabilities to .NET languages.
 >
 > LINQ defines a set of method names (called standard query operators, or standard sequence operators), along with translation rules from so-called query expressions to expressions using these method names, lambda expressions and anonymous types. These can, for example, be used to project and filter data in arrays, enumerable classes, XML (XLINQ), relational database, and third party data sources. Other uses, which utilize query expressions as a general framework for readably composing arbitrary computations, include the construction of event handlers or monadic parsers.
 >
@@ -164,7 +164,7 @@ But here is where the real magic is:
     PersonList = query.ToList();
 </pre>
 
-Looks a lot like SQL huh? Well what this statement is doing is grabbing all the objects in the XML that are a &#8220;Person&#8221;. It then uses an empty PersonObject and defines each of the variables in the object. There is a logic statement inside the query to set the char for the gender in each object (since you cannot cast a string to a char in this instance) based on the string retrieved from the XML.
+Looks a lot like SQL huh? Well what this statement is doing is grabbing all the objects in the XML that are a "Person". It then uses an empty PersonObject and defines each of the variables in the object. There is a logic statement inside the query to set the char for the gender in each object (since you cannot cast a string to a char in this instance) based on the string retrieved from the XML.
 
 Now for comparison, let&#8217;s look at the difference between the two sources:
 

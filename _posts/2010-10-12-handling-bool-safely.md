@@ -1,5 +1,5 @@
 ---
-title: 'Handling &#8220;bool?&#8221; Safely'
+title: 'Handling "bool?" Safely'
 author: Peter Urda
 layout: post
 redirect_from: /2010/10/handling-bool-safely/

@@ -10,7 +10,7 @@ tags:
   - Co-Op
   - Programming
 ---
-Enumerations in C# allow you to group common constants together inside a piece of code. They are often used for determining a system state, flag state, or other constant conditions throughout the program. Usually enums are not formatted for &#8220;pretty&#8221; displaying to the end user. However you can use a little C# magic to make them behave better with descriptions!
+Enumerations in C# allow you to group common constants together inside a piece of code. They are often used for determining a system state, flag state, or other constant conditions throughout the program. Usually enums are not formatted for "pretty" displaying to the end user. However you can use a little C# magic to make them behave better with descriptions!
 
 In order to add descriptions to the desired enum, you&#8217;ll need to declare **using System.ComponentModel;** at the top of your source file. This will help with simplifying the definitions later on. So first let&#8217;s lay out an enum:
 
@@ -55,7 +55,7 @@ Basically, this method has the following workflow:
 
   * Grab the enum type
   * Get the actual field value
-  * Grab our custom attribute &#8220;Description&#8221;
+  * Grab our custom attribute "Description"
   * Finally, check to make sure we got a value.
   * If we didn&#8217;t, just return the string of the enum value
   * If we did, return the Description attribute.
