@@ -3,6 +3,9 @@ title: 'Lambda Expressions and Delegates in C#'
 author: Peter Urda
 layout: post
 redirect_from: /2010/08/lambda-expressions-and-delegates-in-csharp/
+
+urda_uuid: 20100827
+
 categories:
   - How To
   - Mercer Daily Reports
@@ -12,28 +15,46 @@ tags:
   - Delegates
   - Lambda Expressions
 ---
-In a [previous post][1] I discussed chaining C# delegates together. In the source code example, I created a generic *DelegateMath* class to house a few basic math operations. This time we will replace those functions with simpler and shorter lambda expressions.
 
-So what exactly is a lambda expression? What does it have to do with C#? Our friends over at MSDN have this to say:
+In a [previous post]({% post_url 2010-08-26-delegate-chain-of-command %}) I
+discussed chaining C# delegates together. In the source code example, I created
+a generic *DelegateMath* class to house a few basic math operations. This time
+we will replace those functions with simpler and shorter lambda expressions.
 
-> A lambda expression is an anonymous function that can contain expressions and statements, and can be used to create delegates or expression tree types.
-> 
-> All lambda expressions use the lambda operator =>, which is read as &#8220;goes to&#8221;. The left side of the lambda operator specifies the input parameters (if any) and the right side holds the expression or statement block. The lambda expression x => x * x is read &#8220;x goes to x times x.&#8221;
-> 
-> Source: <a href="http://msdn.microsoft.com/en-us/library/bb397687.aspx" class="external external_icon" target="_blank">http://msdn.microsoft.com/en-us/library/bb397687.aspx</a>
+So what exactly is a lambda expression? What does it have to do with C#? Our
+friends over at MSDN have this to say:
 
-If we wanted to build a simple delegate using a lambda expression, it could look something like this:
+> A lambda expression is an anonymous function that can contain expressions and
+> statements, and can be used to create delegates or expression tree types.
+>
+> All lambda expressions use the lambda operator =>, which is read as "goes to".
+> The left side of the lambda operator specifies the input parameters (if any)
+> and the right side holds the expression or statement block. The lambda
+> expression x => x * x is read "x goes to x times x."
+>
+> Source: [Lambda Expressions (C# Programming Guide)](http://msdn.microsoft.com/en-us/library/bb397687.aspx)
 
-<pre class="brush: csharp; title: ; notranslate" title="">delegate int del(int i);
+If we wanted to build a simple delegate using a lambda expression, it could look
+something like this:
+
+```csharp
+delegate int del(int i);
 del ADelegate = x =&gt; x * x;
 int j = ADelegate(5); // j = 25
-</pre>
+```
 
-So why use lambda expression with delegates at all? First of all they can be used anywhere an anonymous delegate can be used. The defining characteristic of lambda expressions is that they can be used with expression trees (which can then be used for LINQ and SQL purposes) while anonymous delegates cannot be used with expression trees.
+So why use lambda expression with delegates at all? First of all they can be
+used anywhere an anonymous delegate can be used. The defining characteristic of
+lambda expressions is that they can be used with expression trees (which can
+then be used for LINQ and SQL purposes) while anonymous delegates cannot be used
+with expression trees.
 
-If we take the same example from the [previous post][1] using delegates, we can modify it to use lambda expressions instead&#8230;
+If we take the same example from the
+[previous post]({% post_url 2010-08-26-delegate-chain-of-command %}) using
+delegates, we can modify it to use lambda expressions instead...
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```csharp
+using System;
 
 namespace DelegateChainWithLambda
 {
@@ -72,12 +93,11 @@ namespace DelegateChainWithLambda
         }
     }
 }
-</pre>
+```
 
-&#8230;and when we run the program we get this output:
+...and when we run the program we get this output:
 
-<img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/08/delegatesoftwarerunning.png" alt="Delegate Chain with Lambda Expressions Software Example (C#)" title="Delegate Chain with Lambda Expressions Software Example (C#)" width="677" height="342" class="aligncenter size-full wp-image-374" />
+[![Program Output](/content/{{ page.urda_uuid }}/delegatesoftwarerunning.png)](/content/{{ page.urda_uuid }}/delegatesoftwarerunning.png)
 
-We still get the exact same output (cool story, I know) however we have removed the need for the math class, and made the code a little easier to follow.
-
- [1]: http://www.peter-urda.com/2010/08/delegate-chain-of-command
+We still get the exact same output (cool story, I know) however we have removed
+the need for the math class, and made the code a little easier to follow.
