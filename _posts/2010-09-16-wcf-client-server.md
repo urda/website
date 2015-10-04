@@ -1,5 +1,5 @@
 ---
-title: 'Windows Communication Foundation - A Simple Client &#038; Server'
+title: 'Windows Communication Foundation - A Simple Client & Server'
 author: Peter Urda
 layout: post
 redirect_from: /2010/09/wcf-client-server/
