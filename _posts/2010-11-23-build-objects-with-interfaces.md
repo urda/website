@@ -71,7 +71,7 @@ An interface is a very basic chunk of code in C#. It is like a checklist of obje
 }
 </pre>
 
-As you can tell, you&#8217;ll need to go through each method and implement it for use. I simply took a moment to do some clean up, and added logic to my *Speak* method:
+As you can tell, you'll need to go through each method and implement it for use. I simply took a moment to do some clean up, and added logic to my *Speak* method:
 
 <pre class="brush: csharp; title: Built Person Object; notranslate" title="Built Person Object">public class Person : IHuman
 {
@@ -100,7 +100,7 @@ As you can tell, you&#8217;ll need to go through each method and implement it fo
 }
 </pre>
 
-Now I can build a simple program and declare a Person 0bject. Then I can set variables within the object and/or use any of the methods associated with it. Yet, I need another object to describe a programmer. Again, I&#8217;ll use the **IHuman** interface and make the needed changes to my methods. I&#8217;m also adding a custom method in this class as another way to speak.
+Now I can build a simple program and declare a Person 0bject. Then I can set variables within the object and/or use any of the methods associated with it. Yet, I need another object to describe a programmer. Again, I'll use the **IHuman** interface and make the needed changes to my methods. I'm also adding a custom method in this class as another way to speak.
 
 <pre class="brush: csharp; title: Programmer Object; notranslate" title="Programmer Object">public class Programmer : IHuman
 {

@@ -14,7 +14,7 @@ If you have worked with WPF or Silverlight at all, you should be familiar with M
 
 From on overall point of view, the Model View ViewModel paradigm tries to blend the separation of functional development that MVC offers while implementing the power of XAML and WPF by controlling where data is manipulated. Basically, MVVM brings the code needed to alter the UI very close to the ViewModel and Model with data bindings, allowing for very little to no code having to be written in the actual XAML UI files.
 
-Let&#8217;s go ahead and break down the individual portions of the MVVM architecture. I made a simple diagram (displayed bellow) that demonstrates the relationships between each portion:
+Let's go ahead and break down the individual portions of the MVVM architecture. I made a simple diagram (displayed bellow) that demonstrates the relationships between each portion:
 
 <img class="aligncenter size-full wp-image-1030" title="MVVM Diagram, Created by Peter Urda" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/MVVM-Diagram_By-Urda.png" alt="MVVM Diagram, Created by Peter Urda" width="552" height="347" />
 
@@ -32,4 +32,4 @@ There are some current issues with MVVM at this time though:
   * If data binding is not handle well and cleanly, things can get messy really quick!
   * Having to create a property then code needed to bind to said property, can lead to duplicate code and maintenance problems down the road
 
-As with any project, plenty of planning and thought has to be put in to produce a successful program. MVVM will not fit every individual&#8217;s needs, but no architecture is perfect. So take a look at MVVM and see if it is the right path for your application.
+As with any project, plenty of planning and thought has to be put in to produce a successful program. MVVM will not fit every individual's needs, but no architecture is perfect. So take a look at MVVM and see if it is the right path for your application.

@@ -38,7 +38,7 @@ Normally, if you declare a normal bool the compiler will throw a fit if you set 
 }
 </pre>
 
-So going to back to the theme of if/else statements, what would happen if you sent a null boolean into a logic block without proper handling it properly beforehand? Let&#8217;s start with a basic program:
+So going to back to the theme of if/else statements, what would happen if you sent a null boolean into a logic block without proper handling it properly beforehand? Let's start with a basic program:
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 
@@ -58,11 +58,11 @@ class Sandbox
 
 If we key this into Visual Studio, we are prompted with the error:
 
-> **Cannot implicity convert type &#8216;bool?&#8217; to &#8216;bool&#8217;. An explicit conversion exists (are you missing a cast?)**
+> **Cannot implicity convert type 'bool?' to 'bool'. An explicit conversion exists (are you missing a cast?)**
 
 This is nice because Visual Studio is informing us of a simple work around (casting) that could be applied. However, if we had a more complex program that had variables declared in objects elsewhere, values pulled out of databases, or dynamic types there would be no way for the compiler to catch them before runtime. Obviously, a null boolean being encountered in logic will produce a nasty stacktrace and crash the program if it is not caught.
 
-We can deal with this issue though! We simply have to double-check the condition of the boolean before we enter any critical logic blocks of code. For most instances we will want to just set the variable to false, and continue to our logic blocks. The check can be performed by any method of your design, but I&#8217;ll simply use the **HasValue** method to handle it for this short example. After handling the null type, we simply just cast it to a regular boolean. Now check out the example:
+We can deal with this issue though! We simply have to double-check the condition of the boolean before we enter any critical logic blocks of code. For most instances we will want to just set the variable to false, and continue to our logic blocks. The check can be performed by any method of your design, but I'll simply use the **HasValue** method to handle it for this short example. After handling the null type, we simply just cast it to a regular boolean. Now check out the example:
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 
@@ -90,4 +90,4 @@ Press any key to continue . . .
 */
 </pre>
 
-Pretty straight forward! This could be a serious issue you will need to handle if you are using anything such as dynamic types with logic statements. The compiler will be unable to catch instances of the sort, and you&#8217;ll need to account for null booleans if so.
+Pretty straight forward! This could be a serious issue you will need to handle if you are using anything such as dynamic types with logic statements. The compiler will be unable to catch instances of the sort, and you'll need to account for null booleans if so.

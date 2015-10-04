@@ -13,6 +13,6 @@ There are times throughout life where you may be in a slow state. Perhaps you ar
 
 Sure you can just sit around and browse the web in downtime, but you can also be productive with it! You could research new projects that your department may want to take on or you could re-visit a failed plan from years ago. Perhaps you want to pick up some personal skills that augment your career path. You may just have a pet project you work on during downtime that keeps you on your toes.
 
-All of these things are a great way to keep your mind sharp and fresh. Nobody wants to be glued to a single project the rest of their lives. Give yourself some time-out, and play around with a small project of yours. Who knows, maybe you&#8217;ll save yourself from burnout or come up with the next great thing. 
+All of these things are a great way to keep your mind sharp and fresh. Nobody wants to be glued to a single project the rest of their lives. Give yourself some time-out, and play around with a small project of yours. Who knows, maybe you'll save yourself from burnout or come up with the next great thing. 
 
 I can tell you one thing though: if you do nothing in your extra time, nothing will ever happen. So why not make the most of it?

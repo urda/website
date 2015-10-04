@@ -18,6 +18,6 @@ When attempting to add a file to TFS or Visual Studio for compilation, you will 
 
 So why is this an issue? Surely modern operating systems should not be bound to these kinds of restrictions. After all, once you get past ***C:\Users\[Username]\Documents\Projects\...*** you have already eaten up 40 or so characters! This is an issue since TFS is apparently making non-unicode calls to create paths. When a program makes a non-unicode call, it will be limited to 260 characters for the path. This is not an issue with other programs that make a unicode call through the Windows API to create paths, as their limit is actually 32,767 characters.
 
-So what can you do about this? The best thing to do is to shorten your base path. You can easily do this by moving your project from, say &#8216;My Documents&#8217;, to something along the lines of ***C:\Projects\*** or ***C:\TFS\***
+So what can you do about this? The best thing to do is to shorten your base path. You can easily do this by moving your project from, say 'My Documents', to something along the lines of ***C:\Projects\*** or ***C:\TFS\***
 
 If you are really interested in the full technical details of this issue, you can visit <a href="http://msdn.microsoft.com/en-us/library/aa365247.aspx" class="external external_icon" target="_blank">MSDN</a> for more information.

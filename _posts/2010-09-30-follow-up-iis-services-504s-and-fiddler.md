@@ -16,7 +16,7 @@ While the maxRequestLength does help the application pull down the query at time
 
 I had to add another entry into my **web.config** file to catch any possible errors my services were throwing out that were not being logged in IIS or Fiddler. Sure enough, I was able to log a trace that showed me the root of the 504 problem. Before I tell you what the problem was with my program, I would like to take you through build a tracer similar to the one I used.
 
-Let&#8217;s start building our tracer. First we drop into a **system.diagnostics** block. The system.diagnostics block is in charge of catching various trace messages and outputting them somewhere of our choosing, so it will contain child tags that will control how it operates. (<a href="http://msdn.microsoft.com/en-us/library/system.diagnostics%28VS.71%29.aspx" class="external external_icon" target="_blank">For reference, you can read all about the system.diagnostics namespace on MSDN</a>)
+Let's start building our tracer. First we drop into a **system.diagnostics** block. The system.diagnostics block is in charge of catching various trace messages and outputting them somewhere of our choosing, so it will contain child tags that will control how it operates. (<a href="http://msdn.microsoft.com/en-us/library/system.diagnostics%28VS.71%29.aspx" class="external external_icon" target="_blank">For reference, you can read all about the system.diagnostics namespace on MSDN</a>)
 
 <pre class="brush: xml; title: ; notranslate" title="">&lt;system.diagnostics&gt;
     &lt;!--

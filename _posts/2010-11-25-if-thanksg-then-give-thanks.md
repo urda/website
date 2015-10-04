@@ -8,4 +8,4 @@ categories:
 tags:
   - Personal
 ---
-Make sure you enjoy the time off from work and school as much as you can. Be sure to surround yourself with those that you love and cherish! Don&#8217;t forget to tell them how much you value them as a person and the impact they have on your life. Also be sure to eat a ton of food, drink plenty, and have a wonderful time!
+Make sure you enjoy the time off from work and school as much as you can. Be sure to surround yourself with those that you love and cherish! Don't forget to tell them how much you value them as a person and the impact they have on your life. Also be sure to eat a ton of food, drink plenty, and have a wonderful time!

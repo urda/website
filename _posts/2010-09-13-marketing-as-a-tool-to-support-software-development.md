@@ -12,9 +12,9 @@ tags:
 ---
 Say we have a Software Development Department at ACME Company. They are tasked with creating and maintaining all the software that ACME sells. The bulk of their daily work is adding new features to current product lines and working on bug fixes. Now and then this Software Development Department has an idea that they think is fantastic. No really, this idea is a real heck of an idea! They attempt to persuade management in investing development hours into their idea after having put together a small prototype for demonstration. However the issue at hand is management does not have full confidence that ACME clients will want such a new and different product. What can the ACME Developers do to prevent their idea from dying on the table? Why they can utilize Marketing as a tool to grow their idea!
 
-Many times it takes more than a group of great Software Engineers to produce a successful software product. Other departments and disciplines must be brought in on the development process throughout the Software&#8217;s life cycle. Out of the various groups that can be included, and one of the more powerful ones, can be considered as Marketing. With Marketing, many important and required aspects of a successful launch would be nonexistent at the actual launch.
+Many times it takes more than a group of great Software Engineers to produce a successful software product. Other departments and disciplines must be brought in on the development process throughout the Software's life cycle. Out of the various groups that can be included, and one of the more powerful ones, can be considered as Marketing. With Marketing, many important and required aspects of a successful launch would be nonexistent at the actual launch.
 
-So what does Marketing bring to the table as far as Software Development is concerned? Well let&#8217;s run through a brief, high level overview:
+So what does Marketing bring to the table as far as Software Development is concerned? Well let's run through a brief, high level overview:
 
 ***Marketing the Prototype Key Points:***
 

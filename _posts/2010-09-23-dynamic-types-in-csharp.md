@@ -14,7 +14,7 @@ When C# 4.0 was released, it added a new type for variables called dynamic. The 
 
 All of these basic concepts come together to form the concept of a C# dynamic type. The dynamic type in C# is a strange, new concept that has some interesting use cases. Those use cases usually apply to interacting with other languages or documents.
 
-Let&#8217;s say I build a simple class that describes a person object. I will also go ahead and create a main class, build a person object with the dynamic type, and print one line to screen.
+Let's say I build a simple class that describes a person object. I will also go ahead and create a main class, build a person object with the dynamic type, and print one line to screen.
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 
@@ -61,6 +61,6 @@ Since we have defined this person object as dynamic, we can use any method we wa
 }
 </pre>
 
-At this point you&#8217;ll notice we have added a method called **SomeMagicFunction** that does not exist in the class, but Visual Studio 2010 still lets us compile the application. It is only at run time that this application will throw an error when it attempts to make a call to **SomeMagicFunction**. But if the function was made available through some form of interop, you would be able to execute that function against the object.
+At this point you'll notice we have added a method called **SomeMagicFunction** that does not exist in the class, but Visual Studio 2010 still lets us compile the application. It is only at run time that this application will throw an error when it attempts to make a call to **SomeMagicFunction**. But if the function was made available through some form of interop, you would be able to execute that function against the object.
 
 So dynamic types allows C# to play nice with other languages such as IronPython, HTML DOMs, COM API, or somewhere else in a program. Think of the dynamic type as a way to bridge the gap between strongly typed components such as C# and weakly type components such as IronPython, COM, or other DOM objects.

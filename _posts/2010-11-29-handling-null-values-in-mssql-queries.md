@@ -12,7 +12,7 @@ tags:
 ---
 When working with a given set of data in a Microsoft SQL server, you may have rows that contain one more **NULL** values for a given column. This may or may not impact your queries against the database, so it is important to understand how the database handles these values and how your queries should be designed around this consideration.
 
-Let&#8217;s take a simple example table. This table contains a *Product ID*, *Product Name*, and *Product Price*. The table is also populated with a few values. 
+Let's take a simple example table. This table contains a *Product ID*, *Product Name*, and *Product Price*. The table is also populated with a few values. 
 
 <pre class="brush: plain; title: ProductTable; notranslate" title="ProductTable">PID  |PName       |PPrice |
 -----|------------|-------|

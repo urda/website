@@ -13,7 +13,7 @@ I wanted to share a few C# tricks I reviewed today. Some programmers will use th
 
 In this short source code example I will be demoing the **?? operator**, **chaining ??**, and **String.IsNullOrWhiteSpace()** which is a newer .NET method.
 
-So here is the source I&#8217;ll talk about:
+So here is the source I'll talk about:
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 

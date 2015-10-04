@@ -11,7 +11,7 @@ tags:
   - Silverlight
   - XAML
 ---
-Users with touch screens, stylus-enabled screens, or USB stylus pads appreciate the ability to write and markup documents and files. Plenty of modern applications today support inking natively (Example: OneNote 2010, one application I use in conjunction with my Lenovo tablet as a digital notebook on most days of the week) for a variety of purposes and actions. You may not know it already, but Silverlight has all the required libraries in place to utilizing inking on screen. So today I&#8217;ve put together a little Silverlight web app to demonstrate.
+Users with touch screens, stylus-enabled screens, or USB stylus pads appreciate the ability to write and markup documents and files. Plenty of modern applications today support inking natively (Example: OneNote 2010, one application I use in conjunction with my Lenovo tablet as a digital notebook on most days of the week) for a variety of purposes and actions. You may not know it already, but Silverlight has all the required libraries in place to utilizing inking on screen. So today I've put together a little Silverlight web app to demonstrate.
 
 The first thing we need to do is define our XAML that will build the visual layout of our web application. In this case we will just call this our MainPage.xaml:
 
@@ -63,13 +63,13 @@ The first thing we need to do is define our XAML that will build the visual layo
 
 The flow of our XAML document, in a nutshell, is as follows:
 
-  * Define top-level grid &#8216;MainLayout&#8217;, make it a 2&#215;2, and set just the left column to a width of 100 (others will be auto)
+  * Define top-level grid 'MainLayout', make it a 2&#215;2, and set just the left column to a width of 100 (others will be auto)
   * Define a sub-grid in the top left cell, this will be used for storing our buttons
   * Define our buttons, create click actions
   * Place a border object in the right column
   * Place an InkPresenter object inside the border, with required action handlers (MouseLeftButtonDown/Up, MouseMove)
 
-Once our XAML is squared away, we can write the actual code our event handlers will use. So we will go ahead and jump to MainPage.xaml.cs to create the logic behind the application. Let&#8217;s go ahead and look at the source code for that.
+Once our XAML is squared away, we can write the actual code our event handlers will use. So we will go ahead and jump to MainPage.xaml.cs to create the logic behind the application. Let's go ahead and look at the source code for that.
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System.Windows;
 using System.Windows.Controls;
@@ -173,7 +173,7 @@ We have four variables used throughout the application:
   * **_EraserPoints** &#8211; A collection of points to compare against already inked strokes for erasing purposes
   * **_InkMode** &#8211; Contains constants to flip between ink and erasing modes. The initial setting is drawing when the application starts
 
-Let&#8217;s examine the major handlers closely. First we will take a look at our buttons for the application:
+Let's examine the major handlers closely. First we will take a look at our buttons for the application:
 
 <pre class="brush: csharp; title: ; notranslate" title="">private void EraseButtonClick(object sender, RoutedEventArgs e)
 {
@@ -222,7 +222,7 @@ Now we need to look at what exactly happens when you press the left mouse button
 
 We first make sure to capture the input of the mouse. After we have done this we need to see if a stylus was used. The easiest way to do that is to see if it was inverted. An inverted stylus should act like an eraser (much like flipping to the other side of a pencil). A normal mouse input will never have an inverted value. However, if we detect that a stylus has been flipped, we can assume the user wants to erase a stroke or strokes from the screen. Once that statement has been evaluated to true we just flip the mode to erase, update the cursor, and flip a flag that lets the program know we used a stylus.
 
-If we hadn&#8217;t used a stylus, we simply check to see what mode we are in for inking based on the last button pressed by the user. If we are erasing we collect the points for use later in a variable. Otherwise, we create a new Stroke() object and add the ink on screen.
+If we hadn't used a stylus, we simply check to see what mode we are in for inking based on the last button pressed by the user. If we are erasing we collect the points for use later in a variable. Otherwise, we create a new Stroke() object and add the ink on screen.
 
 While the user is moving around on screen, we have another event handler that is running throughout mouse movement.
 

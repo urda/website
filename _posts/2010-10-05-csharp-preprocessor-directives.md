@@ -26,7 +26,7 @@ C# has the following directives, all of which will be covered in this article:
   * **#region**
   * **#endregion**
 
-Let&#8217;s start with **#define** and **#undef**. These directives are used to define and undefine symbols that evaluate to true (if using #define) when used in other logical directives. As you could imagine, #undef will undefine a given symbol (such that it yields false).
+Let's start with **#define** and **#undef**. These directives are used to define and undefine symbols that evaluate to true (if using #define) when used in other logical directives. As you could imagine, #undef will undefine a given symbol (such that it yields false).
 
 <pre class="brush: csharp; title: ; notranslate" title="">// Set Debug Mode
 #define DEBUG_MODE
@@ -64,7 +64,7 @@ DEBUG_MODE is defined!
 
 In just these two examples I have already covered 6 of the 11 possible C# preprocessor directives. The next few will help you add messages to your compiler output.
 
-Now let&#8217;s cover the **#warning** and **#error** directives. Both of these directives will throw Warnings or Errors respectively when you compile your application in Visual Studio. For example, you may want to throw a warning that you left debug mode on so you don&#8217;t accidentally deploy your application to production while it is running in a debug state:
+Now let's cover the **#warning** and **#error** directives. Both of these directives will throw Warnings or Errors respectively when you compile your application in Visual Studio. For example, you may want to throw a warning that you left debug mode on so you don't accidentally deploy your application to production while it is running in a debug state:
 
 <pre class="brush: csharp; title: ; notranslate" title="">#define DEBUG_MODE
 using System;
@@ -96,7 +96,7 @@ public class SomeClass
 }
 </pre>
 
-The **#line** directive is more strange than the other preprocessor directives. Specifically, #line allows you to modify the compiler&#8217;s line number and optionally change the file name that is used for warning and error outputs.The syntax is as follows:
+The **#line** directive is more strange than the other preprocessor directives. Specifically, #line allows you to modify the compiler's line number and optionally change the file name that is used for warning and error outputs.The syntax is as follows:
 
 <pre class="brush: plain; title: ; notranslate" title="">#line [ number ["file_name"] | hidden | default ]
 </pre>

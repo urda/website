@@ -1,5 +1,5 @@
 ---
-title: 'Urda&#8217;s PGP Public Key'
+title: 'Urda's PGP Public Key'
 author: Peter Urda
 layout: post
 redirect_from: /2012/07/urdas-pgp-public-key/
@@ -24,7 +24,7 @@ Key Fingerprint:
 AF7C 0F76 C05C 7B84 9BBF  E400 FDBB EE4F 9CED 75CD
 </pre>
 
-You should be able to obtain it from a key server, such as <a href="http://pgp.mit.edu/" class="external external_icon" target="_blank">MIT&#8217;s</a>. Use the following command in your *nix shell:
+You should be able to obtain it from a key server, such as <a href="http://pgp.mit.edu/" class="external external_icon" target="_blank">MIT's</a>. Use the following command in your *nix shell:
 
 <pre class="brush: bash; title: ; notranslate" title="">gpg --keyserver pgp.mit.edu --recv-key 9CED75CD
 </pre>

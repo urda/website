@@ -1,5 +1,5 @@
 ---
-title: 'Urda&#8217;s PGP Public Key (RCHS)'
+title: 'Urda's PGP Public Key (RCHS)'
 author: Peter Urda
 layout: post
 redirect_from: /2012/07/urdas-pgp-public-key-rchs/
@@ -24,7 +24,7 @@ Key Fingerprint:
 DE85 6BAF D17C 69E1 A8A9  E10E 0077 41E2 533D 66D6
 </pre>
 
-You should be able to obtain it from a key server, such as <a href="http://pgp.mit.edu/" class="external external_icon" target="_blank">MIT&#8217;s</a>. Use the following command in your *nix shell:
+You should be able to obtain it from a key server, such as <a href="http://pgp.mit.edu/" class="external external_icon" target="_blank">MIT's</a>. Use the following command in your *nix shell:
 
 <pre class="brush: bash; title: ; notranslate" title="">gpg --keyserver pgp.mit.edu --recv-key 533D66D6
 </pre>
