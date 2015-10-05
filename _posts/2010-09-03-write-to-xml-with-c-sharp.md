@@ -3,6 +3,9 @@ title: 'Write to XML with C#'
 author: Peter Urda
 layout: post
 redirect_from: /2010/09/write-to-xml-with-c-sharp/
+
+urda_uuid: 20100903
+
 categories:
   - How To
   - Mercer Daily Reports
@@ -11,7 +14,10 @@ tags:
   - Co-Op
   - XML
 ---
-So we can read XML in a variety of ways ([one example here][1], [and another here][2]). So can we write it in C#? Of course we can! So lets jump right into shall we?
+
+So we can read XML in a variety of ways ([one example here]({% post_url 2010-08-30-extracting-information-from-xml-with-csharp %}),
+[and another here]({% post_url 2010-08-31-using-linq-to-extract-information-from-xml-in-csharp %})).
+So can we write it in C#? Of course we can! So lets jump right into shall we?
 
 So here is the steps I take in this sample:
 
@@ -121,21 +127,29 @@ namespace WriteXML01
 }
 ```
 
-First I make a generic person class to store my data in, and get it back out for the XML later. This could resemble an object we could get from a data factory or a SQL database. But it is an object nonetheless.
+First I make a generic person class to store my data in, and get it back out for
+the XML later. This could resemble an object we could get from a data factory or
+a SQL database. But it is an object nonetheless.
 
-We then define the declaration of the document, it just states what version and encoding we are using in this specific XML file. We then use some XmlDocument methods to make sure that a root node (People in this case) is created and that our declaration is stuck right before it.
+We then define the declaration of the document, it just states what version and
+encoding we are using in this specific XML file. We then use some XmlDocument
+methods to make sure that a root node (People in this case) is created and that
+our declaration is stuck right before it.
 
-Once that is all said and done, we create a parent node, PersonToXML in this case, and add it after our root node with PrependChild.
+Once that is all said and done, we create a parent node, PersonToXML in this
+case, and add it after our root node with PrependChild.
 
-We then use multiple lines of code create the Elements for our XML object, and the text they will contain. We use even more XmlDocument methods to add these in order to build our logical structure. Finally, we get a path from the user, catch exceptions if needed, and write the XML file.
+We then use multiple lines of code create the Elements for our XML object, and
+the text they will contain. We use even more XmlDocument methods to add these in
+order to build our logical structure. Finally, we get a path from the user,
+catch exceptions if needed, and write the XML file.
 
 Here is the output we get when we run the program:
 
-<img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/09/RunningProgram.png" alt="Output of XML Creation in C#" title="Output of XML Creation in C#" width="679" height="344" class="aligncenter size-full wp-image-642" />
+[![Program Output](/content/{{ page.urda_uuid }}/RunningProgram.png)](/content/{{ page.urda_uuid }}/RunningProgram.png)
 
-The file overwrites Output.xml each time it is ran, and it produces the same results every time (surprising, I know). So be careful!
+The file overwrites Output.xml each time it is ran, and it produces the same
+results every time (surprising, I know). So be careful!
 
-Pretty simple huh? Just add some loops or database calls, and you can be using XML for just about anything you can think of!
-
- [1]: http://www.peter-urda.com/2010/08/extracting-information-from-xml-with-csharp
- [2]: http://www.peter-urda.com/2010/08/using-linq-to-extract-information-from-xml-in-csharp
+Pretty simple huh? Just add some loops or database calls, and you can be using
+XML for just about anything you can think of!
