@@ -21,7 +21,7 @@ Before we can work with IronPython in C#, we need to setup our environment. Here
 
 The first step in working with IronPython in Visual Studio 2010 is to actually install IronPython. You'll need to visit <a href="http://ironpython.net/download/" class="external external_icon" target="_blank">IronPython.net</a> to grab the latest version of IronPython. Just install the latest **stable** release. For reference, I installed IronPython version 2.6.1 when I wrote this article. Just install all the recommended components. After that is done you can go ahead and startup Visual Studio.
 
-After Visual Studio has started up, you'll need to start a new C# Console Application project. After you have created that we are going to need to add references (Right-Click on References in the Solution Explorer > "Add Reference...") to this project. Assuming you installed IronPython in the default directory you will find all the needed references in **"C:\Program Files\IronPython 2.6 for .NET 4.0&#8243;** on **32-bit systems** and **"C:\Program Files (x86)\IronPython 2.6 for .NET 4.0&#8243;** on **64-bit systems**. We will be adding the following references:
+After Visual Studio has started up, you'll need to start a new C# Console Application project. After you have created that we are going to need to add references (Right-Click on References in the Solution Explorer > "Add Reference...") to this project. Assuming you installed IronPython in the default directory you will find all the needed references in **"C:\Program Files\IronPython 2.6 for .NET 4.0"** on **32-bit systems** and **"C:\Program Files (x86)\IronPython 2.6 for .NET 4.0"** on **64-bit systems**. We will be adding the following references:
 
   * IronPython
   * IronPython.Modules
