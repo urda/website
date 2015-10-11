@@ -21,7 +21,7 @@ times, it was not what corrected the original problem! This morning as I was
 continuing to work on the application, I had gotten the same 504 error (which by
 the way you can read the original article
 [here]({% post_url 2010-09-28-iis-services-504s-and-fiddler %}))
-I *thought* I had corrected. Since IIS was not sending me any vital information
+I **thought** I had corrected. Since IIS was not sending me any vital information
 other than the 504 timeout I had to find another way to catch the bug.
 
 I had to add another entry into my **web.config** file to catch any possible
