@@ -9,7 +9,7 @@ paginate_path: "/blog/page/:num/"
 name: Writings of Urda
 
 # Short bio or description (displayed in the header)
-description: "One Man's Thoughts on Life, Technology, and Everything Else in Between"
+description: "A Kentuckian's thoughts on life, technology, and everything else in between"
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /images/avatar-square.jpg
