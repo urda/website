@@ -21,18 +21,18 @@ paginate_path: "/blog/page/:num/"
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
-  email:
   facebook: peter.urda
-  flickr: urda
-  github: urda
-  instagram:
-  linkedin: urdap
-  pinterest:
-  rss: jekyll-feed # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: urda
-  stackoverflow: users/169153/urda # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
+  flickr: urda
+  linkedin: urdap
+  github: urda
+  rss: jekyll-feed
+  # email:
+  # dribbble:
+  # pinterest:
+  # instagram:
+  # youtube: # channel/<your_long_string> or user/<user-name>
+  # stackoverflow: users/169153/urda # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
 # square-footer-links:
 #   rss: jekyll-feed
