@@ -18,17 +18,17 @@ If you have ever worked with an application that bounces from your workstation, 
 
 C# has the following directives, all of which will be covered in this article:
 
-  * **#if**
-  * **#else**
-  * **#elif**
-  * **#endif**
-  * **#define**
-  * **#undef**
-  * **#warning**
-  * **#error**
-  * **#line**
-  * **#region**
-  * **#endregion**
+* **#if**
+* **#else**
+* **#elif**
+* **#endif**
+* **#define**
+* **#undef**
+* **#warning**
+* **#error**
+* **#line**
+* **#region**
+* **#endregion**
 
 Let's start with **#define** and **#undef**. These directives are used to define and undefine symbols that evaluate to true (if using #define) when used in other logical directives. As you could imagine, #undef will undefine a given symbol (such that it yields false).
 
