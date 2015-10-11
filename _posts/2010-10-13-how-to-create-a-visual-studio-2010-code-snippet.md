@@ -240,17 +240,17 @@ reference) using the "Add.." button. You can then click do the following:
 If you take a peak back at the main Code Snippets Manager window and find your
 new snippet you'll be presented with a screen detailing the information from the header section:
 
-<img class="aligncenter size-full wp-image-1098" title="Code Snippets Manager After Adding Snippet" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Code-Snippets-Manager-After-Add.png" alt="Code Snippets Manager After Adding Snippet" width="629" height="469" />
+[![Code Snippets Manager](/content/{{ page.urda_uuid }}/code-snippets-manager.png)](/content/{{ page.urda_uuid }}/code-snippets-manager.png)
 
 So now just jump back to your C# project and you should be able to just type
 **'b'** or **'B'** for IntelliSense to prompt you with the following:
 
-<img class="aligncenter size-full wp-image-1097" title="Code Snippets Before Double-Tab" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Code-Snippets-Before-Call.png" alt="Code Snippets Before Double-Tab" width="512" height="224" />
+[![Code snippet prompt](/content/{{ page.urda_uuid }}/snippets-before-call.png)](/content/{{ page.urda_uuid }}/snippets-before-call.png)
 
 Like any other snippet (such as prop) a double tab after that point will fill
 out the code and jump your cursor to the class name for you to rename:
 
-<img class="aligncenter size-full wp-image-1096" title="Code Snippet After Double-Tab" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Code-Snippets-After-Call.png" alt="Code Snippet After Double-Tab" width="256" height="367" />
+[![Code snippet used](/content/{{ page.urda_uuid }}/snippets-after-call.png)](/content/{{ page.urda_uuid }}/snippets-after-call.png)
 
 For further reading MSDN has plenty of information on creating advanced
 snippets. You can find said information by visiting this
