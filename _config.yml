@@ -1,6 +1,3 @@
-paginate: 10
-paginate_path: "/blog/page/:num/"
-
 #
 # This file contains configuration flags to customize your site
 #
@@ -13,6 +10,10 @@ description: "A Kentuckian's thoughts on life, technology, and everything else i
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /images/avatar-square.jpg
+
+# Pagination Stuff
+paginate: 10
+paginate_path: "/blog/page/:num/"
 
 #
 # Flags below are optional
