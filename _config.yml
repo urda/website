@@ -22,25 +22,25 @@ avatar: /images/avatar-square.jpg
 footer-links:
   dribbble:
   email:
-  facebook:
-  flickr:
-  github:
+  facebook: peter.urda
+  flickr: urda
+  github: urda
   instagram:
-  linkedin:
+  linkedin: urdap
   pinterest:
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter:
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  rss: jekyll-feed # just type anything here for a working RSS icon, make sure you set the "url" above!
+  twitter: urda
+  stackoverflow: users/169153/urda # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
 
-square-footer-links:
-  rss: jekyll-feed
-  facebook: peter.urda
-  twitter: urda
-  flickr: urda
-  linkedin: urdap
-  github: urda
-  stackoverflow: users/169153/urda
+# square-footer-links:
+#   rss: jekyll-feed
+#   facebook: peter.urda
+#   twitter: urda
+#   flickr: urda
+#   linkedin: urdap
+#   github: urda
+#   stackoverflow: users/169153/urda
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
