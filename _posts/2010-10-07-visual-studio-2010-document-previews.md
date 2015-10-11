@@ -23,7 +23,7 @@ restore it with a simple registry change!
 If you use **CTRL + TAB** in Visual Studio 2010 today, you'll get a dialog that
 looks something like the following:
 
-<img class="aligncenter size-full wp-image-1012" title="Visual Studio 2010 - No Document Previews" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/VS2010-NoPreview.png" alt="Visual Studio 2010 - No Document Previews" width="390" height="323" />
+[![VS2010 - No Preview](/content/{{ page.urda_uuid }}/vs2010-nopreview.png)](/content/{{ page.urda_uuid }}/vs2010-nopreview.png)
 
 So in order to restore the thumbnail previews we will run this simple command
 from ***an elevated command prompt*** in Windows:
@@ -36,6 +36,6 @@ Now all you have to do is start up or restart Visual Studio 2010, get your
 documents open again, and then try to cycle through them. You should get a much
 more useful display like so:
 
-<img class="aligncenter size-full wp-image-1020" title="Visual Studio 2010 - Document Previews" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/VS2010-Preview.png" alt="Visual Studio 2010 - Document Previews" width="600" height="323" />
+[![VS2010 - Preview](/content/{{ page.urda_uuid }}/vs2010-preview.png)](/content/{{ page.urda_uuid }}/vs2010-preview.png)
 
 Isn't that fantastic?
