@@ -15,11 +15,21 @@ tags:
   - Visual Studio 2010
 ---
 
-As you work through various projects in Visual Studio 2010 you will find yourself reusing a lot of code. In fact, you may find yourself reusing a lot of the same static code, or code that follows a basic pattern. Visual Studio 2010 lets you cut out a lot of this wasted time by employing code snippets. Code snippets can generate basic code patterns or layouts on the fly inside your project. Today I will walk you through creating a basic code snippet for generating a C# class with specific section stubs.
+As you work through various projects in Visual Studio 2010 you will find
+yourself reusing a lot of code. In fact, you may find yourself reusing a lot of
+the same static code, or code that follows a basic pattern. Visual Studio 2010
+lets you cut out a lot of this wasted time by employing code snippets. Code
+snippets can generate basic code patterns or layouts on the fly inside your
+project. Today I will walk you through creating a basic code snippet for
+generating a C# class with specific section stubs.
 
-You will need to start with a generic XML file. You'll want to keep the XML declaration line inside the file once you create it and change the file extension from **.xml** to **.snippet**. For reference I store my stubs inside **"C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom"**
+You will need to start with a generic XML file. You'll want to keep the XML
+declaration line inside the file once you create it and change the file
+extension from **.xml** to **.snippet**. For reference I store my stubs inside
+**"C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom"**
 
-Now we can go ahead our XML stub! We will first fill out the required schema information:
+Now we can go ahead our XML stub! We will first fill out the required schema
+information:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -33,7 +43,12 @@ Now we can go ahead our XML stub! We will first fill out the required schema inf
 </CodeSnippets>
 ```
 
-Now we are ready to fill out our header information. The header is used to define things such as the title of the snippet, the author, the shortcut for IntelliSense , and a description. The header will also define the snippet type (you can read all about the options of snippet type <a href="http://msdn.microsoft.com/en-us/library/ms171442.aspx" class="external external_icon" target="_blank">here</a>) that the snippet will act as. So we will fill out our header now:
+Now we are ready to fill out our header information. The header is used to
+define things such as the title of the snippet, the author, the shortcut for
+IntelliSense , and a description. The header will also define the snippet type
+(you can read all about the options of snippet type
+[here](https://msdn.microsoft.com/en-us/library/ms171442%28v=vs.110%29.aspx))
+that the snippet will act as. So we will fill out our header now:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -56,9 +71,19 @@ Now we are ready to fill out our header information. The header is used to defin
 </CodeSnippets>
 ```
 
-Our next element, which will also be a child of the **CodeSnippet** element, will define the properties of the actual snippet to be inserted. Now for this example I wanted to be able to replace a single chunk of the snippet when I call the snippet from Visual Studio. This will require the addition of a **Declarations** section that will control this behavior.
+Our next element, which will also be a child of the **CodeSnippet** element,
+will define the properties of the actual snippet to be inserted. Now for this
+example I wanted to be able to replace a single chunk of the snippet when I call
+the snippet from Visual Studio. This will require the addition of a
+**Declarations** section that will control this behavior.
 
-The declaration section can either contain an **Object** type or a **Literal** type. We will be covering the Literal type in this example. The literal has an ID, ToolTip, and a Default value. The ID is used by the snippet for where the actual replacement occurs. The ToolTip tag will be used by IntelliSense to give the end-user a hint as to the purpose of the code section that is being worked on. Finally, a default value is declared to be displayed before the user makes the change.
+The declaration section can either contain an **Object** type or a **Literal**
+type. We will be covering the Literal type in this example. The literal has an
+ID, ToolTip, and a Default value. The ID is used by the snippet for where the
+actual replacement occurs. The ToolTip tag will be used by IntelliSense to give
+the end-user a hint as to the purpose of the code section that is being worked
+on. Finally, a default value is declared to be displayed before the user makes
+the change.
 
 We will go ahead and fill the section out now:
 
@@ -93,12 +118,14 @@ We will go ahead and fill the section out now:
 </CodeSnippets>
 ```
 
-Now we can fill out the final section that will contain the actual code generated by the snippet. We will go ahead and declare that this code is for C#, and create the required tags before we start entering in our code:
+Now we can fill out the final section that will contain the actual code
+generated by the snippet. We will go ahead and declare that this code is for C#,
+and create the required tags before we start entering in our code:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 
-xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Build Class With #regions</Title>
@@ -131,14 +158,20 @@ xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 </CodeSnippets>
 ```
 
-We will being to enter the code our snippet will generate inside this last section. All the code to be generated by the snippet needs to be placed between the **<![CDATA[** **<!--[CDATA[-->** and
+We will being to enter the code our snippet will generate inside this last
+section. All the code to be generated by the snippet needs to be placed between
+the **<![CDATA[** **<!--[CDATA[-->** and
 
-**]]>** tags. If you fail to do so, your snippet will not work. We also want to call back to the literal declaration we made inside the code. To do this we simply surround the name of the literal with the **$** symbol. You should be able to deduce what the snippet will generate from the complete snippet file below:
+**]]>** tags. If you fail to do so, your snippet will not work. We also want to
+call back to the literal declaration we made inside the code. To do this we
+simply surround the name of the literal with the **$** symbol. You should be
+able to deduce what the snippet will generate from the complete snippet file
+below:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 
-xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Build Class With #regions</Title>
@@ -190,20 +223,36 @@ xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 <!-- ...what we'll see will defy explanation. -->
 ```
 
-So after all this work we still need to tell Visual Studio 2010 where to find this snippet file. To do this we will need to open the Code Snippets Manager from **Tools -> Code Snippets Manager...** or with the default keyboard shortcut ** CTRL+K, CTRL+B** inside Visual Studio. Once that is open you may need to reference your custom folder (Mine was at "C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom" for reference) using the "Add.." button. You can then click do the following:
+So after all this work we still need to tell Visual Studio 2010 where to find
+this snippet file. To do this we will need to open the Code Snippets Manager
+from **Tools -> Code Snippets Manager...** or with the default keyboard shortcut
+**CTRL+K, CTRL+B** inside Visual Studio. Once that is open you may need to
+reference your custom folder (Mine was at
+"C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom" for
+reference) using the "Add.." button. You can then click do the following:
 
-  * Click "Import..."
-  * Browse to the location of your snippet
-  * Select the folder you would like Visual Studio to store said snippet (I used my "Custom" folder)
-  * ..and your done!
+* Click "Import..."
+* Browse to the location of your snippet
+* Select the folder you would like Visual Studio to store said snippet
+  (I used my "Custom" folder)
+* ..and your done!
 
-If you take a peak back at the main Code Snippets Manager window and find your new snippet you'll be presented with a screen detailing the information from the header section:
+If you take a peak back at the main Code Snippets Manager window and find your
+new snippet you'll be presented with a screen detailing the information from the header section:
+
 <img class="aligncenter size-full wp-image-1098" title="Code Snippets Manager After Adding Snippet" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Code-Snippets-Manager-After-Add.png" alt="Code Snippets Manager After Adding Snippet" width="629" height="469" />
 
-So now just jump back to your C# project and you should be able to just type **'b'** or **'B'** for IntelliSense to prompt you with the following:
+So now just jump back to your C# project and you should be able to just type
+**'b'** or **'B'** for IntelliSense to prompt you with the following:
+
 <img class="aligncenter size-full wp-image-1097" title="Code Snippets Before Double-Tab" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Code-Snippets-Before-Call.png" alt="Code Snippets Before Double-Tab" width="512" height="224" />
 
-Like any other snippet (such as prop) a double tab after that point will fill out the code and jump your cursor to the class name for you to rename:
+Like any other snippet (such as prop) a double tab after that point will fill
+out the code and jump your cursor to the class name for you to rename:
+
 <img class="aligncenter size-full wp-image-1096" title="Code Snippet After Double-Tab" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Code-Snippets-After-Call.png" alt="Code Snippet After Double-Tab" width="256" height="367" />
 
-For further reading MSDN has plenty of information on creating advanced snippets. You can find said information by visiting this <a href="http://msdn.microsoft.com/en-us/library/ms165392%28VS.80%29.aspx" class="external external_icon" target="_blank">link</a>. So what are you waiting for? Go make your coding life easier!
+For further reading MSDN has plenty of information on creating advanced
+snippets. You can find said information by visiting this
+[link](http://msdn.microsoft.com/en-us/library/ms165392%28VS.80%29.aspx). So
+what are you waiting for? Go make your coding life easier!
