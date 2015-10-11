@@ -3,6 +3,9 @@ title: 'C# Preprocessor Directives'
 author: Peter Urda
 layout: post
 redirect_from: /2010/10/csharp-preprocessor-directives/
+
+urda_uuid: 20101005
+
 categories:
   - Mercer Daily Reports
 tags:
@@ -10,6 +13,7 @@ tags:
   - Co-Op
   - Visual Studio 2010
 ---
+
 If you have ever worked with an application that bounces from your workstation, to QA, then to production the odds are high you have dealt with C# preprocessor directives. While C# does not have a preprocessing engine, these directives are treated as such. They have been named as such to be consistent with C and C++ for familiarity. Directives can be used to build classes based on the environment they will be deployed in, to grouping chunks of your source code together for collapsing inside the Visual Studio code editor. This article will go over each C# preprocessor directive.
 
 C# has the following directives, all of which will be covered in this article:
