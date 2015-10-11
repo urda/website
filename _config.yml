@@ -21,11 +21,11 @@ paginate_path: "/blog/page/:num/"
 
 # Includes an icon in the footer for each username you enter
 footer-links:
+  linkedin: urdap
+  github: urda
   facebook: peter.urda
   twitter: urda
   flickr: urda
-  linkedin: urdap
-  github: urda
   rss: jekyll-feed
   # email:
   # dribbble:
