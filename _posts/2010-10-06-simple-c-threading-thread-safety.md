@@ -53,7 +53,7 @@ class Threading101
 Now at first glance you might say that we will only see "Method Fired" shown on
 screen, however when we run the program we will see this output:
 
-<img class="aligncenter size-full wp-image-1002" title="UnsafeThreading" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/UnsafeThreading.png" alt="UnsafeThreading" width="677" height="342" />
+[![Program Output](/content/{{ page.urda_uuid }}/unsafethreading.png)](/content/{{ page.urda_uuid }}/unsafethreading.png)
 
 Well we have obviously called the method on both threads, but we got an
 undesired output! This example shows the clear issues you will encounter when
@@ -106,7 +106,7 @@ class Threading101
 
 Running the code above now produces a better threading result:
 
-<img class="aligncenter size-full wp-image-1005" title="SafeThreading" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/SafeThreading.png" alt="SafeThreading" width="677" height="342" />
+[![Program Output](/content/{{ page.urda_uuid }}/safethreading.png)](/content/{{ page.urda_uuid }}/safethreading.png)
 
 Now that looks better! We made sure that only a single thread could enter a
 critical section of the code, and prevent other threads from stepping in. We
