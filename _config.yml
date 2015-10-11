@@ -34,15 +34,6 @@ footer-links:
   # youtube: # channel/<your_long_string> or user/<user-name>
   # stackoverflow: users/169153/urda # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
-# square-footer-links:
-#   rss: jekyll-feed
-#   facebook: peter.urda
-#   twitter: urda
-#   flickr: urda
-#   linkedin: urdap
-#   github: urda
-#   stackoverflow: users/169153/urda
-
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
 disqus:
