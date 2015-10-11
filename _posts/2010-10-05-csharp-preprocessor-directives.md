@@ -187,7 +187,7 @@ class MainBox
 
 I can expand and collapse the section inside Visual Studio as pictured:
 
-<img class="aligncenter size-full wp-image-984" title="#region in Visual Studio" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Collapse.png" alt="#region, #endregion in Visual Studio" width="602" height="215" />
+[![Collapsing region](/content/{{ page.urda_uuid }}/collapse.png)](/content/{{ page.urda_uuid }}/collapse.png)
 
 ...and that is all the possible C# preprocessor directives you can use! I love
 the #region one, since it allows you to lump your code together for easier
