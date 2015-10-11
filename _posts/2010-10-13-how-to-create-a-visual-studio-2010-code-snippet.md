@@ -3,6 +3,9 @@ title: 'How To: Create a Visual Studio 2010 Code Snippet'
 author: Peter Urda
 layout: post
 redirect_from: /2010/10/how-to-create-a-visual-studio-2010-code-snippet/
+
+urda_uuid: 20101013
+
 categories:
   - How To
   - Mercer Daily Reports
@@ -11,6 +14,7 @@ tags:
   - Co-Op
   - Visual Studio 2010
 ---
+
 As you work through various projects in Visual Studio 2010 you will find yourself reusing a lot of code. In fact, you may find yourself reusing a lot of the same static code, or code that follows a basic pattern. Visual Studio 2010 lets you cut out a lot of this wasted time by employing code snippets. Code snippets can generate basic code patterns or layouts on the fly inside your project. Today I will walk you through creating a basic code snippet for generating a C# class with specific section stubs.
 
 You will need to start with a generic XML file. You'll want to keep the XML declaration line inside the file once you create it and change the file extension from **.xml** to **.snippet**. For reference I store my stubs inside **"C:\Users\Peter\Documents\Visual Studio 2010\Code Snippets\Visual C#\Custom"**
