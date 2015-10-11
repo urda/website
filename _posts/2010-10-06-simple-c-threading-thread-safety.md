@@ -3,6 +3,9 @@ title: 'Simple C# Threading & Thread Safety'
 author: Peter Urda
 layout: post
 redirect_from: /2010/10/simple-c-threading-thread-safety/
+
+urda_uuid: 20101006
+
 categories:
   - Mercer Daily Reports
 tags:
@@ -11,6 +14,7 @@ tags:
   - Parallel Programming
   - Threading
 ---
+
 A few days ago I compared and contrasted Asynchronous and Parallel Programming. Today I would like to walk you through a very simple threading example in C#, and why the concept of "thread safety" is important to know before you start writing parallel applications.
 
 [Since we already know what exactly parallel programming is, and how it is different from asynchronous calls][1] we can go ahead and drill down to some more aspects of parallel programming. So here is an application that will start a new thread from the main, and both threads will call the same method:
