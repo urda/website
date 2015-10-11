@@ -87,7 +87,7 @@ namespace SomeConsoleApp
 So if you were to plug-in the C# example from above, you could collapse your
 sections down so your editor looks like this:
 
-<img class="aligncenter size-full wp-image-1039" title="Collapsed Code Sections" src="http://www.peter-urda.com/wp/wp-content/uploads/2010/10/Collapsed-Dragons.png" alt="Collapsed Code Sections" width="229" height="297" />
+[![Collapsed Code Sections](/content/{{ page.urda_uuid }}/collapsed-dragons.png)](/content/{{ page.urda_uuid }}/collapsed-dragons.png)
 
 If you are good about keeping your code clean a system like this can be
 invaluable to you. A system like my example will let you quickly move from file
