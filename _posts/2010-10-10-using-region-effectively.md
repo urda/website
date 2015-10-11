@@ -3,6 +3,9 @@ title: 'Using #region Effectively'
 author: Peter Urda
 layout: post
 redirect_from: /2010/10/using-region-effectively/
+
+urda_uuid: 20101010
+
 categories:
   - Mercer Daily Reports
 tags:
@@ -10,6 +13,7 @@ tags:
   - Co-Op
   - Visual Studio 2010
 ---
+
 The **#region** preprocessor directive can make your C# code very organized. It is a shame that so many coders do not learn to use #region early and often. Sure **#region** allows Visual Studio 2010 to collapse your code block down into one-line, but better yet it can be used to sort code by common sections. This provides a framework for other source files throughout your project to mimic. Today I wanted to cover how I like to sort my code in my projects.
 
 Many of your C# classes, interfaces, and other source files will have common logical groupings. For example many classes will contain one or more of the following:
