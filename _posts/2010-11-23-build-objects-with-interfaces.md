@@ -3,6 +3,9 @@ title: Build Objects With Interfaces
 author: Peter Urda
 layout: post
 redirect_from: /2010/11/build-objects-with-interfaces/
+
+urda_uuid: 20101123
+
 categories:
   - Mercer Daily Reports
 tags:
@@ -10,6 +13,7 @@ tags:
   - Co-Op
   - Programming
 ---
+
 The ability to create module software and code blocks is a great trait to have. Being able to drop certain chunks of code from one piece of software to another piece of unrelated software is a powerful thing. Not only does this save time, but it will also allow you to build a small library of tools you find useful in all your applications. Interfaces in C# is just one of many ways to build more modular objects that have similar behavior.
 
 We are going to create an interface **IHuman** to build people objects from. Everyone can agree that all people have a First Name, Last Name, Age, and have some ability to speak. So we will wrap that up into a neat interface.
