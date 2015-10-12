@@ -3,6 +3,9 @@ title: Why I am migrating AWAY from Jungle Disk
 author: Peter Urda
 layout: post
 redirect_from: /2012/08/why-i-am-migrating-away-from-jungle-disk/
+
+urda_uuid: 20120826
+
 categories:
   - Ramblings
 tags:
@@ -20,17 +23,16 @@ the service for many KEY reasons:
 
 * The software has NOT been updated in months, I can't even remember when a news
   item was last posted for a release
-* The blog HAS BEEN pulled offline, probably because:
-  * The blog has not been updated in months
-  * The development team has been NEAR silent. Back in 2011 I had opened a
-    ticket noting that I was concerned by the lack of updates from the team.
-    Support said they would request an update, but nothing came from that.
-  * [There are some known security concerns with Jungle Disk at this time.](http://www.daemonology.net/blog/2011-06-03-insecurity-in-the-jungle.html)
-  * At one point the blog was infected by spammers, this now marks the blog as
-    phishing in OpenDNS and other popular prevention groups. OpenDNS prompts
-    with the following screen if you try to visit their blog:
+* The blog has not been updated in months
+* The development team has been NEAR silent. Back in 2011 I had opened a
+  ticket noting that I was concerned by the lack of updates from the team.
+  Support said they would request an update, but nothing came from that.
+* [There are some known security concerns with Jungle Disk at this time.](http://www.daemonology.net/blog/2011-06-03-insecurity-in-the-jungle.html)
+* At one point the blog was infected by spammers, this now marks the blog as
+  phishing in OpenDNS and other popular prevention groups. OpenDNS prompts
+  with the following screen if you try to visit their blog:
 
-    <img src="http://www.peter-urda.com/wp/wp-content/uploads/2012/08/JD.Blog_.Phish_.png" alt="" title="JD.Blog.Phish" width="615" height="359" class="aligncenter size-full wp-image-1507" /></li>
+[![Jungle Disk Blog Spam](/content/{{ page.urda_uuid }}/jdblog.png)](/content/{{ page.urda_uuid }}/jdblog.png)
 
 So basically because the **development team has been very quiet with no news,
 the blog has stopped updating, and no new software releases to be seen** all had
