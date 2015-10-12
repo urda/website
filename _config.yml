@@ -9,7 +9,7 @@ name: Writings of Urda
 description: "A Kentuckian's thoughts on life, technology, and what have you"
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /images/avatar-square.jpg
+avatar: /content/site-images/avatar-square.jpg
 
 # Pagination Stuff
 paginate: 10
