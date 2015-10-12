@@ -4,3 +4,6 @@
 #
 *.scss text eol=lf
 *.md text eol=lf
+
+#
+content/site-images/favicons/manifest.json text eol=crlf
