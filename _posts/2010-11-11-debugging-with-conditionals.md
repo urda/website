@@ -31,7 +31,7 @@ you have to make changes to debug handling.
 
 But there is a more elegant way of enabling or disabling debugging. We can add
 conditionals to our methods based on the build environment. So let's say we have
-a \`debug\` class with the method named \`PrintStackTrace\`. This simply prints
+a `debug` class with the method named `PrintStackTrace`. This simply prints
 out some stack trace where ever it has been requested. Instead of surrounding
 each method call with #if and #endif we will add a line before our method in the
 debug class (look at the highlighted line):
