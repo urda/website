@@ -199,7 +199,7 @@ static void Main(string[] args)
 
 Running the program will produce this output:
 
-<img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/11/Humans-People-Programmers.png" alt="Output of Interfaces and Objects" title="Output of Interfaces and Objects" width="677" height="342" class="aligncenter size-full wp-image-1233" />
+[![Humans of C#](/content/{{ page.urda_uuid }}/humans.png)](/content/{{ page.urda_uuid }}/humans.png)
 
 As you can tell the Programmer spits out binary when asked to speak, and it is
 only when you call the *DudeInPlainEnglish* method against it is when you get a
