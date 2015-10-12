@@ -26,7 +26,7 @@ the preferred way of changing this page.
 When you first setup a service, you'll see this screen when you visit the
 service URL:
 
-<img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/11/CalculatorService-Service.png" alt="CalculatorService Service HTML" title="CalculatorService Service HTML" width="396" height="256" class="aligncenter size-full wp-image-1217" />
+[![HTTP Help Page](/content/{{ page.urda_uuid }}/calcservice.png)](/content/{{ page.urda_uuid }}/calcservice.png)
 
 To disable the HTML "You Have Created a Service" page for your WCF services,
 simply add this XML inside your **Web.config** file as a child of
