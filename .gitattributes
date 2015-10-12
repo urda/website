@@ -4,6 +4,7 @@
 #
 *.scss text eol=lf
 *.md text eol=lf
+content/site-images/favicons/manifest.json text eol=crlf
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text
