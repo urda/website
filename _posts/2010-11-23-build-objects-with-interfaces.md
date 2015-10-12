@@ -14,9 +14,15 @@ tags:
   - Programming
 ---
 
-The ability to create module software and code blocks is a great trait to have. Being able to drop certain chunks of code from one piece of software to another piece of unrelated software is a powerful thing. Not only does this save time, but it will also allow you to build a small library of tools you find useful in all your applications. Interfaces in C# is just one of many ways to build more modular objects that have similar behavior.
+Being able to drop certain chunks of code from one piece of software to another
+piece of unrelated software is a powerful thing. Not only does this save time,
+but it will also allow you to build a small library of tools you find useful in
+all your applications. Interfaces in C# is just one of many ways to build more
+modular objects that have similar behavior.
 
-We are going to create an interface **IHuman** to build people objects from. Everyone can agree that all people have a First Name, Last Name, Age, and have some ability to speak. So we will wrap that up into a neat interface.
+We are going to create an interface **IHuman** to build people objects from.
+Everyone can agree that all people have a First Name, Last Name, Age, and have
+some ability to speak. So we will wrap that up into a neat interface.
 
 ```csharp
 public interface IHuman
@@ -29,7 +35,11 @@ public interface IHuman
 }
 ```
 
-An interface is a very basic chunk of code in C#. It is like a checklist of objects and actions that all derived classes should have. The way each class handles each dimension of the **IHuman** will be unique to each class. So now we will create just a basic person object from the interface. I will then use Visual Studio to implement the interface, and this will be the result:
+An interface is a very basic chunk of code in C#. It is like a checklist of
+objects and actions that all derived classes should have. The way each class
+handles each dimension of the **IHuman** will be unique to each class. So now we
+will create just a basic person object from the interface. I will then use
+Visual Studio to implement the interface, and this will be the result:
 
 ```csharp
 public class Person : IHuman
@@ -77,7 +87,9 @@ public class Person : IHuman
 }
 ```
 
-As you can tell, you'll need to go through each method and implement it for use. I simply took a moment to do some clean up, and added logic to my *Speak* method:
+As you can tell, you'll need to go through each method and implement it for use.
+I simply took a moment to do some clean up, and added logic to my **Speak**
+method:
 
 ```csharp
 public class Person : IHuman
@@ -107,7 +119,11 @@ public class Person : IHuman
 }
 ```
 
-Now I can build a simple program and declare a Person 0bject. Then I can set variables within the object and/or use any of the methods associated with it. Yet, I need another object to describe a programmer. Again, I'll use the **IHuman** interface and make the needed changes to my methods. I'm also adding a custom method in this class as another way to speak.
+Now I can build a simple program and declare a Person Object. Then I can set
+variables within the object and/or use any of the methods associated with it.
+Yet, I need another object to describe a programmer. Again, I'll use the
+**IHuman** interface and make the needed changes to my methods. I'm also adding
+a custom method in this class as another way to speak.
 
 ```csharp
 public class Programmer : IHuman
@@ -149,7 +165,8 @@ public class Programmer : IHuman
 }
 ```
 
-If you pull the interface and two objects together, you can build a simple console application to prove this proof of concept:
+If you pull the interface and two objects together, you can build a simple
+console application to prove this proof of concept:
 
 ```csharp
 static void Main(string[] args)
@@ -184,8 +201,16 @@ Running the program will produce this output:
 
 <img src="http://www.peter-urda.com/wp/wp-content/uploads/2010/11/Humans-People-Programmers.png" alt="Output of Interfaces and Objects" title="Output of Interfaces and Objects" width="677" height="342" class="aligncenter size-full wp-image-1233" />
 
-As you can tell the Programmer spits out binary when asked to speak, and it is only when you call the *DudeInPlainEnglish* method against it is when you get a readable format. The method also appends "Sorry my bad..." to the start of the print out.
+As you can tell the Programmer spits out binary when asked to speak, and it is
+only when you call the *DudeInPlainEnglish* method against it is when you get a
+readable format. The method also appends "Sorry my bad..." to the start of the
+print out.
 
-If we only had access to the interface, we would know what properties and methods that each class must have when using said interface. Think of this interface as a type of contract, where each class that uses it must (in some fashion) use the properties and methods laid out. You can also think of an interface as a very basic framework for all involved classes.
+If we only had access to the interface, we would know what properties and
+methods that each class must have when using said interface. Think of this
+interface as a type of contract, where each class that uses it must (in some
+fashion) use the properties and methods laid out. You can also think of an
+interface as a very basic framework for all involved classes.
 
-So the next time you are working on a bunch of objects that are closely related to each other, consider using an interface.
+So the next time you are working on a bunch of objects that are closely related
+to each other, consider using an interface.
