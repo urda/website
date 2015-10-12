@@ -2,9 +2,9 @@
 title: Urda's PGP Public Key
 author: Peter Urda
 layout: post
-redirect_from: /2012/07/urdas-pgp-public-key/
-sharing_disabled:
-  - 1
+redirect_from:
+  - /publickey/
+  - /2012/07/urdas-pgp-public-key/
 categories:
   - Ramblings
 tags:
@@ -13,10 +13,8 @@ tags:
 ---
 
 Here is a copy of my PGP public key for verification and encryption purposes.
-
-This key can be used for signature verification and encryption purposes.
-
-My public key has the following properties, and can be found on key servers:
+This key can be used for signature verification and encryption purposes. My
+public key has the following properties, and can be found on key servers:
 
 ```
 Key ID:
@@ -26,21 +24,14 @@ Key Fingerprint:
 AF7C 0F76 C05C 7B84 9BBF  E400 FDBB EE4F 9CED 75CD
 ```
 
-You should be able to obtain it from a key server, such as <a href="http://pgp.mit.edu/" class="external external_icon" target="_blank">MIT's</a>. Use the following command in your *nix shell:
+You should be able to obtain it from a key server, use the following command in
+your *nix shell:
 
 ```bash
 gpg --keyserver pgp.mit.edu --recv-key 9CED75CD
 ```
 
-My public key can be downloaded from my web server here: [PeterUrda.2012.07.08][1]
-
-You can download it in your *nix shell using wget from my web server like so:
-
-```bash
-wget http://www.peter-urda.com/wp/wp-content/uploads/2012/07/PeterUrda.2012.07.08.gpg
-```
-
-You can also copy the public key from the block below:
+For reference, my public key is below:
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -72,7 +63,3 @@ rxBf7O/mV160Xw/6I49LiOuOA/4LtrfXQ57DiWla97eMawdDBqLRUyY0ZLIxW2stX1TS8jbn
 -----END PGP PUBLIC KEY BLOCK-----
 
 ```
-
-You can learn more about PGP by reading this Wikipedia article: <a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy" class="external external_icon" target="_blank">http://en.wikipedia.org/wiki/Pretty_Good_Privacy</a>. You can also learn more about helpful applications over here: <a href="http://www.gnupg.org/" class="external external_icon" target="_blank">http://www.gnupg.org/</a>.
-
- [1]: http://www.peter-urda.com/wp/wp-content/uploads/2012/07/PeterUrda.2012.07.08.gpg
