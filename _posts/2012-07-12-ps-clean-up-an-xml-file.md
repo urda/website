@@ -8,11 +8,21 @@ categories:
 tags:
   - PowerShell
 ---
-Sometimes you are given an Xml file, either handmade or machine generated, to work with. Many times, this Xml file can be a mess, with indentation all wrong or every single node on a single line or two. Within PowerShell, I have created a simple function which accepts just a single input of the file path, and attempts to locate the Xml file and "prettify" for easier reading. This function is only 19 lines long (for a total of 31 when including the documentation) and is a great tool to add to your PowerShell profile!
 
-There is error handling at each step, to verify that there was input, the file exists, can be accessed, and the save operation completed. Just simply provide the function the path to the target Xml file, and fire away!
+Sometimes you are given an Xml file, either handmade or machine generated, to
+work with. Many times, this Xml file can be a mess, with indentation all wrong
+or every single node on a single line or two. Within PowerShell, I have created
+a simple function which accepts just a single input of the file path, and
+attempts to locate the Xml file and "prettify" for easier reading. This function
+is only 19 lines long (for a total of 31 when including the documentation) and
+is a great tool to add to your PowerShell profile!
 
-Here is the function you can load into your session, or add to your profile for future use:
+There is error handling at each step, to verify that there was input, the file
+exists, can be accessed, and the save operation completed. Just simply provide
+the function the path to the target Xml file, and fire away!
+
+Here is the function you can load into your session, or add to your profile for
+future use:
 
 ```powershell
 function Format-Xml
