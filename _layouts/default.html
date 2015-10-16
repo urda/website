@@ -48,7 +48,12 @@
 
           <nav>
             <a href="{{ site.baseurl }}/blog">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+
+            {% for page in site.pages %}
+              {% if page.permalink == "/about/" %}
+                <a href="{{ site.baseurl }}/about">About</a>
+              {% endif %}
+            {% endfor %}
           </nav>
         </header>
       </div>
