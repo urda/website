@@ -14,5 +14,11 @@
   margin: 0 auto;
 }
 
-#home-recent-posts {
+#home-recent-posts > .home-recent-post {
+    padding-top: 1em;
+    border-bottom: 1px solid $gray;
+}
+
+#home-recent-posts > .home-recent-post:last-child {
+    border-bottom: none;
 }
