@@ -2,6 +2,7 @@
 $betterGray: #d6d6d6;
 
 .posts > .post {
+  padding-top: 1em;
   padding-bottom: 2em;
   border-bottom: 1px solid $betterGray;
 }
@@ -23,7 +24,7 @@ $betterGray: #d6d6d6;
 }
 
 .wrapper-masthead {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 #home h1, h2 {
@@ -32,7 +33,7 @@ $betterGray: #d6d6d6;
 
 #home-about {
   display: table;
-  margin: 0 auto;
+  margin: 0.5em auto 0;
 }
 
 #home-recent-posts > .home-recent-post {
@@ -44,7 +45,7 @@ $betterGray: #d6d6d6;
     border-bottom: none;
 }
 
-.home-recent-post > a {
+.blog-post-title, .home-recent-post > a {
   color: #000;
   font-weight: bolder;
 
