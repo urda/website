@@ -1,6 +1,5 @@
 ---
 title: 'Specialized C# Operators'
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/specialized-csharp-operators/
 categories:

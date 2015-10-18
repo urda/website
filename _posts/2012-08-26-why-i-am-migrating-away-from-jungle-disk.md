@@ -1,13 +1,12 @@
 ---
 title: Why I am migrating AWAY from Jungle Disk
-author: Peter Urda
 layout: post
 redirect_from: /2012/08/why-i-am-migrating-away-from-jungle-disk/
 
 urda_uuid: 20120826
 
-summary:
-    "Jungle Disk stagnation, woes, and why I am leaving the product."
+summary: |
+    Jungle Disk stagnation, woes, and why I am leaving the product.
 
 categories:
   - Ramblings
@@ -22,7 +21,7 @@ story of watching their fall from fame.** I have used Jungle Disk for years, and
 have been very satisfied with the pricing and the software up until recently. I
 became a Lifetime member of the Desktop Edition when it was offered for sale as
 soon as possible, and used it up until this week. However I have opted to leave
-the service for many KEY reasons:
+the service for many KEY reasons.
 
 * The software has NOT been updated in months, I can't even remember when a news
   item was last posted for a release

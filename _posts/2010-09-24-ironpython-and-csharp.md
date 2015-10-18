@@ -1,6 +1,5 @@
 ---
 title: 'IronPython and C#'
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/ironpython-and-csharp/
 

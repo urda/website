@@ -1,6 +1,5 @@
 ---
 title: 'C# Classes Versus Structures'
-author: Peter Urda
 layout: post
 redirect_from: /2010/11/csharp-classes-versus-structures/
 categories:

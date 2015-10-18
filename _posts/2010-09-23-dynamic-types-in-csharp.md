@@ -1,6 +1,5 @@
 ---
 title: 'Dynamic Types in C#'
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/dynamic-types-in-csharp/
 

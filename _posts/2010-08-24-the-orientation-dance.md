@@ -1,6 +1,5 @@
 ---
 title: The Orientation Dance
-author: Peter Urda
 layout: post
 redirect_from: /2010/08/the-orientation-dance/
 

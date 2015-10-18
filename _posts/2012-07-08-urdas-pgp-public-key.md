@@ -1,10 +1,14 @@
 ---
 title: Urda's PGP Public Key
-author: Peter Urda
 layout: post
+
+summary: |
+    My PGP key, use it to send me secure communications.
+
 redirect_from:
   - /publickey/
   - /2012/07/urdas-pgp-public-key/
+
 categories:
   - Ramblings
 tags:
@@ -14,7 +18,7 @@ tags:
 
 Here is a copy of my PGP public key for verification and encryption purposes.
 This key can be used for signature verification and encryption purposes. My
-public key has the following properties, and can be found on key servers:
+public key has the following properties, and can be found on key servers online.
 
 ```
 Key ID:
@@ -61,5 +65,4 @@ rxBf7O/mV160Xw/6I49LiOuOA/4LtrfXQ57DiWla97eMawdDBqLRUyY0ZLIxW2stX1TS8jbn
 /oGZoJl0Jo21wbYJ6vubinW3yQ8rKAPAKP70aIrnvi7Fi5RADuks5zPFJYZ+yizcKnA=
 =w0UO
 -----END PGP PUBLIC KEY BLOCK-----
-
 ```

@@ -1,6 +1,5 @@
 ---
 title: 'Random C# Tricks'
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/random-csharp-tricks/
 

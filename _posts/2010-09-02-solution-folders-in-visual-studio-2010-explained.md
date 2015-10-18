@@ -1,6 +1,5 @@
 ---
 title: Solution Folders in Visual Studio 2010 Explained
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/solution-folders-in-visual-studio-2010-explained/
 

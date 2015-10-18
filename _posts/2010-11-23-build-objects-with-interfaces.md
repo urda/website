@@ -1,7 +1,10 @@
 ---
 title: Build Objects With Interfaces
-author: Peter Urda
 layout: post
+
+summary: |
+    Interfaces can help you design better objects, let's review in C#.
+
 redirect_from: /2010/11/build-objects-with-interfaces/
 
 urda_uuid: 20101123

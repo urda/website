@@ -1,8 +1,13 @@
 ---
 title: Using PowerShell to Delete Files Not Written to in 'X' Days
-author: Peter Urda
 layout: post
+
+summary: |
+    Use PowerShell to clean up those old files that have not been written to
+    or altered in a while.
+
 redirect_from: /2011/09/using-powershell-to-delete-files-not-written-to-in-x-days/
+
 categories:
   - How To
 tags:

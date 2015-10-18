@@ -1,6 +1,5 @@
 ---
 title: 'Extracting Information From XML With C#'
-author: Peter Urda
 layout: post
 redirect_from: /2010/08/extracting-information-from-xml-with-csharp/
 
