@@ -41,6 +41,10 @@ $betterGray: #d6d6d6;
     border-bottom: 1px solid $betterGray;
 }
 
+#home-recent-posts > .home-recent-post:first-child {
+    padding-top: 0;
+}
+
 #home-recent-posts > .home-recent-post:last-child {
     border-bottom: none;
 }
