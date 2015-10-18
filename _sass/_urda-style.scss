@@ -1,15 +1,21 @@
+// Local Variables
+$betterGray: #d6d6d6;
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $betterGray;
+}
+
 .pagination {
-  border-top: 1px solid $lightGray;
-  border-bottom: 1px solid $lightGray;
+  border-top: 1px solid $betterGray;
+  border-bottom: 1px solid $betterGray;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: #d6d6d6;
+  background-color: $betterGray;
 }
 
 .wrapper-masthead {
@@ -27,7 +33,7 @@
 
 #home-recent-posts > .home-recent-post {
     padding-top: 1em;
-    border-bottom: 1px solid $lightGray;
+    border-bottom: 1px solid $betterGray;
 }
 
 #home-recent-posts > .home-recent-post:last-child {
