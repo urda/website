@@ -6,8 +6,8 @@ redirect_from: /2012/08/why-i-am-migrating-away-from-jungle-disk/
 
 urda_uuid: 20120826
 
-summary:
-    "Jungle Disk stagnation, woes, and why I am leaving the product."
+summary: |
+    Jungle Disk stagnation, woes, and why I am leaving the product.
 
 categories:
   - Ramblings
