@@ -1,6 +1,5 @@
 ---
 title: IIS Services, 504s, and Fiddler
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/iis-services-504s-and-fiddler/
 categories:

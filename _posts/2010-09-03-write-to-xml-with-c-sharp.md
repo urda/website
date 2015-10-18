@@ -1,6 +1,5 @@
 ---
 title: 'Write to XML with C#'
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/write-to-xml-with-c-sharp/
 

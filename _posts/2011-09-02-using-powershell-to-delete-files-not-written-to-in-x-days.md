@@ -1,6 +1,5 @@
 ---
 title: Using PowerShell to Delete Files Not Written to in 'X' Days
-author: Peter Urda
 layout: post
 
 summary: |

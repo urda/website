@@ -1,6 +1,5 @@
 ---
 title: 'Disable "You Have Created a Service"'
-author: Peter Urda
 layout: post
 redirect_from: /2010/11/disable-you-have-created-a-service/
 

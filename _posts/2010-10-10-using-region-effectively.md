@@ -1,6 +1,5 @@
 ---
 title: 'Using #region Effectively'
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/using-region-effectively/
 

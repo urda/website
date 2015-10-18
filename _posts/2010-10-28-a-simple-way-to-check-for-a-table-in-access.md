@@ -1,6 +1,5 @@
 ---
 title: A Simple Way to Check for a Table in Access
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/a-simple-way-to-check-for-a-table-in-access/
 categories:

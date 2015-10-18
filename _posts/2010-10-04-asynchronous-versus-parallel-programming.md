@@ -1,6 +1,5 @@
 ---
 title: Asynchronous Versus Parallel Programming
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/asynchronous-versus-parallel-programming/
 categories:
