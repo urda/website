@@ -43,3 +43,12 @@ $betterGray: #d6d6d6;
 #home-recent-posts > .home-recent-post:last-child {
     border-bottom: none;
 }
+
+.home-recent-post > a {
+  color: #000;
+  font-weight: bolder;
+
+  &:hover, &:active {
+    color: $blue;
+  }
+}
