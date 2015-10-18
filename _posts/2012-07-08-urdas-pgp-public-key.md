@@ -19,7 +19,7 @@ tags:
 
 Here is a copy of my PGP public key for verification and encryption purposes.
 This key can be used for signature verification and encryption purposes. My
-public key has the following properties, and can be found on key servers:
+public key has the following properties, and can be found on key servers online.
 
 ```
 Key ID:
