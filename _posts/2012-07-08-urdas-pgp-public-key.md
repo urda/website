@@ -2,9 +2,14 @@
 title: Urda's PGP Public Key
 author: Peter Urda
 layout: post
+
+summary: |
+    My PGP key, use it to send me secure communications.
+
 redirect_from:
   - /publickey/
   - /2012/07/urdas-pgp-public-key/
+
 categories:
   - Ramblings
 tags:

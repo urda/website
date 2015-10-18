@@ -2,7 +2,12 @@
 title: Using PowerShell to Clean Up an Xml File
 author: Peter Urda
 layout: post
+
+summary: |
+    Put PowerShell to work at cleaning up your XML files.
+
 redirect_from: /2012/07/ps-clean-up-an-xml-file/
+
 categories:
   - Programming
 tags:
