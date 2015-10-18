@@ -1,6 +1,5 @@
 ---
 title: Understanding Path Limits in TFS
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/understanding-path-limits-in-tfs/
 categories:

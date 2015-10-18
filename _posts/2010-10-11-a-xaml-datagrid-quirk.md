@@ -1,6 +1,5 @@
 ---
 title: A XAML DataGrid Quirk
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/a-xaml-datagrid-quirk/
 categories:

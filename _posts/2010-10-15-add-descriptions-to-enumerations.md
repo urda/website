@@ -1,6 +1,5 @@
 ---
 title: Add Descriptions to Enumerations
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/add-some-descriptions-to-enumerations/
 categories:

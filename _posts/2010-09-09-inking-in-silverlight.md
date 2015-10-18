@@ -1,6 +1,5 @@
 ---
 title: Inking in Silverlight
-author: Peter Urda
 layout: post
 redirect_from: /2010/09/inking-in-silverlight/
 

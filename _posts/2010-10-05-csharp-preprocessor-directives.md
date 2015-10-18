@@ -1,6 +1,5 @@
 ---
 title: 'C# Preprocessor Directives'
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/csharp-preprocessor-directives/
 

@@ -1,6 +1,5 @@
 ---
 title: Using PowerShell to Clean Up an Xml File
-author: Peter Urda
 layout: post
 
 summary: |

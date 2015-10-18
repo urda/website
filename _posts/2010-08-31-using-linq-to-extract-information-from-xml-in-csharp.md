@@ -1,6 +1,5 @@
 ---
 title: 'Using LINQ to Extract Information from XML in C#'
-author: Peter Urda
 layout: post
 redirect_from: /2010/08/using-linq-to-extract-information-from-xml-in-csharp/
 

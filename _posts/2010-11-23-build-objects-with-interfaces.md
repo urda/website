@@ -1,6 +1,5 @@
 ---
 title: Build Objects With Interfaces
-author: Peter Urda
 layout: post
 
 summary: |

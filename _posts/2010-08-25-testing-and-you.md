@@ -1,6 +1,5 @@
 ---
 title: Testing and You
-author: Peter Urda
 layout: post
 redirect_from: /2010/08/testing-and-you/
 

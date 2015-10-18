@@ -1,6 +1,5 @@
 ---
 title: 'How To: Create a Visual Studio 2010 Code Snippet'
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/how-to-create-a-visual-studio-2010-code-snippet/
 

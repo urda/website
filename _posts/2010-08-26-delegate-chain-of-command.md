@@ -1,6 +1,5 @@
 ---
 title: Delegate Chain of Command
-author: Peter Urda
 layout: post
 redirect_from: /2010/08/delegate-chain-of-command/
 

@@ -1,6 +1,5 @@
 ---
 title: Debugging With Conditionals
-author: Peter Urda
 layout: post
 redirect_from: /2010/11/debugging-with-conditionals/
 categories:

@@ -1,6 +1,5 @@
 ---
 title: Why I am migrating AWAY from Jungle Disk
-author: Peter Urda
 layout: post
 redirect_from: /2012/08/why-i-am-migrating-away-from-jungle-disk/
 

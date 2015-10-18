@@ -1,6 +1,5 @@
 ---
 title: Visual Studio 2010 Document Previews
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/visual-studio-2010-document-previews/
 

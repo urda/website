@@ -1,6 +1,5 @@
 ---
 title: 'Simple C# Threading & Thread Safety'
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/simple-c-threading-thread-safety/
 

@@ -1,6 +1,5 @@
 ---
 title: Access Common Methods Using Extensions
-author: Peter Urda
 layout: post
 redirect_from: /2010/10/access-common-methods-using-extensions/
 categories:

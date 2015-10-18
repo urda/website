@@ -1,6 +1,5 @@
 ---
 title: 'Lambda Expressions and Delegates in C#'
-author: Peter Urda
 layout: post
 redirect_from: /2010/08/lambda-expressions-and-delegates-in-csharp/
 

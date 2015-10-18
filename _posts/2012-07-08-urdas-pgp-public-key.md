@@ -1,6 +1,5 @@
 ---
 title: Urda's PGP Public Key
-author: Peter Urda
 layout: post
 
 summary: |
