@@ -13,6 +13,10 @@ $betterGray: #d6d6d6;
   padding-bottom: 0.5em;
 }
 
+.masthead {
+  border-bottom: 1px solid $betterGray;
+}
+
 .wrapper-footer {
   margin-top: 50px;
   background-color: $betterGray;
