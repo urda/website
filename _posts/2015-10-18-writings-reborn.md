@@ -2,8 +2,8 @@
 layout: post
 title: Writings Reborn
 
-summary: |
-    After a long hiatus, 'Writings of Urda' is reborn!
+excerpt: |
+    After a long hiatus, Writings of Urda is reborn!
 ---
 
 This blog originally started out as a simple place for posting my daily reports
