@@ -30,15 +30,7 @@ layout: default
             <a href="{{ post.url }}">{{ post.title }}</a>
 
             <p>
-            {% if post.summary %}
-
-                {{ post.summary }}
-
-            {% else %}
-
                 {{ post.excerpt }}
-
-            {% endif %}
             </p>
         </article>
 

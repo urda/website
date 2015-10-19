@@ -2,7 +2,7 @@
 title: Urda's PGP Public Key
 layout: post
 
-summary: |
+excerpt: |
     My PGP key, use it to send me secure communications.
 
 redirect_from:
