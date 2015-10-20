@@ -3,7 +3,7 @@ layout: post
 title: Writings Reborn
 
 excerpt: |
-    After a long hiatus, Writings of Urda is reborn!
+    After a long hiatus, Writings of Urda returns!
 ---
 
 This blog originally started out as a simple place for posting my daily reports
