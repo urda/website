@@ -1,5 +1,5 @@
 ---
-title: Using PowerShell to Delete Files Not Written to in 'X' Days
+title: Using PowerShell to Delete Files Not Written to in X Days
 layout: post
 
 excerpt: |
