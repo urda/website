@@ -1,5 +1,5 @@
 ---
-title: 'Disable "You Have Created a Service"'
+title: Disable You Have Created a Service
 layout: post
 redirect_from: /2010/11/disable-you-have-created-a-service/
 

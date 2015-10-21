@@ -1,5 +1,5 @@
 ---
-title: Urda's PGP Public Key
+title: Urda PGP Public Key
 layout: post
 
 excerpt: |
