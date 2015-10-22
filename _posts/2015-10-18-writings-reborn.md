@@ -76,7 +76,7 @@ all my URLs for post. I was lucky to be able to use
 [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from). This
 allowed me to simply add a `redirect_from` in my posts to handle my old URLs.
 
-```yaml
+```
 redirect_from: /YYYY/MM/post-title/ # Old WordPress URL to redirect from
 ```
 
