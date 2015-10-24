@@ -15,6 +15,18 @@ excerpt: |
 import argparse
 
 
+shutdown_requested = False
+
+
+def request_shutdown(signum, frame):
+    """
+    Use this to request the daemon to shutdown.
+    """
+
+    global shutdown_requested
+    shutdown_requested = True
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
