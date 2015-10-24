@@ -31,7 +31,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     # setup our subparser for start, stop, restart
-    sp = parser.add_subparsers(dest="command")
+    sp = parser.add_subparsers(
+        dest="daemon_control",
+        title="daemon_control",
+    )
+    sp.required = True
     sp_start = sp.add_parser('start', help="start the daemon")
     sp_stop = sp.add_parser('stop', help="stop the daemon")
     sp_restart = sp.add_parser('restart', help="restart the daemon")
@@ -50,13 +54,13 @@ if __name__ == '__main__':
 $ ./daemon.py --help
 usage: daemon.py [-h] [--interactive] {start,stop,restart} ...
 
-positional arguments:
+optional arguments:
+  -h, --help            show this help message and exit
+  --interactive         run the daemon interactively
+
+daemon_control:
   {start,stop,restart}
     start               start the daemon
     stop                stop the daemon
     restart             restart the daemon
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --interactive         run the daemon interactively
 ```
