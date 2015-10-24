@@ -9,3 +9,25 @@ excerpt: |
 ---
 
 
+```python
+#! /usr/bin/env python
+
+import argparse
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+
+    sp = parser.add_subparsers(dest="command")
+    sp_start = sp.add_parser('start', help="start the daemon")
+    sp_stop = sp.add_parser('stop', help="stop the daemon")
+    sp_restart = sp.add_parser('restart', help="restart the daemon")
+
+    parser.add_argument(
+        "--interactive",
+        help="run the daemon interactively",
+        action="store_true",
+    )
+
+    args = parser.parse_args()
+```
