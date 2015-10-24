@@ -45,3 +45,18 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 ```
+
+```bash
+$ ./daemon.py --help
+usage: daemon.py [-h] [--interactive] {start,stop,restart} ...
+
+positional arguments:
+  {start,stop,restart}
+    start               start the daemon
+    stop                stop the daemon
+    restart             restart the daemon
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --interactive         run the daemon interactively
+```
