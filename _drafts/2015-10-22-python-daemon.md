@@ -21,6 +21,8 @@ from daemon.pidfile import PIDLockFile
 
 
 shutdown_requested = False
+daemon_dir = os.path.dirname(os.path.abspath("__file__"))
+pid_path = "{}/daemon.pid".format(daemon_dir)
 
 
 def request_shutdown(signum, frame):
@@ -65,11 +67,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Setup daemon context
-    cwd = os.path.dirname(os.path.abspath("__file__"))
-    pid_path = "{}/daemon.pid".format(cwd)
-
     context = DaemonContext(
-        working_directory=cwd,
+        working_directory=daemon_dir,
         pidfile=PIDLockFile(pid_path),
         signal_map={
             signal.SIGTERM: request_shutdown,
