@@ -79,8 +79,16 @@ if __name__ == '__main__':
     if args.daemon_control == 'start':
         print("Starting daemon ...")
 
+        with context:
+            daemon_work(interactive=args.interactive)
+
     if args.daemon_control == 'stop':
         print("Stopping daemon ...")
+
+        with open(pid_path, mode='r') as open_pid_file:
+            pid_value = int(open_pid_file.readline().strip())
+
+        os.kill(pid_value, signal.SIGTERM)
 
     if args.daemon_control == 'restart':
         print("Restarting daemon ...")
