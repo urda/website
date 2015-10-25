@@ -24,7 +24,7 @@ layout: default
 
         <article class="home-recent-post">
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-                {{ post.date | date: "%Y / %d / %m" }}
+                {{ post.date | date: "%Y / %m / %d" }}
             </time>
             -
             <a href="{{ post.url }}">{{ post.title }}</a>
