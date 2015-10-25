@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Straightforward daemons in python
+title: Daemons and python
 
 date: 2015-10-22 15:00:00 +0400
 
@@ -27,6 +27,10 @@ def request_shutdown(signum, frame):
     shutdown_requested = True
 
 
+def daemon_work(interactive: bool=False):
+    pass
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
@@ -48,6 +52,15 @@ if __name__ == '__main__':
     )
 
     args = parser.parse_args()
+
+    if args.daemon_control == 'start':
+        print("Starting daemon ...")
+
+    if args.daemon_control == 'stop':
+        print("Stopping daemon ...")
+
+    if args.daemon_control == 'restart':
+        print("Restarting daemon ...")
 ```
 
 ```bash
