@@ -34,6 +34,16 @@ def request_shutdown(signum, frame):
     shutdown_requested = True
 
 
+def daemon_work(interactive: bool=False):
+    import time
+
+    while True:
+        time.sleep(1)
+
+        if shutdown_requested:
+            break
+
+
 def start_daemon(interactive: bool=False):
     pass
 
@@ -46,16 +56,6 @@ def restart_daemon():
     stop_daemon()
     # Pid file check attempts here
     start_daemon()
-
-
-def daemon_work(interactive: bool=False):
-    import time
-
-    while True:
-        time.sleep(1)
-
-        if shutdown_requested:
-            break
 
 
 if __name__ == '__main__':
