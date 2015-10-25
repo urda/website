@@ -33,7 +33,13 @@ def request_shutdown(signum, frame):
 
 
 def daemon_work(interactive: bool=False):
-    pass
+    import time
+
+    while True:
+        time.sleep(1)
+
+        if shutdown_requested:
+            break
 
 
 if __name__ == '__main__':
