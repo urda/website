@@ -8,6 +8,7 @@ excerpt: |
     Build a basic daemon in python
 ---
 
+## Full Source
 
 ```python
 #! /usr/bin/env python
@@ -15,6 +16,7 @@ excerpt: |
 import argparse
 import os
 import signal
+import sys
 
 from daemon import DaemonContext
 from daemon.pidfile import PIDLockFile
@@ -22,6 +24,7 @@ from daemon.pidfile import PIDLockFile
 
 shutdown_requested = False
 daemon_dir = os.path.dirname(os.path.abspath("__file__"))
+log_path = "{}/daemon.log".format(daemon_dir)
 pid_path = "{}/daemon.pid".format(daemon_dir)
 
 
@@ -92,8 +95,11 @@ if __name__ == '__main__':
     if args.daemon_control == 'start':
         print("Starting daemon ...")
 
-        with context:
-            daemon_work(interactive=args.interactive)
+        if args.interactive:
+            pass
+        else:
+            with context:
+                daemon_work(interactive=False)
 
     if args.daemon_control == 'stop':
         print("Stopping daemon ...")
@@ -104,6 +110,10 @@ if __name__ == '__main__':
         os.kill(pid_value, signal.SIGTERM)
 
     if args.daemon_control == 'restart':
+        if args.interactive:
+            print("Interactive mode is not supported with restarts")
+            sys.exit(1)
+
         print("Restarting daemon ...")
 ```
 
