@@ -13,6 +13,11 @@ excerpt: |
 #! /usr/bin/env python
 
 import argparse
+import os
+import signal
+
+from daemon import DaemonContext
+from daemon.pidfile import PIDLockFile
 
 
 shutdown_requested = False
@@ -52,6 +57,18 @@ if __name__ == '__main__':
     )
 
     args = parser.parse_args()
+
+    # Setup daemon context
+    cwd = os.path.dirname(os.path.abspath("__file__"))
+    pid_path = "{}/daemon.pid".format(cwd)
+
+    context = DaemonContext(
+        working_directory=cwd,
+        pidfile=PIDLockFile(pid_path),
+        signal_map={
+            signal.SIGTERM: request_shutdown,
+        },
+    )
 
     if args.daemon_control == 'start':
         print("Starting daemon ...")
