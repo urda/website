@@ -61,6 +61,7 @@ if __name__ == '__main__':
     sp_start = sp.add_parser('start', help="start the daemon")
     sp_stop = sp.add_parser('stop', help="stop the daemon")
     sp_restart = sp.add_parser('restart', help="restart the daemon")
+    sp_status = sp.add_parser('status', help="get the daemon's status")
 
     # allow for an "interactive" flag
     parser.add_argument(
@@ -103,3 +104,6 @@ if __name__ == '__main__':
             sys.exit(1)
 
         print("Restarting daemon ...")
+
+    if args.daemon_control == 'status':
+        pass
