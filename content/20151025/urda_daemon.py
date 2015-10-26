@@ -9,6 +9,7 @@ from daemon import DaemonContext
 from daemon.pidfile import PIDLockFile
 
 
+# Establish some global variables for the daemon
 shutdown_requested = False
 daemon_dir = os.path.dirname(os.path.realpath(sys.argv[0]))
 log_path = "{}/daemon.log".format(daemon_dir)
