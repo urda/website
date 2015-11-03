@@ -26,5 +26,5 @@ You can review the source below, or
 ```
 
 ```bash
-# Update me later / before publishing
+python-daemon==2.0.6
 ```
