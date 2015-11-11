@@ -26,6 +26,10 @@ def request_shutdown(signum, frame):
 
 
 def daemon_work(interactive: bool=False):
+    """
+    The actual daemon workload.
+    """
+
     import time
 
     while True:
