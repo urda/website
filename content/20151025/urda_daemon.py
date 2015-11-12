@@ -49,7 +49,7 @@ def stop_daemon():
 
 def restart_daemon():
     stop_daemon()
-    # Pid file check attempts here
+    # PID file check attempts here
     start_daemon()
 
 
