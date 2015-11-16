@@ -50,6 +50,7 @@ def stop_daemon():
 def restart_daemon():
     stop_daemon()
     # PID file check attempts here
+    #  5? 10 checks?
     start_daemon()
 
 
