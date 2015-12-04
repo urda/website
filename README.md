@@ -21,14 +21,12 @@ $ git config alias.live-push "push production live-gh-pages:gh-pages"
 
 ## Sublime Project Settings
 
-### OS X
-
 ```json
 {
-	"folders":
-	[
-		{
-			"path": "/path/to/github/website",
+    "folders":
+    [
+        {
+            "path": "/PATH/TO/GITHUB_REPO/website",
             "default_line_ending": "unix",
             "file_exclude_patterns":
             [
@@ -47,7 +45,7 @@ $ git config alias.live-push "push production live-gh-pages:gh-pages"
                 ".sass-cache",
                 "_site"
             ]
-		}
-	]
+        }
+    ]
 }
 ```
