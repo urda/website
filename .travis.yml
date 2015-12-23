@@ -1,0 +1,22 @@
+language: ruby
+rvm:
+  - 2.1
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+branches:
+  only:
+    - gh-pages
+
+install:
+  - bundle install
+
+script:
+  - make travis
+
+notifications:
+  email: false
+  slack:
+    secure: Cq2jBrLFkQhdgaTBHpSVymBZda2hmpwbm0Tvz6uS+CV1phy6FV9TQkUbobVseT3QmMtIW8uYtZJm35w52nWUdJbb7Yi1pz81Zw1e2A0GncmnmwdRj/vYqd5PXFDxsNZLKss35kazazDc4ebLY532Dp4EKKxMVGbMIiu+5Kc9fkMLKV1fO8YKz5MFFsrYamKiGy7soa5EJ9L0oEl3vK0F6qdgxat4AYEZ5S/hG4cUJtfGgV4dsAAwDvDlawESPJsGUY6bJoi8VubWEAXcEoqnJcwHJYiNmNYBG9Y4+LMAQgCq84BEyU5ry9jodmqZc9QzShgJdsnxUwB4N7vBr9Rgxk4NNKDbCfymm3PTlOo5I7NhAMk+6B2ofB7AXHN1oNWLqyu68gCtqUSUj9aVjNttwcgGm4jxVqDdu/f8pur76QnX3HMiLNsoE+qIh9BOcQcm7jPOS4pdMFP07jTd5AmDNzOdytAVeVCtYFF8ys1v1oUn19/Mu7r6qkWsXq8LN/BKyZcX/Wu+JSTb8KcK0wEvl6/qS2OWmiOVC/mjm/RNEkmrsujrrqUqr5G2fY7+uLCZD9TQzyx7on4lFSqcnb37SoPbIOjCKLBlzPukc+qO3Ds56sOvLlInwglac/7dv6hRAVDtNJlX96WrsjiyyIMTd232Cg/SuOdcZ9s/TYYokks=
