@@ -1,5 +1,5 @@
 ---
-title: 'Simple C# Threading & Thread Safety'
+title: 'Simple C# Threading and Thread Safety'
 layout: post
 redirect_from: /2010/10/simple-c-threading-thread-safety/
 

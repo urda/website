@@ -1,5 +1,5 @@
 ---
-title: 'Follow Up on "IIS Services, 504s, and Fiddler"'
+title: Follow Up on IIS Services, 504s, and Fiddler
 layout: post
 redirect_from: /2010/09/follow-up-iis-services-504s-and-fiddler/
 categories:
