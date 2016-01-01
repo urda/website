@@ -10,9 +10,9 @@ build:
 htmlproof:
 	bundle exec htmlproof ./_site --url-ignore http://linkedin.com/in/urdap
 
-.PHONY: live-push
-live-push:
-	git push production live-gh-pages:gh-pages
+.PHONY: install
+install:
+	bundle install
 
 .PHONY: serve
 serve:
