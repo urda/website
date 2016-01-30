@@ -8,7 +8,7 @@ env:
 
 addons:
   ssh_known_hosts:
-    - walter.urda.cc
+    - walter.urda.cc:54545
 
 branches:
   only:
