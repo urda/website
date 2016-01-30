@@ -25,7 +25,7 @@ after_success:
     -in walter_deploy_id_rsa.enc -out walter_deploy_id_rsa -d
   - chmod 600 walter_deploy_id_rsa
   - mv walter_deploy_id_rsa ~/.ssh/id_rsa
-  - rsync -avv ./_site/ purda@walter.urda.cc:/var/www/mirror.urda.cc
+  - rsync -avv -e 'ssh -p 54545' ./_site/ purda@walter.urda.cc:/var/www/mirror.urda.cc
   - shred ~/.ssh/id_rsa
 
 notifications:
