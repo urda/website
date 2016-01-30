@@ -75,7 +75,10 @@ gems:
 
 # Exclude these files from your production _site
 exclude:
+    - CNAME
     - Gemfile
     - Gemfile.lock
     - LICENSE
+    - Makefile
     - README.md
+    - walter_deploy_id_rsa.enc
