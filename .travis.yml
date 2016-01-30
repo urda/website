@@ -24,9 +24,8 @@ after_success:
   - openssl aes-256-cbc -K $encrypted_a69d2ce47afd_key -iv $encrypted_a69d2ce47afd_iv
     -in walter_deploy_id_rsa.enc -out walter_deploy_id_rsa -d
   - chmod 600 walter_deploy_id_rsa
-  - mv walter_deploy_id_rsa ~/.ssh/id_rsa
-  - rsync -avv -e 'ssh -p 54545' ./_site/ purda@walter.urda.cc:/var/www/mirror.urda.cc
-  - shred ~/.ssh/id_rsa
+  - rsync -avv -e 'ssh -p 54545 -i walter_deploy_id_rsa' ./_site/ purda@walter.urda.cc:/var/www/mirror.urda.cc
+  - shred walter_deploy_id_rsa
 
 notifications:
   email: false
