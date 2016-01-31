@@ -7,6 +7,10 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 addons:
+  apt:
+    packages:
+      - lftp
+
   ssh_known_hosts:
     - 45.33.18.250:54545
     - mirror.urda.cc:54545
