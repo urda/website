@@ -1,6 +1,6 @@
 .PHONY: serve-drafts
 serve-drafts:
-	bundle exec jekyll serve --drafts
+	bundle exec jekyll serve --host=0.0.0.0 --drafts
 
 .PHONY: build
 build:
@@ -16,7 +16,7 @@ install:
 
 .PHONY: serve
 serve:
-	bundle exec jekyll serve
+	bundle exec jekyll serve --host=0.0.0.0
 
 .PHONY: travis
 travis: build htmlproof
