@@ -27,7 +27,7 @@ script:
   - make travis
 
 after_success:
-  - openssl aes-256-cbc -K $encrypted_a69d2ce47afd_key -iv $encrypted_a69d2ce47afd_iv
+  - openssl aes-256-cbc -K $encrypted_dd95c95167c0_key -iv $encrypted_dd95c95167c0_iv
     -in walter_deploy_id_rsa.enc -out walter_deploy_id_rsa -d
   - chmod 600 walter_deploy_id_rsa
   - lftp -c
