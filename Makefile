@@ -8,7 +8,7 @@ build:
 
 .PHONY: htmlproof
 htmlproof:
-	bundle exec htmlproof ./_site --verbose --check-html --external_only --url-ignore http://linkedin.com/in/urdap
+	bundle exec htmlproofer ./_site --log-level debug --check-html --external_only --url-ignore http://linkedin.com/in/urdap
 
 .PHONY: install
 install:
