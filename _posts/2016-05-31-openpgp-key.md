@@ -1,19 +1,16 @@
 ---
-title: Urda PGP Public Key
+title: Urda's OpenPGP Key
 layout: post
 
 excerpt: |
-    My PGP key, use it to send me secure communications.
+    Use this to send me secure communications or verify my signed messages.
+
+date: 2016-05-31 20:00:00
 
 redirect_from:
   - /publickey/
   - /2012/07/urdas-pgp-public-key/
-
-categories:
-  - Ramblings
-tags:
-  - Cryptography
-  - Public Key
+  - /blog/2012/07/08/urdas-pgp-public-key
 ---
 
 Here is a copy of my OpenPGP key for verification and encryption purposes.
