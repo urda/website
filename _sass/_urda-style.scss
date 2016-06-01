@@ -1,6 +1,14 @@
 // Local Variables
 $betterGray: #d6d6d6;
 
+// Specify the color of the selection
+::-moz-selection {
+  background: $blueHighlight;
+}
+::selection {
+  background: $blueHighlight;
+}
+
 .posts > .post {
   padding-top: 1em;
   padding-bottom: 2em;
