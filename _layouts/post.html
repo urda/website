@@ -15,3 +15,27 @@ layout: default
 
   {% include disqus.html %}
 </article>
+
+<!-- Pagination links -->
+<div class="pagination-post">
+  <div class="pagination-post-left">
+  {% if page.previous.url %}
+    <a href="{{page.previous.url}}">
+      « Older Post
+      <br />
+      ({{ page.previous.title }})
+    </a>
+  {% endif %}
+  </div>
+
+  <div class="pagination-post-right">
+  {% if page.next.url %}
+    <a href="{{page.next.url}}">
+      Newer Post »
+      <br />
+      ({{ page.next.title }})
+    </a>
+  {% endif %}
+  </div>
+  <div class="pagination-post-clear"></div>
+</div>

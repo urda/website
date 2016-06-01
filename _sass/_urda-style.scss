@@ -22,6 +22,27 @@ $betterGray: #d6d6d6;
   padding-bottom: 0.5em;
 }
 
+.pagination-post {
+  border-top: 1px solid $betterGray;
+  border-bottom: 1px solid $betterGray;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.pagination-post > .pagination-post-clear {
+  clear: both;
+}
+
+.pagination-post > .pagination-post-left {
+  float: left;
+  text-align: left;
+}
+
+.pagination-post > .pagination-post-right {
+  float: right;
+  text-align: right;
+}
+
 .masthead {
   border-bottom: 1px solid $betterGray;
 }
