@@ -18,13 +18,13 @@ This key can be used for signature verification and encryption purposes.
 
 I can also be found on [Keybase.io](https://keybase.io/urda)!
 
-### Get my key from a keyserver
+### Get my key from a keyserver:
 
 ```bash
 gpg --keyserver pgp.mit.edu --recv-key 194E3161
 ```
 
-### My key's fingerprint
+### My key's fingerprint:
 
 ```
 pub   4096R/194E3161 2016-05-31
@@ -93,7 +93,7 @@ lqiz1i/facfWbX+XQ8gVx7JtQDFatT39LUt6oO1/n4AOWz8KZJOVCOAbuXOeZg==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-### Transition notice
+### Transition notice:
 
 If you used my older key before, you can review my
 [transition notice here]({% post_url 2016-05-31-key-transition %}).
