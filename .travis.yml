@@ -6,16 +6,6 @@ env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-addons:
-  apt:
-    packages:
-      - lftp
-
-  ssh_known_hosts:
-    - 45.33.18.250:54545
-    - mirror.urda.cc:54545
-    - walter.urda.cc:54545
-
 branches:
   only:
     - gh-pages
@@ -25,16 +15,6 @@ install:
 
 script:
   - make travis
-
-after_success:
-  - openssl aes-256-cbc -K $encrypted_dd95c95167c0_key -iv $encrypted_dd95c95167c0_iv
-    -in walter_deploy_id_rsa.enc -out walter_deploy_id_rsa -d
-  - chmod 600 walter_deploy_id_rsa
-  # - lftp -c
-  #  "set sftp:connect-program \"ssh -a -x -p 54545 -i walter_deploy_id_rsa\";
-  #  connect sftp://mirrorurdacc:usingsshkey@mirror.urda.cc;
-  #  mirror --reverse --delete --verbose ./_site /public_html"
-  - shred walter_deploy_id_rsa
 
 notifications:
   email: false
