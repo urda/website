@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    command: make serve
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./_site:/app/web/_site
+
+  test:
+    command: make travis
+    build:
+      context: .
+      dockerfile: ./Dockerfile

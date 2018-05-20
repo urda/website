@@ -16,7 +16,7 @@ branches:
     - gh-pages
 
 install:
-  - make install
+  - bundle install
 
 script:
   - make travis
