@@ -1,18 +1,23 @@
 version: '3'
 
 services:
+  builder:
+    command: make jekyll-build
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./_site:/app/web/_site
+
+  test:
+    command: make travis-test
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
   web:
-    command: make serve
     build:
       context: .
       dockerfile: ./Dockerfile
     ports:
       - "4000:4000"
-    volumes:
-      - ./_site:/app/web/_site
-
-  test:
-    command: make travis
-    build:
-      context: .
-      dockerfile: ./Dockerfile
