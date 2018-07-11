@@ -5,7 +5,12 @@ rvm:
 addons:
   apt:
     packages:
+      - lftp
       - libcurl4-openssl-dev
+
+  ssh_known_hosts:
+    - mirror.urda.cc:54545
+    - walter.urda.cc:54545
 
 env:
   global:
@@ -20,6 +25,16 @@ install:
 
 script:
   - make travis
+
+after_success:
+  - openssl aes-256-cbc -K $encrypted_a69d2ce47afd_key -iv $encrypted_a69d2ce47afd_iv
+    -in walter_deploy_id_rsa.enc -out walter_deploy_id_rsa -d
+  - chmod 600 walter_deploy_id_rsa
+  - lftp -c
+    "set sftp:connect-program \"ssh -a -x -p 54545 -i walter_deploy_id_rsa\";
+    connect sftp://mirrorurdacc:usingsshkey@mirror.urda.cc;
+    mirror --reverse --delete --verbose ./_site /public_html"
+  - shred walter_deploy_id_rsa
 
 notifications:
   email: false
