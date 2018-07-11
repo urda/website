@@ -24,7 +24,7 @@ install:
   - bundle install
 
 script:
-  - make travis
+  - make travis-test
 
 after_success:
   - openssl aes-256-cbc -K $encrypted_a69d2ce47afd_key -iv $encrypted_a69d2ce47afd_iv

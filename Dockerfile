@@ -29,4 +29,4 @@ RUN bundle install
 WORKDIR ${WEB_ROOT}
 ADD . ${WEB_ROOT}
 
-CMD make serve
+CMD make jekyll-serve
