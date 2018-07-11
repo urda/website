@@ -9,6 +9,7 @@ ENV DOCKER_CONTAINER true
 WORKDIR ${APP_ROOT}
 
 RUN apk add --no-cache \
+    bash \
     build-base \
     cmake \
     icu-dev \
