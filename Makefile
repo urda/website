@@ -51,7 +51,7 @@ jekyll-htmlproof: require-container
 	bundle exec htmlproofer ./_site --log-level debug --check-html --external_only --url-ignore http://linkedin.com/in/urdap
 
 .PHONY: jekyll-serve
-jekyll-serve: require-container jekyll-build
+jekyll-serve: require-container
 	bundle exec jekyll serve --host 0.0.0.0 --port 4000 --drafts
 
 ########################################################################################################################
