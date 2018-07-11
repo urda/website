@@ -94,3 +94,5 @@ exclude:
     - Makefile
     - README.md
     - walter_deploy_id_rsa.enc
+    - website.sublime-project
+    - website.sublime-workspace
