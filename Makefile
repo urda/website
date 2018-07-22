@@ -3,6 +3,10 @@
 ########################################################################################################################
 
 CLEAN_TARGETS = ./_site ./.sass-cache
+DOCKER_IMAGE = urda/website:latest
+DOCKER_RUN_BASE_CMD = -it --mount type=bind,source=${MAKEFILE_PWD},target=/app/web
+DOCKER_RUN_EXPOSE = -p 4000:4000/tcp
+MAKEFILE_PWD = $(shell pwd)
 
 ########################################################################################################################
 # `make help` Needs to be first so it is ran when just `make` is called
@@ -22,20 +26,20 @@ help: # Show this help screen
 
 
 .PHONY: build
-build: docker-builder-build # [DOCKER] Build the entire website, and output to ./_site .
+build: docker-run-builder # [DOCKER] Build the entire website, and output to ./_site .
 
 
 .PHONY: clean
-clean: docker-all-down # Clean up build, test, and other project artifacts. Downs all docker containers.
+clean: # Clean up build, test, and other project artifacts. Downs all docker containers.
 	rm -rf $(CLEAN_TARGETS)
 
 
 .PHONY: run-server
-run-server: docker-web-run # [DOCKER] Run the Jekyll server.
+run-server: docker-run-server # [DOCKER] Run the Jekyll server.
 
 
 .PHONY: test
-test: docker-test-run # [DOCKER] Run automated testing against website project.
+test: docker-run-test # [DOCKER] Run automated testing against website project.
 
 
 ########################################################################################################################
@@ -52,7 +56,7 @@ jekyll-htmlproof: require-container
 
 .PHONY: jekyll-serve
 jekyll-serve: require-container
-	bundle exec jekyll serve --host 0.0.0.0 --port 4000 --drafts
+	bundle exec jekyll serve --host 0.0.0.0 --port 4000 --drafts --force_polling
 
 ########################################################################################################################
 # Docker Commands
@@ -68,21 +72,21 @@ else
 	$(error This command is ONLY ran inside docker or travis)
 endif
 
-.PHONY: docker-all-down
-docker-all-down:
-	docker-compose down
+.PHONY: docker-build
+docker-build:
+	docker build --rm -t ${DOCKER_IMAGE} .
 
-.PHONY: docker-builder-build
-docker-builder-build:
-	docker-compose build builder && docker-compose run builder
+.PHONY: docker-run-builder
+docker-run-builder: docker-build
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-build
 
-.PHONY: docker-test-run
-docker-test-run:
-	docker-compose build test && docker-compose run test
+.PHONY: docker-run-server
+docker-run-server: docker-build
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_RUN_EXPOSE} ${DOCKER_IMAGE} || :
 
-.PHONY: docker-web-run
-docker-web-run:
-	docker-compose build web && docker-compose run --service-ports web
+.PHONY: docker-run-test
+docker-run-test: docker-build
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make travis-test
 
 #---------------------------------------------------------------------------------------------------
 # Travis Container Commands
