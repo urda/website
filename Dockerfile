@@ -29,6 +29,5 @@ ADD Gemfile.lock ${TMP_ROOT}
 RUN bundle install
 
 WORKDIR ${WEB_ROOT}
-ADD . ${WEB_ROOT}
 
 CMD make jekyll-serve
