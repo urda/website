@@ -1,68 +1,88 @@
+// Local Variables
+$betterGray: #d6d6d6;
+
+// Specify the color of the selection
 ::-moz-selection {
-  background: #b4d5ff;
+  background: $blueHighlight;
 }
 ::selection {
-  background: #b4d5ff;
+  background: $blueHighlight;
 }
+
 .posts > .post {
   padding-top: 1em;
   padding-bottom: 2em;
-  border-bottom: 1px solid #d6d6d6;
+  border-bottom: 1px solid $betterGray;
 }
+
 .pagination {
-  border-top: 1px solid #d6d6d6;
-  border-bottom: 1px solid #d6d6d6;
+  border-top: 1px solid $betterGray;
+  border-bottom: 1px solid $betterGray;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+
 .pagination-post {
-  border-top: 1px solid #d6d6d6;
-  border-bottom: 1px solid #d6d6d6;
+  border-top: 1px solid $betterGray;
+  border-bottom: 1px solid $betterGray;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+
 .pagination-post > .pagination-post-clear {
   clear: both;
 }
+
 .pagination-post > .pagination-post-left {
   float: left;
   text-align: left;
 }
+
 .pagination-post > .pagination-post-right {
   float: right;
   text-align: right;
 }
+
 .masthead {
-  border-bottom: 1px solid #d6d6d6;
+  border-bottom: 1px solid $betterGray;
 }
+
 .wrapper-footer {
   margin-top: 50px;
-  background-color: #d6d6d6;
+  background-color: $betterGray;
 }
+
 .wrapper-masthead {
   margin-bottom: 0px;
 }
+
 #home h1, h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
+
 #home-about {
   display: table;
   margin: 0.5em auto 0;
 }
+
 #home-recent-posts > .home-recent-post {
-  padding-top: 1em;
-  border-bottom: 1px solid #d6d6d6;
+    padding-top: 1em;
+    border-bottom: 1px solid $betterGray;
 }
+
 #home-recent-posts > .home-recent-post:first-child {
-  padding-top: 0;
+    padding-top: 0;
 }
+
 #home-recent-posts > .home-recent-post:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
+
 .blog-post-title, .home-recent-post > a {
   color: #000;
   font-weight: bolder;
-}
-.blog-post-title:hover, .home-recent-post > a:hover, .blog-post-title:active, .home-recent-post > a:active {
-  color: #4183c4;
+
+  &:hover, &:active {
+    color: $blue;
+  }
 }
