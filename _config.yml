@@ -23,7 +23,7 @@ paginate_path: "/blog/page/:num/"
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  linkedin: urdap
+  linkedin: urda
   github: urda
   facebook: peter.urda
   twitter: urda
