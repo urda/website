@@ -299,6 +299,7 @@ DEPENDENCIES
   github-linguist
   github-pages
   html-proofer
+  nokogiri (>= 1.13.4)
   webrick
 
 BUNDLED WITH
