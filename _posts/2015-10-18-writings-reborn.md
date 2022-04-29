@@ -17,7 +17,7 @@ time.
 
 - Domain: peter-urda.com
 - Content Platform: [WordPress](https://wordpress.org/)
-- Analytics Engine: [Piwik](http://piwik.org/)
+- Analytics Engine: [Piwik](https://piwik.com/)
   - Both required PHP
   - Both required MySQL Database
 - Hosting Group: [DreamHost](https://www.dreamhost.com/)
@@ -63,7 +63,7 @@ new technology stack, and a migration plan.
 
 - Domain: urda.cc (leaving peter-urda.com)
 - Content Platform: [Jekyll](https://jekyllrb.com/)
-- Analytics Engine: [Google Analytics](http://www.google.com/analytics/)
+- Analytics Engine: Google Analytics
 - Hosting Group: [GitHub Pages](https://pages.github.com/)
 - Simple NGINX instance to raise `301 Moved Permanently` from peter-urda.com
   - While I have to manage the NGINX, it is only for a short period during

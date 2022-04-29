@@ -50,6 +50,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "http://urda.com",
+    "start_url": "https://urda.com",
     "display": "standalone"
 }
