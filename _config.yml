@@ -23,18 +23,14 @@ paginate_path: "/blog/page/:num/"
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  linkedin: urda
-  github: urda
-  facebook: peter.urda
-  twitter: urda
+  email: website@urda.com
   flickr: urda
+  github: urda
+  instagram: peter.urda
+  linkedin: urda
   rss: jekyll-feed
-  # email:
-  # dribbble:
-  # pinterest:
-  # instagram:
-  # youtube: # channel/<your_long_string> or user/<user-name>
-  # stackoverflow: users/169153/urda # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  stackoverflow: users/169153/urda # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  twitter: urda
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
