@@ -26,58 +26,35 @@ help: # Show this help screen
 
 
 .PHONY: build
-build: docker-run-builder # [DOCKER] Build the entire website, and output to ./_site .
+build: docker-run-jekyll-builder # [DOCKER CONTAINER] Build the entire website, and output to ./_site .
 
 
 .PHONY: clean
-clean: # Clean up build, test, and other project artifacts. Downs all docker containers.
+clean: # Clean the project directory.
 	rm -rf $(CLEAN_TARGETS)
 
 
 .PHONY: run-server
-run-server: docker-run-server # [DOCKER] Run the Jekyll server.
+run-server: docker-run-server # [DOCKER CONTAINER] Run the Jekyll server.
 
 
 .PHONY: test
-test: docker-run-test # [DOCKER] Run automated testing against website project.
+test: docker-run-test # [DOCKER CONTAINER] Run automated testing against website project.
 
 
-########################################################################################################################
-# Jekyll Commands
-########################################################################################################################
-
-.PHONY: jekyll-build
-jekyll-build: require-container
-	bundle exec jekyll build
-
-.PHONY: jekyll-htmlproof
-jekyll-htmlproof: require-container
-	bundle exec htmlproofer ./_site --log-level debug --check-html --external_only --url-ignore http://linkedin.com/in/urda
-
-.PHONY: jekyll-serve
-jekyll-serve: require-container
-	bundle exec jekyll serve --host 0.0.0.0 --port 4000 --drafts --force_polling
+.PHONY: update
+update: docker-run-updater # [DOCKER CONTAINER] Update Jekyll
 
 ########################################################################################################################
 # Docker Commands
 ########################################################################################################################
 
-.PHONY: require-container
-require-container:
-ifeq ($(DOCKER_CONTAINER),true)
-	$(info ---------- Detected docker container ----------)
-else ifeq ($(TRAVIS),true)
-	$(info ---------- Detected travis container ----------)
-else
-	$(error This command is ONLY ran inside docker or travis)
-endif
-
 .PHONY: docker-build
 docker-build:
 	docker build --rm -t ${DOCKER_IMAGE} .
 
-.PHONY: docker-run-builder
-docker-run-builder: docker-build
+.PHONY: docker-run-jekyll-builder
+docker-run-jekyll-builder: docker-build
 	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-build
 
 .PHONY: docker-run-server
@@ -86,12 +63,39 @@ docker-run-server: docker-build
 
 .PHONY: docker-run-test
 docker-run-test: docker-build
-	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make travis-test
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-test
 
-#---------------------------------------------------------------------------------------------------
-# Travis Container Commands
-#---------------------------------------------------------------------------------------------------
+.PHONY: docker-run-updater
+docker-run-updater: docker-build
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-update
 
-.PHONY: travis-test
-travis-test: require-container jekyll-build jekyll-htmlproof
+########################################################################################################################
+# Jekyll Commands
+########################################################################################################################
 
+.PHONY: require-container
+require-container:
+ifeq ($(DOCKER_CONTAINER),true)
+	$(info ---------- Detected docker container ----------)
+else
+	$(error This command is ONLY ran inside containers)
+endif
+
+.PHONY: jekyll-build
+jekyll-build: require-container
+	bundle exec jekyll build
+
+.PHONY: jekyll-htmlproof
+jekyll-htmlproof: require-container
+	bundle exec htmlproofer ./_site --log-level debug --check-html --external_only --url-ignore https://linkedin.com/in/urda
+
+.PHONY: jekyll-serve
+jekyll-serve: require-container
+	bundle exec jekyll serve --drafts --future --force_polling --host 0.0.0.0 --port 4000
+
+.PHONY: jekyll-test
+jekyll-test: require-container jekyll-build jekyll-htmlproof
+
+.PHONY: jekyll-update
+jekyll-update: require-container
+	bundle update --all

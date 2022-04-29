@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3
 
 ENV APP_ROOT /app
 ENV TMP_ROOT /app/tmp
