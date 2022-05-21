@@ -4,7 +4,7 @@ name: Testing urda.com
 on:
   push:
     branches:
-      - master
+      - gh-pages
 
 
 jobs:
