@@ -16,8 +16,6 @@ redirect_from:
 Here is a copy of my OpenPGP key for verification and encryption purposes.
 This key can be used for signature verification and encryption purposes.
 
-I can also be found on [Keybase.io](https://keybase.io/urda)!
-
 ### Get my key from a keyserver:
 
 ```bash
