@@ -77,6 +77,8 @@ docker-run-updater: docker-build
 require-container:
 ifeq ($(DOCKER_CONTAINER),true)
 	$(info ---------- Detected docker container ----------)
+else ifeq ($(GITHUB_ACTIONS),true)
+	$(info ---------- Detected GitHub Actions ----------)
 else
 	$(error This command is ONLY ran inside containers)
 endif
