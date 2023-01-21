@@ -38,5 +38,5 @@ path. You can easily do this by moving your project from, say 'My Documents',
 to something along the lines of **C:\Projects** or **C:\TFS**
 
 If you are really interested in the full technical details of this issue, you
-can visit [MSDN](http://msdn.microsoft.com/en-us/library/aa365247.aspx) for more
+can visit [MSDN](https://msdn.microsoft.com/en-us/library/aa365247.aspx) for more
 information.

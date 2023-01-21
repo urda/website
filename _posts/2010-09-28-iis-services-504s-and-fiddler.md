@@ -36,7 +36,7 @@ entering and exiting your computer. From the official Fiddler website:
 > Fiddler is freeware and can debug traffic from virtually any application,
 > including Internet Explorer, Mozilla Firefox, Opera, and thousands more.
 >
-> Source: [http://www.fiddler2.com/fiddler2/](http://www.fiddler2.com/fiddler2/)
+> Source: [https://www.fiddler2.com/fiddler2/](https://www.fiddler2.com/fiddler2/)
 
 When I performed the action that caused the application to lock up (in this case
 hit a service on IIS to pull down a list from a database), Fiddler treated me

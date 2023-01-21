@@ -36,7 +36,7 @@ In case you are not familiar with LINQ, here is a quick overview on it:
 > general framework for readably composing arbitrary computations, include the
 > construction of event handlers or monadic parsers.
 >
-> Source: [Language Integrated Query - Wikipedia](http://en.wikipedia.org/w/index.php?title=Language_Integrated_Query&oldid=382114822)
+> Source: [Language Integrated Query - Wikipedia](https://en.wikipedia.org/w/index.php?title=Language_Integrated_Query&oldid=382114822)
 
 So if we modify the previous program to use a LINQ statement instead, we can use
 logic and syntax that look a lot like a SQL statement. But instead of accessing

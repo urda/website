@@ -29,7 +29,7 @@ the service for many KEY reasons.
 * The development team has been NEAR silent. Back in 2011 I had opened a
   ticket noting that I was concerned by the lack of updates from the team.
   Support said they would request an update, but nothing came from that.
-* [There are some known security concerns with Jungle Disk at this time.](http://www.daemonology.net/blog/2011-06-03-insecurity-in-the-jungle.html)
+* [There are some known security concerns with Jungle Disk at this time.](https://www.daemonology.net/blog/2011-06-03-insecurity-in-the-jungle.html)
 * At one point the blog was infected by spammers, this now marks the blog as
   phishing in OpenDNS and other popular prevention groups. OpenDNS prompts
   with the following screen if you try to visit their blog:

@@ -40,4 +40,4 @@ program is not bound to knowing which method exactly will be called when the
 delegate is used. This offers flexibility to defining the back-end method used
 by the delegate, without trigger compilation issues while working on a project.
 
-[1]: http://en.wikipedia.org/w/index.php?title=Delegate_%28.NET%29&oldid=380252993
+[1]: https://en.wikipedia.org/w/index.php?title=Delegate_%28.NET%29&oldid=380252993

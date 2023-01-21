@@ -47,5 +47,5 @@ simply add this XML inside your **Web.config** file as a child of
 This block of XML will then cause the raw XML information to be displayed
 instead of the generic "You Have Created a Service" page. You can fine tune the
 behavior even more, so you may want to reference
-[MSDN](http://msdn.microsoft.com/en-us/library/ms788993.aspx) for more
+[MSDN](https://msdn.microsoft.com/en-us/library/ms788993.aspx) for more
 information.
