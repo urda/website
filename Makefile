@@ -89,7 +89,7 @@ jekyll-build: require-container
 
 .PHONY: jekyll-htmlproof
 jekyll-htmlproof: require-container
-	bundle exec htmlproofer ./_site --log-level debug --check-html --external_only --url-ignore https://linkedin.com/in/urda
+	bundle exec htmlproofer ./_site --log-level debug --ignore_urls https://linkedin.com/in/urda
 
 .PHONY: jekyll-serve
 jekyll-serve: require-container

@@ -187,4 +187,4 @@ C# has plenty more methods for reading and handling XML files and XML based
 information. This is just a very basic example, but it does help a lot if you
 are just starting to learn C# programming and XML and handling. If you are
 looking for some further reading, you may want to
-[read up on the XmlDocument Class over at MSDN](http://msdn.microsoft.com/en-us/library/system.xml.xmldocument.aspx).
+[read up on the XmlDocument Class over at MSDN](https://msdn.microsoft.com/en-us/library/system.xml.xmldocument.aspx).

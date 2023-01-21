@@ -253,5 +253,5 @@ out the code and jump your cursor to the class name for you to rename:
 
 For further reading MSDN has plenty of information on creating advanced
 snippets. You can find said information by visiting this
-[link](http://msdn.microsoft.com/en-us/library/ms165392%28VS.80%29.aspx). So
+[link](https://msdn.microsoft.com/en-us/library/ms165392%28VS.80%29.aspx). So
 what are you waiting for? Go make your coding life easier!

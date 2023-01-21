@@ -31,7 +31,7 @@ friends over at MSDN have this to say:
 > and the right side holds the expression or statement block. The lambda
 > expression x => x * x is read "x goes to x times x."
 >
-> Source: [Lambda Expressions (C# Programming Guide)](http://msdn.microsoft.com/en-us/library/bb397687.aspx)
+> Source: [Lambda Expressions (C# Programming Guide)](https://msdn.microsoft.com/en-us/library/bb397687.aspx)
 
 If we wanted to build a simple delegate using a lambda expression, it could look
 something like this:

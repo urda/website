@@ -19,6 +19,7 @@ RUN apk add --no-cache \
     ruby \
     ruby-dev \
     ruby-json \
+    ruby-nokogiri \
     zlib-dev \
     && :
 RUN gem install bundler --no-document && bundle config --global silence_root_warning 1

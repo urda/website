@@ -34,7 +34,7 @@ block. The system.diagnostics block is in charge of catching various trace
 messages and outputting them somewhere of our choosing, so it will contain child
 tags that will control how it operates. For reference, you can read all about
 the system.diagnostics namespace on
-[MSDN](http://msdn.microsoft.com/en-us/library/system.diagnostics%28VS.71%29.aspx).
+[MSDN](https://msdn.microsoft.com/en-us/library/system.diagnostics%28VS.71%29.aspx).
 
 ```xml
 <system.diagnostics>
@@ -47,7 +47,7 @@ the system.diagnostics namespace on
 Now we will add another line to our XML snippet. The **trace** tag, with the
 property of **autoflush="true"** is a class in charge of tracing through methods
 in your code.
-[Autoflush](http://msdn.microsoft.com/en-us/library/system.diagnostics.trace.autoflush.aspx)
+[Autoflush](https://msdn.microsoft.com/en-us/library/system.diagnostics.trace.autoflush.aspx)
 will define if flush is called after every write (if it is set to true; see the
 link for the full MSDN specifications). So now our XML looks as so:
 
@@ -68,7 +68,7 @@ on MSDN as:
 > is read, a message is processed in transport, security processing, a message
 > is dispatched in user code, and so on.
 >
-> Source: [http://msdn.microsoft.com/en-us/library/ms733025.aspx](http://msdn.microsoft.com/en-us/library/ms733025.aspx)
+> Source: [https://msdn.microsoft.com/en-us/library/ms733025.aspx](https://msdn.microsoft.com/en-us/library/ms733025.aspx)
 
 We then define our **switchValue**, which will capture any messages matching the
 values. Possible values are:
@@ -82,7 +82,7 @@ values. Possible values are:
 * ActivityTracing
 * All
 * ...more details on each level can be found on
-  [MSDN](http://msdn.microsoft.com/en-us/library/ms733025.aspx)
+  [MSDN](https://msdn.microsoft.com/en-us/library/ms733025.aspx)
 
 In this case we want to catch message that are "Information" or
 "ActivityTracing" operations. The **propagateActivity** setting determines

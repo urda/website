@@ -31,7 +31,7 @@ explanation of extension methods:
 > calling an extension method and the methods that are actually defined in a
 > type.
 >
-> Source: [MSDN](http://msdn.microsoft.com/en-us/library/bb383977.aspx)
+> Source: [MSDN](https://msdn.microsoft.com/en-us/library/bb383977.aspx)
 
 To create an extension method, you must use this syntax:
 

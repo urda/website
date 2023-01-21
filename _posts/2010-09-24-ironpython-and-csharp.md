@@ -29,7 +29,7 @@ is a quick overview of the steps we will take before we work with IronPython:
 
 The first step in working with IronPython in Visual Studio 2010 is to actually
 install IronPython. You'll need to visit
-[IronPython.net](http://ironpython.net/) to grab the latest version of
+[IronPython.net](https://ironpython.net/) to grab the latest version of
 IronPython. Just install the latest **stable** release. For reference, I
 installed IronPython version 2.6.1 when I wrote this article. Just install all
 the recommended components. After that is done you can go ahead and startup
