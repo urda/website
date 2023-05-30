@@ -1,25 +1,24 @@
-#
-# This file contains configuration flags to customize your site
-#
+################################################################################
+# Configuration
+################################################################################
 
-# Name of your site (displayed in the header)
 name: Writings of Urda
 title: Writings of Urda
 author: Peter Urda
 
-# Short bio or description (displayed in the header)
+# Short bio or description to display in header
 description: "Your friendly West Coast Software Engineer"
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
+# URL for the avatar image
 avatar: /assets/avatar/avatar-250.png
 
-# Pagination Stuff
+# Pagination Contorl
 paginate: 10
 paginate_path: "/blog/page/:num/"
 
-#
-# Flags below are optional
-#
+################################################################################
+# Optional Features and Settings
+################################################################################
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -29,7 +28,7 @@ footer-links:
   instagram: peter.urda
   linkedin: urda
   rss: jekyll-feed
-  stackoverflow: users/169153/urda # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  stackoverflow: users/169153/urda # stackoverflow URL, e.g. "users/169153/urda"
   twitter: urda
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -39,8 +38,8 @@ disqus:
 # Cloudflare Web Analytics Control
 cloudflare_web_analytics_token: 87c9132d6cf2496f99c47a221a4ef7fc
 
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
+# Your URL (e.g. https://urda.com or https://github.com/urda)
+# Required for Sitemap.xml and RSS feed
 url: https://urda.com
 
 # If you're hosting your site at a Project repository on GitHub pages
@@ -49,9 +48,15 @@ url: https://urda.com
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+################################################################################
 #
-# !! You don't need to change any of the configuration flags below !!
+# /!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\
+# /!\ *STOP* Do not change things below! /!\
+# /!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\
 #
+################################################################################
+
+version: v1.1.1-urda
 
 markdown: kramdown
 kramdown:
@@ -62,14 +67,9 @@ kramdown:
 
 permalink: /blog/:year/:month/:day/:title
 
-# The release of Jekyll Now that you're using
-version: v1.1.0-urda
-
-# Set the Sass partials directory, as we're using @imports
 sass:
-  style: :compressed # You might prefer to minify using :compressed
+  style: :compressed
 
-# Use the following plug-ins
 plugins:
   - jekyll-coffeescript
   - jekyll-feed
@@ -80,7 +80,6 @@ plugins:
 include:
   - _pages
 
-# Exclude these files from your production _site
 exclude:
   - vendor/
   - CNAME
