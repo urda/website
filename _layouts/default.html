@@ -53,6 +53,10 @@
             <a href="{{ site.baseurl }}/blog">Blog</a>
 
             {% for page in site.pages %}
+              {% if page.permalink == "/projects/" %}
+                <a href="{{ site.baseurl }}/projects">Projects</a>
+              {% endif %}
+
               {% if page.permalink == "/about/" %}
                 <a href="{{ site.baseurl }}/about">About</a>
               {% endif %}
