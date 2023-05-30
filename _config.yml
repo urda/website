@@ -79,13 +79,13 @@ plugins:
 
 # Exclude these files from your production _site
 exclude:
-    - vendor/
-    - CNAME
-    - Dockerfile
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - Makefile
-    - README.md
-    - website.sublime-project
-    - website.sublime-workspace
+  - vendor/
+  - CNAME
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Makefile
+  - README.md
+  - website.sublime-project
+  - website.sublime-workspace
