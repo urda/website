@@ -31,10 +31,6 @@ footer-links:
   stackoverflow: users/169153/urda # stackoverflow URL, e.g. "users/169153/urda"
   twitter: urda
 
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus:
-
 # Cloudflare Web Analytics Control
 cloudflare_web_analytics_token: 87c9132d6cf2496f99c47a221a4ef7fc
 
