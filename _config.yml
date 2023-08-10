@@ -34,6 +34,7 @@ footer-links:
   rss: jekyll-feed
   stackoverflow: users/169153/urda # stackoverflow URL, e.g. "users/169153/urda"
   twitter: urda
+  mastodon: https://urda.social/@urda
 
 # Cloudflare Web Analytics Control
 cloudflare_web_analytics_token: 87c9132d6cf2496f99c47a221a4ef7fc
