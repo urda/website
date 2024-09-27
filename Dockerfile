@@ -14,6 +14,7 @@ RUN apk add --no-cache \
     build-base \
     cmake \
     icu-dev \
+    libcurl \
     nodejs \
     openssl-dev \
     ruby \
