@@ -45,6 +45,9 @@ test: docker-run-test # [DOCKER CONTAINER] Run automated testing against website
 .PHONY: update
 update: docker-run-updater # [DOCKER CONTAINER] Update Jekyll
 
+.PHONY: update-bundler
+update-bundler: docker-run-updater-bundler # [DOCKER CONTAINER] Update Jekyll's Bundler
+
 ########################################################################################################################
 # Docker Commands
 ########################################################################################################################
@@ -68,6 +71,10 @@ docker-run-test: docker-build
 .PHONY: docker-run-updater
 docker-run-updater: docker-build
 	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-update
+
+.PHONY: docker-run-updater-bundler
+docker-run-updater-bundler: docker-build
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-update-bundler
 
 ########################################################################################################################
 # Jekyll Commands
@@ -101,3 +108,7 @@ jekyll-test: require-container jekyll-build jekyll-htmlproof
 .PHONY: jekyll-update
 jekyll-update: require-container
 	bundle update --all
+
+.PHONY: jekyll-update-bundler
+jekyll-update-bundler: require-container
+	bundle update --bundler
