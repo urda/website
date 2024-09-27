@@ -1,10 +1,10 @@
 FROM alpine:3
 
-ENV APP_ROOT /app
-ENV TMP_ROOT /app/tmp
-ENV WEB_ROOT /app/web
+ENV APP_ROOT=/app
+ENV TMP_ROOT=/app/tmp
+ENV WEB_ROOT=/app/web
 
-ENV DOCKER_CONTAINER true
+ENV DOCKER_CONTAINER=true
 
 WORKDIR ${APP_ROOT}
 
@@ -32,4 +32,4 @@ RUN bundle install
 
 WORKDIR ${WEB_ROOT}
 
-CMD make jekyll-serve
+CMD ["make", "jekyll-serve"]
