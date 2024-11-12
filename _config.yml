@@ -66,6 +66,8 @@ permalink: /blog/:year/:month/:day/:title
 sass:
   style: :compressed
 
+excerpt_separator: '<!-- excerpt_end -->'
+
 plugins:
   - jekyll-coffeescript
   - jekyll-feed
