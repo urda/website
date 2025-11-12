@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM alpine:3.22.2
 
 ENV APP_ROOT=/app
 ENV TMP_ROOT=/app/tmp
@@ -19,7 +19,6 @@ RUN apk add --no-cache \
     openssl-dev \
     ruby \
     ruby-dev \
-    ruby-json \
     ruby-nokogiri \
     zlib-dev \
     && :
