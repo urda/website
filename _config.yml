@@ -4,7 +4,7 @@
 
 name: Writings of Urda
 title: Writings of Urda
-author: Peter Urda
+author: Urda
 
 # Your URL (e.g. https://urda.com or https://github.com/urda)
 # Required for Sitemap.xml and RSS feed
@@ -27,10 +27,7 @@ paginate_path: "/blog/page/:num/"
 # Includes an icon in the footer for each username you enter
 footer-links:
   email: website@urda.com
-  flickr: urda
   github: urda
-  instagram: peter.urda
-  linkedin: urda
   rss: jekyll-feed
   stackoverflow: users/169153/urda # stackoverflow URL, e.g. "users/169153/urda"
   mastodon: https://urda.social/@urda
