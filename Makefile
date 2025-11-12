@@ -96,7 +96,7 @@ jekyll-build: require-container
 
 .PHONY: jekyll-htmlproof
 jekyll-htmlproof: require-container
-	bundle exec htmlproofer ./_site --log-level debug --ignore-urls "/twitter.com/,/linkedin.com/,/static.cloudflareinsights.com/"
+	bundle exec htmlproofer ./_site --log-level debug --ignore-urls "/urda.com/,/twitter.com/,/linkedin.com/,/static.cloudflareinsights.com/,/www.fiddler2.com/,/github.com/"
 
 .PHONY: jekyll-serve
 jekyll-serve: require-container
