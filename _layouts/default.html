@@ -1,83 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
+<html lang="{{ site.language }}">
+<head>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  {% include meta.html %}
 
-    {% include meta.html %}
+  {% include styles.html %}
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" media="none" onload="if(media!='all')media='all'" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/svg-icons.css" media="none" onload="if(media!='all')media='all'" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/highlights.css" media="none" onload="if(media!='all')media='all'" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
+</head>
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
+<body>
+<div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead">
+      <a href="{{ site.baseurl }}/" class="site-avatar"><img alt="{{ site.avatar_alt_text }}" src="{{ site.avatar }}"></a>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/generated/apple-touch-icon.png?v=TYJLCnY7r4">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/generated/favicon-32x32.png?v=TYJLCnY7r4">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/generated/favicon-16x16.png?v=TYJLCnY7r4">
-    <link rel="manifest" href="/assets/favicons/generated/site.webmanifest?v=TYJLCnY7r4">
-    <link rel="mask-icon" href="/assets/favicons/generated/safari-pinned-tab.svg?v=TYJLCnY7r4" color="#003399">
-    <link rel="shortcut icon" href="/assets/favicons/generated/favicon.ico?v=TYJLCnY7r4">
-    <meta name="apple-mobile-web-app-title" content="Writings of Urda">
-    <meta name="application-name" content="Writings of Urda">
-    <meta name="msapplication-TileColor" content="#003399">
-    <meta name="msapplication-TileImage" content="/assets/favicons/generated/mstile-144x144.png?v=TYJLCnY7r4">
-    <meta name="msapplication-config" content="/assets/favicons/generated/browserconfig.xml?v=TYJLCnY7r4">
-    <meta name="theme-color" content="#ffffff">
-
-    <noscript>
-      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/svg-icons.css" />
-      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/highlights.css" />
-    </noscript>
-  </head>
-
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img alt="Urda's Avatar" src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/blog">Blog</a>
-
-            {% for page in site.pages %}
-              {% if page.permalink == "/projects/" %}
-                <a href="{{ site.baseurl }}/projects">Projects</a>
-              {% endif %}
-
-              {% if page.permalink == "/about/" %}
-                <a href="{{ site.baseurl }}/about">About</a>
-              {% endif %}
-            {% endfor %}
-          </nav>
-        </header>
+      <div class="site-info">
+        <p class="site-name"><a href="{{ site.baseurl }}/">{{ site.title }}</a></p>
+        <p class="site-description">{{ site.description }}</p>
       </div>
-    </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+      <nav aria-label="Main navigation">
+        {%- for link in site.nav_links -%}
+        <a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+        {%- endfor -%}
+      </nav>
+    </header>
+  </div>
+</div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+<main id="main" class="container">
+  {{ content }}
+</main>
 
-    {% include analytics.html %}
-  </body>
+<div class="wrapper-footer">
+  <div class="container">
+    <footer class="footer">
+      {% include svg-icons.html %}
+    </footer>
+  </div>
+</div>
 
-  <!--
+{% include analytics.html %}
+<script src="{{ site.baseurl }}/assets/js/copy-code.js"></script>
+</body>
 
-  Scientists discover the world that exists; Engineers create the world that never was.
-  ~ Theodore von Kármán ~
+<!--
 
-  -->
+Scientists discover the world that exists;
+Engineers create the world that never was.
+~ Theodore von Kármán ~
+
+This page was generated with '{{ site.version }}'.
+
+-->
+
 </html>

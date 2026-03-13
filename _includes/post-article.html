@@ -1,0 +1,19 @@
+<article class="post">
+  <h2>
+    <a class="blog-post-title" href="{{ post.url }}">{{ post.title }}</a>
+    -
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+      {{ post.date | date: "%Y / %m / %d" }}
+    </time>
+  </h2>
+
+  <div class="entry">
+    {%- if post.content contains site.excerpt_separator -%}
+      {{ post.excerpt }}
+    {%- else -%}
+      <p>{{ post.excerpt | strip_html | truncatewords: site.excerpt_truncate_words, " " }}<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">... Read More</a></p>
+    {%- endif -%}
+  </div>
+
+  <a href="{{ site.baseurl }}{{ post.url }}" class="permalink">Permalink</a>
+</article>

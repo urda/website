@@ -2,44 +2,69 @@
 # Configuration
 ################################################################################
 
-name: Writings of Urda
 title: Writings of Urda
 author: Urda
+language: en-US
 
-# Your URL (e.g. https://urda.com or https://github.com/urda)
-# Required for Sitemap.xml and RSS feed
-url: https://urda.com
-
-# Short bio or description to display in header
+# Short bio or description to display in the header
 description: "Your friendly West Coast Software Engineer"
+
+# One-liner placed on the homepage you can update
+homepage_oneliner: "I'm Urda."
 
 # URL for the avatar image
 avatar: /assets/avatar/avatar-250.png
+avatar_alt_text: "Urda's Avatar"
 
-# Pagination Contorl
-paginate: 10
-paginate_path: "/blog/page/:num/"
+# Default social sharing image (used for og:image). Override per-page with social_image in front matter.
+social_image: /assets/social/og-default.png
 
-################################################################################
-# Optional Features and Settings
-################################################################################
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  email: website@urda.com
-  github: urda
-  rss: jekyll-feed
-  stackoverflow: users/169153/urda # stackoverflow URL, e.g. "users/169153/urda"
-  mastodon: https://urda.social/@urda
-
-# Cloudflare Web Analytics Control
-cloudflare_web_analytics_token: 87c9132d6cf2496f99c47a221a4ef7fc
+# Your URL (e.g., https://urda.com or https://github.com/urda)
+# Required for Sitemap.xml and RSS feed
+url: https://urda.com
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
+
+# Configure the social URLs throughout the project.
+socials:
+  # email - Set to any e-mail you like, e.g. 'noreply@domain.com'
+  email: website@urda.com
+
+  # flickr - If set, e.g. 'asdf' becomes 'https://www.flickr.com/photos/asdf/'
+  # flickr:
+
+  # github - Set to your GitHub username
+  github: urda
+
+  # instagram - Set to your Instagram username
+  # instagram:
+
+  # linkedin - Set to your LinkedIn username
+  # linkedin:
+
+  # mastodon - Set to your full mastodon URL
+  mastodon: https://urda.social/@urda
+
+  # rss - Set to 'true' to enable RSS feed references, 'false' to disable.
+  rss: true
+
+# Configure the navigation links
+nav_links:
+  - title: Blog
+    url: /blog
+  - title: Projects
+    url: /projects
+#  - title: About
+#    url: /about
+
+# Configure analytic services
+analytics:
+  # Cloudflare Web Analytics
+  cloudflare_web_analytics_token: 87c9132d6cf2496f99c47a221a4ef7fc
 
 ################################################################################
 #
@@ -49,7 +74,11 @@ baseurl: ""
 #
 ################################################################################
 
-version: v1.1.1-urda
+version: 2.0.0-urdacom
+favicon_version: w2eUH4dwkk
+
+paginate: 10
+paginate_path: "/blog/page/:num/"
 
 markdown: kramdown
 kramdown:
@@ -57,13 +86,16 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'rougecssclass'
+    block:
+      line_numbers: true
 
 permalink: /blog/:year/:month/:day/:title
 
 sass:
-  style: :compressed
+  style: compressed
 
 excerpt_separator: '<!-- excerpt_end -->'
+excerpt_truncate_words: 50
 
 plugins:
   - jekyll-coffeescript
@@ -76,13 +108,24 @@ include:
   - _pages
 
 exclude:
+  - .github/
+  - .idea/
+  - node_modules/
+  - scripts/
   - vendor/
+  - .ackrc
+  - .gitattributes
+  - .gitignore
+  - .nvmrc
   - CNAME
   - Dockerfile
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - Makefile
+  - package.json
+  - pnpm-lock.yaml
   - README.md
+  - stylelint.config.mjs
   - website.sublime-project
   - website.sublime-workspace

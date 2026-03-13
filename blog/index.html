@@ -2,37 +2,25 @@
 layout: default
 ---
 
+<h1>Blog Post Archive</h1>
+
 <div class="posts">
   {% for post in paginator.posts %}
-    <article class="post">
-
-      <a class="blog-post-title" href="{{ post.url }}">{{ post.title }}</a>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+  {% include post-article.html %}
   {% endfor %}
 </div>
 
-<!-- Pagination links -->
+<!-- Pagination -->
 <div class="pagination">
-  <div style="float: left;">
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">
-        « Older Posts
-    </a>
+  <a href="{{ paginator.next_page_path }}" rel="next" class="pagination-breadcrumb-left">
+    Older Posts
+  </a>
   {% endif %}
-  </div>
 
-  <div style="float: right;">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-        Newer Posts »
-    </a>
+  <a href="{{ paginator.previous_page_path }}" rel="prev" class="pagination-breadcrumb-right">
+    Newer Posts
+  </a>
   {% endif %}
-  </div>
-  <div style="clear: both;"></div>
 </div>

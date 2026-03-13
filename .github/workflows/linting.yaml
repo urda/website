@@ -1,4 +1,4 @@
-name: Testing urda.com
+name: Linting urda.com
 
 
 on:
@@ -19,13 +19,6 @@ jobs:
       - name: Checkout ⬇️
         uses: actions/checkout@v5
 
-      # https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
-      - name: Setup Ruby 💎
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.4'
-          bundler-cache: True # runs 'bundle install' and caches installed gems automatically
-
       # https://github.com/marketplace/actions/setup-pnpm
       - name: Install pnpm 📦
         uses: pnpm/action-setup@v4
@@ -43,5 +36,8 @@ jobs:
       - name: Install dependencies via pnpm
         run: pnpm install
 
-      - name: Test 🧪
-        run: make jekyll-test
+      - name: Version Check 🕵️
+        run: make version-check
+
+      - name: Lint 🧹
+        run: make jekyll-lint

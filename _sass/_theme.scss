@@ -1,0 +1,349 @@
+@import "theme.tokens";
+@import "theme.mixins";
+@import "theme.typography";
+@import "theme.base";
+@import "theme.a11y";
+
+/**************
+ * BASE RULES *
+ **************/
+
+body {
+  background: linear-gradient(180deg, var(--color-bg-secondary, $bg-secondary) 0%, var(--color-bg-primary, $bg-primary) 70%);
+  font: 18px/1.6 $helvetica;
+  color: var(--color-text-primary, $text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(a) {
+  color: var(--color-link, $link-color);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-link, $link-color) 45%, transparent);
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+  text-shadow: 0 0 var(--glow-sm) color-mix(in srgb, var(--color-link, $link-color) 40%, transparent);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Keep base link interactions at zero specificity
+   so descendants can override freely. */
+:where(a:hover),
+:where(a:focus) {
+  color: var(--color-link-hover, $link-hover-color);
+  text-decoration-color: color-mix(in srgb, var(--color-link-hover, $link-hover-color) 85%, transparent);
+  text-shadow: 0 0 var(--glow-md) color-mix(in srgb, var(--color-link-hover, $link-hover-color) 65%, transparent);
+}
+
+:where(a:active) {
+  color: var(--color-link-active, $link-active-color);
+  text-decoration-color: color-mix(in srgb, var(--color-link-active, $link-active-color) 80%, transparent);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $helvetica-neue;
+  color: var(--color-text-primary, $text-primary);
+  font-weight: bold;
+  text-shadow: 0 0 var(--glow-lg) color-mix(in srgb, var(--color-link-hover, $blue) 18%, transparent);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  margin: 1em 0 0.5em;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-size: $font-size-h1;
+  color: var(--color-heading-primary, $heading-accent-primary);
+  text-shadow: 0 0 var(--glow-lg) color-mix(in srgb, var(--color-link, $accent-electric-blue) 60%, transparent);
+
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2;
+  color: var(--color-heading-secondary, $heading-accent-secondary);
+  text-shadow: 0 0 var(--glow-md) color-mix(in srgb, var(--color-link, $accent-electric-blue) 50%, transparent);
+}
+
+h3 {
+  font-size: $font-size-h3;
+  color: var(--color-heading-tertiary, $heading-accent-tertiary);
+  text-shadow: 0 0 var(--glow-md) color-mix(in srgb, var(--color-link-hover, $blue) 40%, transparent);
+}
+
+h4 {
+  font-size: $font-size-h4;
+  color: var(--color-heading-muted, $heading-accent-muted);
+}
+
+:where(a:focus-visible),
+button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-link-hover, $link-hover-color) 80%, transparent);
+  outline-offset: 4px;
+}
+
+.date {
+  font-style: italic;
+  color: var(--color-text-muted, $text-muted);
+}
+
+::selection {
+  color: var(--color-text-primary, $text-primary);
+  background: color-mix(in srgb, var(--color-link-hover, $blue) 25%, transparent);
+}
+
+:not(pre) > code {
+  background: color-mix(in srgb, var(--color-bg-card, $bg-card) 90%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-border-primary, $border-primary) 75%, transparent);
+  border-radius: 4px;
+  color: var(--color-text-primary, $text-primary);
+  font-family: $monospace-font;
+  font-size: 0.92em;
+  padding: 0.1em 0.4em;
+}
+
+/*********************
+ * LAYOUT / SECTIONS *
+ *********************/
+
+/*************
+ * .masthead *
+ *************/
+
+.wrapper-masthead {
+  margin-bottom: 25px;
+  padding: 30px 0 10px;
+}
+
+.masthead {
+  @include glass-panel(24px 30px, 12px, var(--shadow-md));
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @include mobile {
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.site-avatar {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+
+  img {
+    border-radius: 6px;
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.site-info {
+  flex: 1 1 auto;
+}
+
+.site-name {
+  margin: 0;
+  color: var(--color-text-primary, $text-primary);
+  cursor: pointer;
+  font-family: $helvetica-neue;
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  text-shadow: 0 0 var(--glow-lg) color-mix(in srgb, #000 45%, transparent);
+
+  :where(a) {
+    color: inherit;
+  }
+}
+
+.site-description {
+  margin: -5px 0 0;
+  color: var(--color-text-secondary, $text-secondary);
+  font-size: 16px;
+
+  @include mobile {
+    margin: 3px 0;
+  }
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: $helvetica-neue;
+
+  a {
+    color: var(--color-nav-link, $nav-link-color);
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+    text-shadow: 0 0 var(--glow-sm) color-mix(in srgb, var(--color-link-active, $accent-deep-blue) 40%, transparent);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+
+    &:where(:hover) {
+      color: var(--color-link-hover, $blue);
+      text-shadow: 0 0 var(--glow-md) color-mix(in srgb, var(--color-link-hover, $blue) 65%, transparent);
+    }
+  }
+
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+
+  }
+}
+
+/*********
+ * .main *
+ *********/
+
+.posts > .post {
+  @include mobile {
+    padding: 1.25em;
+  }
+
+  @include glass-panel(1.5em, 16px, var(--shadow-lg));
+
+  position: relative;
+  margin-bottom: 1.75em;
+  overflow: hidden;
+
+}
+
+.posts > .post:last-child {
+  margin-bottom: 1.25em;
+}
+
+.post {
+  h2 {
+    font-size: $font-size-h3;
+    color: var(--color-heading-tertiary, $heading-accent-tertiary);
+    text-shadow: 0 0 var(--glow-md) color-mix(in srgb, var(--color-link-hover, $blue) 40%, transparent);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  blockquote {
+    margin: 2em 0;
+    border-left: 3px solid color-mix(in srgb, var(--color-text-primary, $text-primary) 70%, transparent);
+    padding: 0.8em 1.5em;
+    color: var(--color-text-secondary, $text-secondary);
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.6;
+    background: color-mix(in srgb, var(--color-border-primary, $border-primary) 30%, transparent);
+    border-radius: 0 16px 16px 0;
+    box-shadow: inset 4px 0 20px color-mix(in srgb, var(--color-text-primary, $text-primary) 20%, transparent);
+  }
+
+  .permalink {
+    display: block;
+    margin-top: 1em;
+
+    @include fancy-web-link-with-arrow("🔗", right);
+  }
+
+  .read-more {
+    @include fancy-web-link-with-arrow("👉", right);
+  }
+}
+
+.wrapper-footer {
+  margin-top: 0;
+}
+
+footer {
+  padding: 15px 0 20px;
+  text-align: center;
+  color: var(--color-text-secondary, $text-secondary);
+}
+
+/***************
+ * HOME / BLOG *
+ ***************/
+
+.pagination {
+  border-top: 1px solid var(--color-rule, $rule-color);
+  border-bottom: 1px solid var(--color-rule, $rule-color);
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  color: var(--color-text-secondary, $text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    color: var(--color-link, $link-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--color-link-hover, $link-hover-color);
+    }
+  }
+
+  .pagination-breadcrumb-left {
+    @include fancy-web-link-with-arrow("⟸", left);
+
+    padding-left: 0.5em;
+    text-align: left;
+  }
+
+  .pagination-breadcrumb-right {
+    @include fancy-web-link-with-arrow("⟹", right);
+
+    margin-left: auto;
+    padding-right: 0.5em;
+    text-align: right;
+  }
+}
+
+#home-about h1 {
+  margin-top: 0;
+  color: var(--color-home-heading, $home-heading-accent);
+  text-shadow: 0 0 var(--glow-lg) color-mix(in srgb, var(--color-home-heading, $home-heading-accent) 45%, transparent);
+}
+
+#home-about {
+  display: table;
+  margin: 0.5em auto 0;
+}
+
+.blog-post-title {
+  color: var(--color-home-recent-link, $home-recent-link-accent);
+  font-weight: bolder;
+  text-shadow: 0 0 var(--glow-md) color-mix(in srgb, var(--color-home-recent-link, $home-recent-link-accent) 45%, transparent);
+  text-decoration: underline;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+
+  &:hover,
+  &:active {
+    color: var(--color-link-hover, $blue);
+    text-shadow: 0 0 var(--glow-md) color-mix(in srgb, var(--color-link-hover, $blue) 45%, transparent);
+  }
+}

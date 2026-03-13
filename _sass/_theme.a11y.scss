@@ -1,0 +1,26 @@
+@import "theme.colors";
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-link: #{$blue};
+    --color-link-hover: #{$text-primary};
+  }
+
+  a {
+    text-decoration-thickness: 0.16em;
+  }
+
+  .masthead,
+  .posts > .post {
+    border-color: color-mix(in srgb, var(--color-border-primary, $border-primary) 95%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

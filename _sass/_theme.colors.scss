@@ -1,0 +1,33 @@
+/* Base palette */
+$blue: #00b5ff;
+$accent-electric-blue: #1a73ff;
+$accent-deep-blue: #0b3dff;
+$bg-primary: #0d1117;
+$bg-secondary: #1a2236;
+$bg-card: #0e0e12;
+$border-primary: #1f1f1f;
+$text-primary: #f3f3f3;
+$text-secondary: #bdbdbd;
+$text-muted: #7f7f7f;
+
+/* Heading colors */
+$heading-accent-primary: #118aff;    // h1 - bright blue
+$heading-accent-secondary: #42a1ff;  // h2 - lighter blue
+$heading-accent-tertiary: #00c4f4;   // h3 - cyan-tinted
+$heading-accent-muted: #749cdb;      // h4 - desaturated
+
+/* Link colors */
+$link-color: $accent-electric-blue;
+$link-hover-color: $blue;
+$link-active-color: $accent-deep-blue;
+
+/* Navigation */
+$nav-link-color: #a0b0f5;            // light blue-purple
+
+/* Accents */
+$read-more-accent: #0e91ff;          // fancy links (Read More, Permalink, pagination)
+$home-heading-accent: #076dff;       // home page headings
+$home-recent-link-accent: #1287ff;   // blog post titles
+
+/* Utility */
+$rule-color: rgba($text-primary, 0.25);

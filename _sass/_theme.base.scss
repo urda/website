@@ -1,0 +1,61 @@
+/* Base Elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* Sectional Elements */
+p {
+  margin: 15px 0;
+}
+
+/* Font Elements */
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+/* List Elements */
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+/* Other Elements */
+img {
+  max-width: 100%;
+}
+
+.entry img {
+  display: block;
+  margin: 2em auto;
+  border: 1px solid #0081ff;
+  border-radius: 18px;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 75%),
+    0 0 35px rgba(0, 129, 255, 75%);
+}
+
+/* Classes */
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 10px;
+  width: 100%;
+}

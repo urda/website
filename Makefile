@@ -4,14 +4,15 @@
 
 CLEAN_TARGETS = ./_site ./.sass-cache
 DOCKER_IMAGE = urda/website:latest
-DOCKER_RUN_BASE_CMD = -it --mount type=bind,source=${MAKEFILE_PWD},target=/app/web
+DOCKER_TTY_FLAG = $(shell [ -t 0 ] && echo "-t")
+DOCKER_RUN_BASE_CMD = -i ${DOCKER_TTY_FLAG} --mount type=bind,source=${MAKEFILE_PWD},target=/app/web
 DOCKER_RUN_EXPOSE = -p 4000:4000/tcp
+HTMLPROOF_IGNORES = "/static.cloudflareinsights.com/,/www.fiddler2.com/,/www.linkedin.com/"
 MAKEFILE_PWD = $(shell pwd)
 
 ########################################################################################################################
 # `make help` Needs to be first so it is ran when just `make` is called
 ########################################################################################################################
-
 
 .PHONY: help
 help: # Show this help screen
@@ -19,28 +20,25 @@ help: # Show this help screen
 	sort -k1,1 |\
 	awk 'BEGIN {FS = ":.*?# "}; {printf "\033[1m%-30s\033[0m %s\n", $$1, $$2}'
 
-
 ########################################################################################################################
 # User-callable commands
 ########################################################################################################################
 
-
 .PHONY: build
 build: docker-run-jekyll-builder # [DOCKER CONTAINER] Build the entire website, and output to ./_site .
-
 
 .PHONY: clean
 clean: # Clean the project directory.
 	rm -rf $(CLEAN_TARGETS)
 
+.PHONY: lint
+lint: docker-run-lint # [DOCKER CONTAINER] Run automated linting against website project.
 
 .PHONY: run-server
 run-server: docker-run-server # [DOCKER CONTAINER] Run the Jekyll server.
 
-
 .PHONY: test
-test: docker-run-test # [DOCKER CONTAINER] Run automated testing against website project.
-
+test: lint docker-run-test # [DOCKER CONTAINER] Run automated testing against website project.
 
 .PHONY: update
 update: docker-run-updater # [DOCKER CONTAINER] Update Jekyll
@@ -49,7 +47,7 @@ update: docker-run-updater # [DOCKER CONTAINER] Update Jekyll
 update-bundler: docker-run-updater-bundler # [DOCKER CONTAINER] Update Jekyll's Bundler
 
 ########################################################################################################################
-# Docker Commands
+# Docker Entry Points Commands
 ########################################################################################################################
 
 .PHONY: docker-build
@@ -59,6 +57,10 @@ docker-build:
 .PHONY: docker-run-jekyll-builder
 docker-run-jekyll-builder: docker-build
 	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-build
+
+.PHONY: docker-run-lint
+docker-run-lint: docker-build
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-lint
 
 .PHONY: docker-run-server
 docker-run-server: docker-build
@@ -96,7 +98,11 @@ jekyll-build: require-container
 
 .PHONY: jekyll-htmlproof
 jekyll-htmlproof: require-container
-	bundle exec htmlproofer ./_site --log-level debug --ignore-urls "/static.cloudflareinsights.com/,/www.fiddler2.com/"
+	bundle exec htmlproofer ./_site --log-level debug --ignore-urls ${HTMLPROOF_IGNORES}
+
+.PHONY: jekyll-lint
+jekyll-lint: require-container
+	pnpm exec stylelint "**/*.{css,scss}" --ignore-path .stylelintignore
 
 .PHONY: jekyll-serve
 jekyll-serve: require-container
@@ -112,3 +118,23 @@ jekyll-update: require-container
 .PHONY: jekyll-update-bundler
 jekyll-update-bundler: require-container
 	bundle update --bundler
+
+.PHONY: jekyll-project-version-check
+jekyll-project-version-check: require-container
+	./scripts/version_manager.py check
+
+########################################################################################################################
+# Version Checker
+########################################################################################################################
+
+.PHONY: version-check
+version-check: docker-build # [DOCKER CONTAINER] Verify the project version string is correct across the project
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-project-version-check
+
+.PHONY: version-only
+version-only: docker-build # [DOCKER CONTAINER] Get the version string for the project
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} ./scripts/version_manager.py get-version-only
+
+.PHONY: version-update
+version-update: docker-build # [DOCKER CONTAINER] Update the project version string is correct across the project
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} ./scripts/version_manager.py update

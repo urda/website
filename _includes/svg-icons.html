@@ -1,27 +1,27 @@
-{% if site.footer-links.github %}
-<a href="https://github.com/{{ site.footer-links.github }}"><i class="svg-icon github"></i></a>
-{% endif %}
+{% if site.socials.github %}
+<a href="https://github.com/{{ site.socials.github }}" target="_blank" aria-label="GitHub"><i class="svg-icon github"></i></a>
+{%- endif -%}
 
-{% if site.footer-links.mastodon %}
-<a href="{{ site.footer-links.mastodon }}" rel="me" target="_blank"><i class="svg-icon mastodon"></i></a>
-{% endif %}
+{% if site.socials.mastodon %}
+<a href="{{ site.socials.mastodon }}" rel="me" target="_blank" aria-label="Mastodon"><i class="svg-icon mastodon"></i></a>
+{%- endif -%}
 
-{% if site.footer-links.flickr %}
-<a href="https://flickr.com/{{ site.footer-links.flickr }}"><i class="svg-icon flickr"></i></a>
-{% endif %}
+{% if site.socials.flickr %}
+<a href="https://www.flickr.com/photos/{{ site.socials.flickr }}" target="_blank" aria-label="Flickr"><i class="svg-icon flickr"></i></a>
+{%- endif -%}
 
-{% if site.footer-links.instagram %}
-<a href="https://instagram.com/{{ site.footer-links.instagram }}"><i class="svg-icon instagram"></i></a>
-{% endif %}
+{% if site.socials.instagram %}
+<a href="https://instagram.com/{{ site.socials.instagram }}" target="_blank" aria-label="Instagram"><i class="svg-icon instagram"></i></a>
+{%- endif -%}
 
-{% if site.footer-links.linkedin %}
-<a href="https://linkedin.com/in/{{ site.footer-links.linkedin }}"><i class="svg-icon linkedin"></i></a>
-{% endif %}
+{% if site.socials.linkedin %}
+<a href="https://www.linkedin.com/in/{{ site.socials.linkedin }}" target="_blank" aria-label="LinkedIn"><i class="svg-icon linkedin"></i></a>
+{%- endif -%}
 
-{% if site.footer-links.email %}
-<a href="mailto:{{ site.footer-links.email }}"><i class="svg-icon email"></i></a>
-{% endif %}
+{% if site.socials.email %}
+<a href="mailto:{{ site.socials.email }}" aria-label="Email"><i class="svg-icon email"></i></a>
+{%- endif -%}
 
-{% if site.footer-links.rss %}
-<a href="{{ site.baseurl }}/feed.xml"><i class="svg-icon rss"></i></a>
-{% endif %}
+{% if site.socials.rss %}
+<a href="{{ site.baseurl }}/feed.xml" target="_blank" aria-label="RSS feed"><i class="svg-icon rss"></i></a>
+{%- endif -%}

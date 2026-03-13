@@ -1,0 +1,28 @@
+{
+  "name": "website",
+  "version": "2.0.0-urdacom",
+  "description": "Website for urda.com",
+  "homepage": "https://github.com/urda/website#readme",
+  "bugs": {
+    "url": "https://github.com/urda/website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urda/website.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Peter Urda",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Use the Makefile not this' && exit 1"
+  },
+  "devDependencies": {
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-config-standard-scss": "^16.0.0"
+  },
+  "dependencies": {
+    "vnu-jar": "^25.12.1"
+  }
+}

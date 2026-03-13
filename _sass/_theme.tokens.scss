@@ -1,0 +1,46 @@
+@import "theme.colors";
+
+/* CSS color tokens derived from the SCSS palette. */
+:root {
+  color-scheme: dark;
+
+  --color-bg-primary: #{$bg-primary};
+  --color-bg-secondary: #{$bg-secondary};
+  --color-text-primary: #{$text-primary};
+  --color-text-secondary: #{$text-secondary};
+  --color-text-muted: #{$text-muted};
+  --color-link: #{$accent-electric-blue};
+  --color-link-hover: #{$blue};
+  --color-link-active: #{$accent-deep-blue};
+
+  /* Headings */
+  --color-heading-primary: #{$heading-accent-primary};
+  --color-heading-secondary: #{$heading-accent-secondary};
+  --color-heading-tertiary: #{$heading-accent-tertiary};
+  --color-heading-muted: #{$heading-accent-muted};
+
+  /* Navigation */
+  --color-nav-link: #{$nav-link-color};
+
+  /* Accents */
+  --color-read-more: #{$read-more-accent};
+  --color-home-heading: #{$home-heading-accent};
+  --color-home-recent-link: #{$home-recent-link-accent};
+
+  /* Surfaces */
+  --color-bg-card: #{$bg-card};
+  --color-border-primary: #{$border-primary};
+
+  /* Utility */
+  --color-rule: #{$rule-color};
+
+  /* Glow blur sizes (for text-shadow) */
+  --glow-sm: 14px;
+  --glow-md: 22px;
+  --glow-lg: 35px;
+
+  /* Box shadows (elevation) */
+  --shadow-sm: 0 15px 30px rgba(0, 0, 0, 55%);
+  --shadow-md: 0 25px 60px rgba(0, 0, 0, 65%);
+  --shadow-lg: 0 45px 90px rgba(0, 0, 0, 70%);
+}

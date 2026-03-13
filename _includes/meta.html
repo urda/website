@@ -1,23 +1,56 @@
-    <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+<meta charset="utf-8">
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt| strip_html }}" />
-    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
-    {% else %}
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:description" content="{{ site.description }}" />
-    {% endif %}
+{%- if page.excerpt --%}
+<meta name="description" content="{{ page.excerpt| strip_html }}">
+<meta property="og:description" content="{{ page.excerpt| strip_html }}">
+{%- else -%}
+<meta name="description" content="{{ site.description }}">
+<meta property="og:description" content="{{ site.description }}">
+{%- endif -%}
 
-    {% if site.author %}
-    <meta name="author" content="{{ site.author }}" />
-    {% else %}
-    <meta name="author" content="{{ site.name }}" />
-    {% endif %}
+{%- if site.author -%}
+<meta name="author" content="{{ site.author }}">
+{%- else -%}
+<meta name="author" content="{{ site.title }}">
+{%- endif -%}
 
-    {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
-    {% endif %}
+{%- if page.title -%}
+<meta property="og:title" content="{{ page.title }}">
+{%- endif -%}
+
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:locale" content="{{ site.language | replace: '-', '_' }}">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+{%- if page.social_image -%}
+<meta property="og:image" content="{{ site.url }}{{ page.social_image }}">
+{%- else -%}
+<meta property="og:image" content="{{ site.url }}{{ site.social_image }}">
+{%- endif -%}
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicons/generated/apple-touch-icon.png?v={{ site.favicon_version }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicons/generated/favicon-32x32.png?v={{ site.favicon_version }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicons/generated/favicon-16x16.png?v={{ site.favicon_version }}">
+<link rel="manifest" href="{{ site.baseurl }}/assets/favicons/generated/site.webmanifest?v={{ site.favicon_version }}">
+<link rel="mask-icon" href="{{ site.baseurl }}/assets/favicons/generated/safari-pinned-tab.svg?v={{ site.favicon_version }}" color="#003399">
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicons/generated/favicon.ico?v={{ site.favicon_version }}">
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+<meta name="application-name" content="{{ site.title }}">
+<meta name="msapplication-TileColor" content="#003399">
+<meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/favicons/generated/mstile-144x144.png?v={{ site.favicon_version }}">
+<meta name="msapplication-config" content="{{ site.baseurl }}/assets/favicons/generated/browserconfig.xml?v={{ site.favicon_version }}">
+<meta name="theme-color" content="#ffffff">
+{%- if page.previous.url -%}
+<link rel="prev" href="{{ site.url }}{{ page.previous.url }}">
+{%- endif -%}
+{%- if page.next.url -%}
+<link rel="next" href="{{ site.url }}{{ page.next.url }}">
+{%- endif -%}
+{%- if paginator.previous_page_path -%}
+<link rel="prev" href="{{ site.url }}{{ paginator.previous_page_path }}">
+{%- endif -%}
+{%- if paginator.next_page_path -%}
+<link rel="next" href="{{ site.url }}{{ paginator.next_page_path }}">
+{%- endif -%}

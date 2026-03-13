@@ -14,26 +14,21 @@ layout: default
   </div>
 </article>
 
-<!-- Pagination links -->
-<div class="pagination-post">
-  <div class="pagination-post-left">
+<!-- Pagination -->
+<div class="pagination">
   {% if page.previous.url %}
-    <a href="{{page.previous.url}}">
-      « Older Post
+    <a href="{{page.previous.url}}" rel="prev" class="pagination-breadcrumb-left">
+      Older Post
       <br />
       ({{ page.previous.title }})
     </a>
   {% endif %}
-  </div>
 
-  <div class="pagination-post-right">
   {% if page.next.url %}
-    <a href="{{page.next.url}}">
-      Newer Post »
+    <a href="{{page.next.url}}" rel="next" class="pagination-breadcrumb-right">
+      Newer Post
       <br />
       ({{ page.next.title }})
     </a>
   {% endif %}
-  </div>
-  <div class="pagination-post-clear"></div>
 </div>
