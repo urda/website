@@ -76,6 +76,7 @@
 .rouge-code {
   padding-left: 16px;
   border-left: 1px solid #1f1f1f;
+  vertical-align: top;
 }
 
 code {
