@@ -2,12 +2,7 @@ name: Testing urda.com
 
 
 on:
-  push:
-    branches:
-      - gh-pages
-  pull_request:
-    branches:
-      - gh-pages
+  workflow_call:
 
 
 jobs:
@@ -26,22 +21,8 @@ jobs:
           ruby-version: '3.4'
           bundler-cache: True # runs 'bundle install' and caches installed gems automatically
 
-      # https://github.com/marketplace/actions/setup-pnpm
-      - name: Install pnpm 📦
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-          run_install: false # pnpm install is ran if set to 'true'
-
-      # https://github.com/marketplace/actions/setup-node-js-environment
-      - name: Setup Node.js ⚙️
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
-
-      - name: Install dependencies via pnpm
-        run: pnpm install
+      - name: Setup Node.js and pnpm ⚙️
+        uses: ./.github/actions/setup-node-pnpm
 
       - name: Test 🧪
         run: make jekyll-test

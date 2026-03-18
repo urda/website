@@ -1,0 +1,15 @@
+name: PR Check urda.com
+
+
+on:
+  pull_request:
+    branches:
+      - gh-pages
+
+
+jobs:
+  lint:
+    uses: ./.github/workflows/linting.yaml
+
+  test:
+    uses: ./.github/workflows/testing.yaml

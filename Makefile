@@ -2,7 +2,7 @@
 # Variables
 ########################################################################################################################
 
-CLEAN_TARGETS = ./_site ./.sass-cache
+CLEAN_TARGETS = ./_site ./.sass-cache ./.jekyll-cache
 DOCKER_IMAGE = urda/website:latest
 DOCKER_TTY_FLAG = $(shell [ -t 0 ] && echo "-t")
 DOCKER_RUN_BASE_CMD = -i ${DOCKER_TTY_FLAG} --mount type=bind,source=${MAKEFILE_PWD},target=/app/web

@@ -98,7 +98,6 @@ excerpt_separator: '<!-- excerpt_end -->'
 excerpt_truncate_words: 50
 
 plugins:
-  - jekyll-coffeescript
   - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
