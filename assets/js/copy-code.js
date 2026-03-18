@@ -18,6 +18,14 @@
     const code = block.querySelector('.rouge-code pre');
     if (!code) return;
 
+    // Wrap scrollable content so the button stays fixed in place
+    var scrollWrap = document.createElement('div');
+    scrollWrap.className = 'highlight-scroll';
+    while (block.firstChild) {
+      scrollWrap.appendChild(block.firstChild);
+    }
+    block.appendChild(scrollWrap);
+
     const btn = document.createElement('button');
     let timer = null;
 

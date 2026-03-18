@@ -243,6 +243,17 @@ nav {
     &:first-child {
       margin-top: 0;
     }
+
+    @include mobile {
+      .post-title-separator {
+        display: none;
+      }
+
+      time {
+        display: block;
+        font-size: 0.8em;
+      }
+    }
   }
 
   blockquote {

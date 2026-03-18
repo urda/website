@@ -1,7 +1,7 @@
 <article class="post">
   <h2>
     <a class="blog-post-title" href="{{ post.url }}">{{ post.title }}</a>
-    -
+    <span class="post-title-separator" aria-hidden="true"> - </span>
     <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
       {{ post.date | date: "%Y / %m / %d" }}
     </time>
