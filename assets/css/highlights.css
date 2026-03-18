@@ -11,6 +11,8 @@
   font-size: 90%;
   color: #00a595;
   position: relative;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .highlight-scroll {
