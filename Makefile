@@ -109,7 +109,7 @@ jekyll-serve: require-container
 	bundle exec jekyll serve --drafts --future --force_polling --host 0.0.0.0 --port 4000
 
 .PHONY: jekyll-test
-jekyll-test: require-container jekyll-build jekyll-htmlproof
+jekyll-test: require-container jekyll-build jekyll-htmlproof jekyll-w3c-check
 
 .PHONY: jekyll-update
 jekyll-update: require-container
@@ -119,9 +119,13 @@ jekyll-update: require-container
 jekyll-update-bundler: require-container
 	bundle update --bundler
 
-.PHONY: jekyll-project-version-check
-jekyll-project-version-check: require-container
+.PHONY: jekyll-version-check
+jekyll-version-check: require-container
 	./scripts/version_manager.py check
+
+.PHONY: jekyll-w3c-check
+jekyll-w3c-check: require-container
+	java -jar $$(pnpm exec node -e "process.stdout.write(require('vnu-jar').toString())") --errors-only --skip-non-html ./_site
 
 ########################################################################################################################
 # Version Checker
@@ -129,7 +133,7 @@ jekyll-project-version-check: require-container
 
 .PHONY: version-check
 version-check: docker-build # [DOCKER CONTAINER] Verify the project version string is correct across the project
-	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-project-version-check
+	docker run ${DOCKER_RUN_BASE_CMD} ${DOCKER_IMAGE} make jekyll-version-check
 
 .PHONY: version-only
 version-only: docker-build # [DOCKER CONTAINER] Get the version string for the project

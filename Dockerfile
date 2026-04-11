@@ -17,6 +17,7 @@ RUN apk add --no-cache \
     libcurl \
     nodejs \
     npm \
+    openjdk21-jre-headless \
     openssl-dev \
     python3 \
     ruby \

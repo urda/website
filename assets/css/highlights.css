@@ -73,6 +73,7 @@
 
 .rouge-gutter .lineno {
   color: #4a5568;
+  font-family: 'Bitstream Vera Sans Mono', courier, monospace;
 }
 
 .rouge-code {
