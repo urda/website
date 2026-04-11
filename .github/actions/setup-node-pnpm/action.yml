@@ -1,5 +1,5 @@
 name: Setup Node.js and pnpm
-description: Install pnpm, configure Node.js from .nvmrc, and install dependencies
+description: Install pnpm, configure Node.js from .node-version, and install dependencies
 
 
 runs:
@@ -16,7 +16,7 @@ runs:
     - name: Setup Node.js ⚙️
       uses: actions/setup-node@v6
       with:
-        node-version-file: '.nvmrc'
+        node-version-file: '.node-version'
         cache: 'pnpm'
 
     - name: Install dependencies via pnpm ⚙️

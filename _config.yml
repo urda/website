@@ -115,7 +115,7 @@ exclude:
   - .ackrc
   - .gitattributes
   - .gitignore
-  - .nvmrc
+  - .node-version
   - CNAME
   - Dockerfile
   - Gemfile
