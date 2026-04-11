@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      vnu-jar:
-        specifier: ^25.12.1
-        version: 25.12.31
     devDependencies:
       stylelint:
         specifier: ^16.25.0
@@ -21,6 +17,9 @@ importers:
       stylelint-config-standard-scss:
         specifier: ^16.0.0
         version: 16.0.0(postcss@8.5.6)(stylelint@16.25.0)
+      vnu-jar:
+        specifier: ^25.12.1
+        version: 25.12.31
 
 packages:
 
