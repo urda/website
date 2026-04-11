@@ -1,8 +1,9 @@
-@import "theme.tokens";
-@import "theme.mixins";
-@import "theme.typography";
-@import "theme.base";
-@import "theme.a11y";
+@use "theme.colors" as *;
+@use "theme.tokens" as *;
+@use "theme.mixins" as *;
+@use "theme.typography" as *;
+@use "theme.base" as *;
+@use "theme.a11y" as *;
 
 /**************
  * BASE RULES *

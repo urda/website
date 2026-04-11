@@ -1,4 +1,4 @@
-@import "theme.colors";
+@use "theme.colors" as *;
 
 /* CSS color tokens derived from the SCSS palette. */
 :root {

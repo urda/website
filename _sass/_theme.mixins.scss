@@ -1,4 +1,4 @@
-@import "theme.colors";
+@use "theme.colors" as *;
 
 @mixin mobile {
   @media screen and (width <= 640px) {
@@ -18,7 +18,7 @@
   text-decoration: none;
   text-shadow: 0 0 var(--glow-sm) color-mix(in srgb, var(--color-read-more, $read-more-accent) 40%, transparent);
 
-  &::#{if($dir == right, 'after', 'before')} {
+  &::#{if(sass($dir == right): 'after'; else: 'before')} {
     content: $glyph;
     transition: transform 0.2s ease;
   }
@@ -27,7 +27,7 @@
     color: var(--color-link-hover, $blue);
     text-shadow: 0 0 var(--glow-md) color-mix(in srgb, var(--color-link-hover, $blue) 50%, transparent);
 
-    &::#{if($dir == right, 'after', 'before')} { transform: translateX(if($dir == right, 4px, -4px)); }
+    &::#{if(sass($dir == right): 'after'; else: 'before')} { transform: translateX(if(sass($dir == right): 4px; else: -4px)); }
   }
 }
 
