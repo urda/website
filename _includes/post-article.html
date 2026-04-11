@@ -8,7 +8,9 @@
   </h2>
 
   <div class="entry">
-    {%- if post.content contains site.excerpt_separator -%}
+    {%- assign _content_start = post.content | strip_html | strip | truncatewords: 15, "" -%}
+    {%- assign _excerpt_start = post.excerpt | strip_html | strip | truncatewords: 15, "" -%}
+    {%- if post.content contains site.excerpt_separator or _content_start != _excerpt_start -%}
       {{ post.excerpt }}
     {%- else -%}
       <p>{{ post.excerpt | strip_html | truncatewords: site.excerpt_truncate_words, " " }}<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">... Read More</a></p>
