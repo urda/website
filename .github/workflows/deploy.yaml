@@ -52,9 +52,6 @@ jobs:
           ruby-version: '3.4'
           bundler-cache: true
 
-      - name: ⚙️ Setup Node.js and pnpm
-        uses: ./.github/actions/setup-node-pnpm
-
       - name: 📄 Setup Pages
         uses: actions/configure-pages@v5
 
