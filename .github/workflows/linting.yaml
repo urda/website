@@ -11,14 +11,14 @@ jobs:
 
     steps:
       # https://github.com/marketplace/actions/checkout
-      - name: Checkout ⬇️
+      - name: ⬇️ Checkout
         uses: actions/checkout@v5
 
-      - name: Setup Node.js and pnpm ⚙️
+      - name: ⚙️ Setup Node.js and pnpm
         uses: ./.github/actions/setup-node-pnpm
 
-      - name: Version Check 🕵️
+      - name: 🕵️ Version Check
         run: make version-check
 
-      - name: Lint 🧹
+      - name: 🧹 Lint
         run: make jekyll-lint

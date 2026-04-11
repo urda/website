@@ -42,28 +42,28 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, test]
     steps:
-      - name: Checkout ⬇️
+      - name: ⬇️ Checkout
         uses: actions/checkout@v5
 
       # https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
-      - name: Setup Ruby 💎
+      - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4'
-          bundler-cache: True
+          bundler-cache: true
 
-      - name: Setup Node.js and pnpm ⚙️
+      - name: ⚙️ Setup Node.js and pnpm
         uses: ./.github/actions/setup-node-pnpm
 
-      - name: Setup Pages 📄
+      - name: 📄 Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build site 🔨
+      - name: 🔨 Build Site
         run: make jekyll-build
         env:
           JEKYLL_ENV: production
 
-      - name: Upload artifacts 🏗
+      - name: 🏗 Upload Artifacts
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./_site
@@ -78,6 +78,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages 🚀
+      - name: 🚀 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

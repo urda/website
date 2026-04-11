@@ -11,18 +11,18 @@ jobs:
 
     steps:
       # https://github.com/marketplace/actions/checkout
-      - name: Checkout ⬇️
+      - name: ⬇️ Checkout
         uses: actions/checkout@v5
 
       # https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
-      - name: Setup Ruby 💎
+      - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4'
-          bundler-cache: True # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Setup Node.js and pnpm ⚙️
+      - name: ⚙️ Setup Node.js and pnpm
         uses: ./.github/actions/setup-node-pnpm
 
-      - name: Test 🧪
+      - name: 🧪 Test
         run: make jekyll-test
