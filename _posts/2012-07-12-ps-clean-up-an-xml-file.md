@@ -41,7 +41,7 @@ function Format-Xml
     .NOTES
         Author : Peter Urda (@Urda)
     .LINK
-        Script source: http://urda.cc/blog/2012/07/12/ps-clean-up-an-xml-file/
+        Script source: https://urda.com/blog/2012/07/12/ps-clean-up-an-xml-file
     #>
     param ([string]$FilePath = $null)
     if ($FilePath) {
