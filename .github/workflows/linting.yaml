@@ -17,6 +17,8 @@ jobs:
       # https://github.com/marketplace/actions/checkout
       - name: ⬇️ Checkout
         uses: actions/checkout@v5
+        with:
+          lfs: true
 
       - name: ⚙️ Setup Node.js and pnpm
         uses: ./.github/actions/setup-node-pnpm
