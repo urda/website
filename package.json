@@ -18,9 +18,9 @@
     "test": "echo 'Use the Makefile not this' && exit 1"
   },
   "devDependencies": {
-    "stylelint": "^16.25.0",
+    "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.1",
     "stylelint-config-standard-scss": "^16.0.0",
-    "vnu-jar": "^25.12.1"
+    "vnu-jar": "^25.12.31"
   }
 }
