@@ -1,4 +1,5 @@
 @use "theme.colors" as *;
+@use "theme.typography" as *;
 
 /* CSS color tokens derived from the SCSS palette. */
 :root {
@@ -33,6 +34,9 @@
 
   /* Utility */
   --color-rule: #{$rule-color};
+
+  /* Fonts */
+  --font-mono: #{$monospace-font};
 
   /* Glow blur sizes (for text-shadow) */
   --glow-sm: 14px;
