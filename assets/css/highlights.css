@@ -8,6 +8,7 @@
     0 0 35px rgba(0, 129, 255, 75%);
   margin: 30px 0;
   overflow: auto;
+  font-family: var(--font-mono, monospace);
   font-size: 90%;
   color: #00a595;
   position: relative;
