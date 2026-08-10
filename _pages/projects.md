@@ -6,6 +6,12 @@ permalink: /projects/
 
 I build and tinker with computer engineering and computer science from time to time.
 
+## [Urda Anvil (anvil.urda.com)](https://anvil.urda.com/)
+
+The tools, settings, prompts, and software that blend into one workbench for building better software with LLMs.
+
+- [Urda's Forged Status Line](https://anvil.urda.com/forged-statusline/) - A `bash`-powered Claude Code status line with live context and rate-limit gauges.
+
 You can find my GitHub profile at:
 
 ## [github.com/urda](https://github.com/urda)
