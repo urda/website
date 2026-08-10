@@ -7,7 +7,7 @@ DOCKER_IMAGE = urda/website:latest
 DOCKER_TTY_FLAG = $(shell [ -t 0 ] && echo "-t")
 DOCKER_RUN_BASE_CMD = -i ${DOCKER_TTY_FLAG} --mount type=bind,source=${MAKEFILE_PWD},target=/app/web
 DOCKER_RUN_EXPOSE = -p 4000:4000/tcp
-HTMLPROOF_IGNORES = "/static.cloudflareinsights.com/,/urda.com/,/www.dreamhost.com/,/www.fiddler2.com/,/www.linkedin.com/"
+HTMLPROOF_IGNORES = "/static.cloudflareinsights.com/,/^https?:\/\/urda\.com/,/www.dreamhost.com/,/www.fiddler2.com/,/www.linkedin.com/"
 MAKEFILE_PWD = $(shell pwd)
 
 ########################################################################################################################
