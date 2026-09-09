@@ -26,37 +26,23 @@
 # continue to work without changes.
 #
 
-Jekyll::Hooks.register(:documents, :post_render) do |doc|
-  next unless doc.output_ext == '.html'
+module RougeFixLineNumbers
+  OUTER = %r{<pre\s+class="rougecssclass"><code>(<table\s+class="rouge-table">.*?</table>)</code></pre>}m
+  INNER = %r{(<td\s+class="rouge-code">)<pre>(.*?)</pre>(</td>)}m
 
-  doc.output = doc.output.gsub(
-    %r{<pre\s+class="rougecssclass"><code>(<table\s+class="rouge-table">.*?</table>)</code></pre>}m
-  ) do |_match|
-    table_html = Regexp.last_match(1)
+  def self.fix(html)
+    html.gsub(OUTER) do
+      table_html = Regexp.last_match(1)
+      table_html.gsub(INNER, '\1<pre><code>\2</code></pre>\3')
+    end
+  end
 
-    # Wrap the code content inside rouge-code with <code>
-    table_html = table_html.gsub(
-      %r{(<td\s+class="rouge-code">)<pre>(.*?)</pre>(</td>)}m,
-      '\1<pre><code>\2</code></pre>\3'
-    )
+  def self.hook(item)
+    return unless item.output_ext == '.html'
 
-    table_html
+    item.output = fix(item.output)
   end
 end
 
-Jekyll::Hooks.register(:pages, :post_render) do |page|
-  next unless page.output_ext == '.html'
-
-  page.output = page.output.gsub(
-    %r{<pre\s+class="rougecssclass"><code>(<table\s+class="rouge-table">.*?</table>)</code></pre>}m
-  ) do |_match|
-    table_html = Regexp.last_match(1)
-
-    table_html = table_html.gsub(
-      %r{(<td\s+class="rouge-code">)<pre>(.*?)</pre>(</td>)}m,
-      '\1<pre><code>\2</code></pre>\3'
-    )
-
-    table_html
-  end
-end
+Jekyll::Hooks.register(:documents, :post_render) { |doc| RougeFixLineNumbers.hook(doc) }
+Jekyll::Hooks.register(:pages, :post_render) { |page| RougeFixLineNumbers.hook(page) }

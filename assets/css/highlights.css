@@ -54,6 +54,21 @@
   border-color: #00a595;
 }
 
+.highlight .copy-btn.failed {
+  color: #e06c75;
+  border-color: #e06c75;
+}
+
+/* Visually hidden live region for screen reader announcements. */
+.copy-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .highlight pre {
   margin: 0;
 }
